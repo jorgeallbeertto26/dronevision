@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Drone Vision | Foto & Vídeo Aéreo Profissional</title>
+  <title>Drone Vision | Imagens e Filmagem Aérea Profissional 4K</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --bg-dark: #0b0f19;
-      --bg-card: #131b2e;
-      --primary: #00d2ff;
-      --primary-hover: #00a8cc;
+      --bg-dark: #070a12;
+      --bg-card: rgba(18, 25, 43, 0.7);
+      --bg-card-hover: rgba(26, 36, 61, 0.85);
+      --primary: #38bdf8;
+      --primary-glow: rgba(56, 189, 248, 0.25);
       --whatsapp: #25d366;
-      --danger: #ef4444;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --border: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(56, 189, 248, 0.3);
     }
 
     * {
@@ -28,128 +29,229 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(37, 211, 102, 0.04) 0%, transparent 40%);
       color: var(--text-main);
       line-height: 1.6;
       overflow-x: hidden;
     }
 
+    /* Header */
     header {
-      padding: 1.5rem 5%;
+      padding: 1rem 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid var(--border);
-      background: rgba(11, 15, 25, 0.8);
-      backdrop-filter: blur(12px);
+      background: rgba(7, 10, 18, 0.85);
+      backdrop-filter: blur(14px);
       position: sticky;
       top: 0;
       z-index: 50;
     }
 
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      color: var(--text-main);
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
     }
 
-    .logo span {
+    .brand img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    .brand-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+
+    .brand-title span {
       color: var(--primary);
     }
 
-    .hero {
-      padding: 6rem 5% 4rem;
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
+    /* Botões */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+      font-size: 0.95rem;
     }
 
-    .tagline {
-      display: inline-block;
-      padding: 0.4rem 1rem;
-      background: rgba(0, 210, 255, 0.1);
+    .btn-whatsapp {
+      background-color: var(--whatsapp);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1ebc57;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+      color: #070a12;
+      font-weight: 700;
+      box-shadow: 0 4px 20px var(--primary-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(56, 189, 248, 0.4);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 5rem 6% 4rem;
+      text-align: center;
+      max-width: 980px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1.1rem;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid var(--border-accent);
       color: var(--primary);
       border-radius: 50px;
       font-size: 0.85rem;
       font-weight: 600;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
+    }
+
+    .hero-logo-center {
+      width: 130px;
+      height: 130px;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 10px 25px rgba(56, 189, 248, 0.3));
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-weight: 800;
       line-height: 1.15;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #ffffff 40%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero p {
       font-size: 1.15rem;
       color: var(--text-muted);
       margin-bottom: 2.5rem;
+      max-width: 720px;
+      line-height: 1.6;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.9rem 1.8rem;
-      border-radius: 10px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      cursor: pointer;
-      border: none;
-      font-size: 1rem;
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    .btn-whatsapp {
-      background-color: var(--whatsapp);
-      color: #fff;
-    }
-
-    .btn-whatsapp:hover {
-      background-color: #1ebc57;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text-main);
-    }
-
-    .btn-outline:hover {
+    /* Trust Stats / Credenciais */
+    .trust-bar {
+      max-width: 1100px;
+      margin: 1rem auto 4rem;
+      padding: 1.5rem 2rem;
       background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+      backdrop-filter: blur(10px);
     }
 
-    /* Serviços / Segmentos */
-    .services-container {
+    .trust-item h4 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    .trust-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Container de Seção */
+    .section-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 4rem 5% 2rem;
+      padding: 4rem 6%;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
 
     .section-title h2 {
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: 2.2rem;
+      font-weight: 800;
       margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
     }
 
     .section-title p {
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
 
+    /* Cards de Serviços / Segmentos */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -158,39 +260,39 @@
 
     .service-card {
       background: var(--bg-card);
-      padding: 2rem;
-      border-radius: 16px;
+      padding: 2.2rem;
+      border-radius: 18px;
       border: 1px solid var(--border);
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
 
     .service-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(0, 210, 255, 0.3);
+      transform: translateY(-6px);
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     }
 
     .service-card h3 {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       margin-bottom: 0.75rem;
       color: var(--primary);
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
     }
 
     .service-card p {
       color: var(--text-muted);
       font-size: 0.95rem;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     /* Portfólio */
-    .portfolio-section {
-      padding: 4rem 5%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
     .portfolio-header {
       display: flex;
       flex-wrap: wrap;
@@ -206,19 +308,19 @@
     }
 
     .filter-btn {
-      padding: 0.5rem 1.2rem;
+      padding: 0.55rem 1.3rem;
       border-radius: 8px;
-      background: transparent;
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid var(--border);
       color: var(--text-muted);
       cursor: pointer;
-      font-weight: 500;
+      font-weight: 600;
+      transition: all 0.2s ease;
     }
 
     .filter-btn.active {
       background: var(--primary);
-      color: #0b0f19;
-      font-weight: 700;
+      color: #070a12;
       border-color: var(--primary);
     }
 
@@ -230,63 +332,94 @@
 
     .gallery-item {
       background: var(--bg-card);
-      border-radius: 14px;
+      border-radius: 16px;
       overflow: hidden;
       border: 1px solid var(--border);
-      position: relative;
+      transition: transform 0.25s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-accent);
     }
 
     .gallery-item img, .gallery-item iframe {
       width: 100%;
-      height: 220px;
+      height: 230px;
       object-fit: cover;
       display: block;
       border: none;
     }
 
     .gallery-info {
-      padding: 1rem;
+      padding: 1.1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: rgba(11, 15, 25, 0.6);
     }
 
     .gallery-text h4 {
       font-size: 1rem;
-      margin-bottom: 0.25rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
     }
 
     .gallery-text span {
       font-size: 0.8rem;
-      color: var(--text-muted);
+      color: var(--primary);
       text-transform: uppercase;
+      font-weight: 600;
       letter-spacing: 0.5px;
     }
 
-    /* Botão de Excluir Mídia */
-    .btn-delete {
-      background: rgba(239, 68, 68, 0.1);
-      border: 1px solid rgba(239, 68, 68, 0.2);
-      color: var(--danger);
-      padding: 0.4rem 0.6rem;
-      border-radius: 8px;
-      cursor: pointer;
+    /* Etapas de Trabalho */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .process-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.8rem;
+      text-align: center;
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 1rem;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--primary);
+      border: 1px solid var(--border-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+    }
+
+    .process-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .process-card p {
       font-size: 0.85rem;
-      transition: all 0.2s ease;
+      color: var(--text-muted);
     }
 
-    .btn-delete:hover {
-      background: var(--danger);
-      color: #ffffff;
-    }
-
-    /* Modal de Cadastro */
+    /* Modal */
     .modal {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(5px);
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(6px);
       z-index: 100;
       align-items: center;
       justify-content: center;
@@ -294,20 +427,16 @@
     }
 
     .modal-content {
-      background: var(--bg-card);
-      padding: 2rem;
-      border-radius: 16px;
+      background: #0f172a;
+      padding: 2.2rem;
+      border-radius: 18px;
       width: 100%;
       max-width: 480px;
-      border: 1px solid var(--border);
-    }
-
-    .modal-content h2 {
-      margin-bottom: 1.5rem;
+      border: 1px solid var(--border-accent);
     }
 
     .form-group {
-      margin-bottom: 1rem;
+      margin-bottom: 1.1rem;
     }
 
     .form-group label {
@@ -319,9 +448,9 @@
 
     .form-group input, .form-group select {
       width: 100%;
-      padding: 0.75rem;
+      padding: 0.8rem;
       border-radius: 8px;
-      background: var(--bg-dark);
+      background: #070a12;
       border: 1px solid var(--border);
       color: var(--text-main);
       outline: none;
@@ -347,19 +476,34 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      box-shadow: 0 4px 25px rgba(37, 211, 102, 0.45);
       z-index: 99;
       text-decoration: none;
-      font-size: 1.8rem;
-      transition: transform 0.2s ease;
+      font-size: 1.9rem;
+      transition: transform 0.25s ease;
     }
 
     .whatsapp-float:hover {
       transform: scale(1.1);
     }
 
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 3rem 6%;
+      text-align: center;
+      background: rgba(7, 10, 18, 0.95);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2.2rem; }
+      .hero h1 { font-size: 2.3rem; }
+      .hero-logo-center { width: 100px; height: 100px; }
       .portfolio-header { flex-direction: column; align-items: flex-start; }
       .services-grid { grid-template-columns: 1fr; }
     }
@@ -369,72 +513,131 @@
 
   <!-- Header -->
   <header>
-    <div class="logo">DRONE<span>VISION</span></div>
-    <a href="https://wa.me/5521988545380?text=Olá!%20Gostaria%20de%20um%20orçamento%20de%20filmagens%20aéreas." target="_blank" class="btn btn-whatsapp">Falar no WhatsApp</a>
+    <a href="#" class="brand">
+      <img src="logo.png" alt="Drone Vision Logo" onerror="this.style.display='none'">
+      <div class="brand-title">DRONE<span>VISION</span></div>
+    </a>
+    <a href="https://wa.me/5521988545380?text=Olá!%20Gostaria%20de%20um%20orçamento%20de%20filmagens%20aéreas." target="_blank" class="btn btn-whatsapp">
+      Falar no WhatsApp
+    </a>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <span class="tagline">Captação Aérea Profissional em 4K</span>
-    <h1>Eleve o nível visual dos seus projetos e empreendimentos</h1>
-    <p>Fotos e vídeos aéreos de alta resolução para hotelaria, mercado imobiliário, acompanhamento de obras e vídeos institucionais.</p>
-    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="https://wa.me/5521988545380?text=Olá!%20Gostaria%20de%20um%20orçamento%20de%20filmagens%20aéreas." target="_blank" class="btn btn-whatsapp">
-        Solicitar Orçamento Rápido
+    <img src="logo.png" alt="Drone Vision" class="hero-logo-center" onerror="this.style.display='none'">
+    
+    <div class="hero-badge">
+      ⚡ Captação Aérea de Alta Resolução • 4K HDR
+    </div>
+    
+    <h1>Perspectivas aéreas que <span>valorizam seu negócio</span></h1>
+    
+    <p>Produções audiovisuais cinematográficas com drones para hotelaria, mercado imobiliário, vistorias técnicas e campanhas comerciais.</p>
+    
+    <div class="hero-actions">
+      <a href="https://wa.me/5521988545380?text=Olá!%20Gostaria%20de%20um%20orçamento%20de%20filmagens%20aéreas." target="_blank" class="btn btn-primary">
+        Solicitar Orçamento no WhatsApp
       </a>
-      <a href="#portfolio" class="btn btn-outline">Ver Portfólio</a>
+      <a href="#portfolio" class="btn btn-outline">Explorar Portfólio</a>
     </div>
   </section>
 
-  <!-- Serviços & Segmentos Atendidos -->
-  <section class="services-container">
+  <!-- Barra de Destaques / Credenciais -->
+  <div class="trust-bar">
+    <div class="trust-item">
+      <h4>4K / 60 FPS</h4>
+      <p>Qualidade ultra nítida e cores cinematográficas</p>
+    </div>
+    <div class="trust-item">
+      <h4>100% Seguro</h4>
+      <p>Operação técnica conforme normas da ANATEL e DECEA</p>
+    </div>
+    <div class="trust-item">
+      <h4>Entrega Ágil</h4>
+      <p>Arquivos tratados e prontos para publicação rápida</p>
+    </div>
+  </div>
+
+  <!-- Segmentos Atendidos -->
+  <section class="section-container" id="segmentos">
     <div class="section-title">
-      <h2>Segmentos Atendidos</h2>
-      <p>Soluções visuais sob medida para valorizar sua estrutura e atrair mais clientes</p>
+      <h2>Segmentos Especializados</h2>
+      <p>Soluções visuais desenhadas para o objetivo de cada mercado</p>
     </div>
 
     <div class="services-grid">
       <div class="service-card">
         <h3>🏨 Hotéis, Pousadas & Resorts</h3>
-        <p>Apresente sua área de lazer, piscinas, chalés e localização privilegiada com ângulos cinematográficos que aumentam as reservas diretas.</p>
+        <p>Valorize áreas de piscina, infraestrutura, praias e vistas panorâmicas com vídeos envolventes que aumentam o interesse e as reservas diretas.</p>
       </div>
 
       <div class="service-card">
         <h3>🏢 Mercado Imobiliário</h3>
-        <p>Destaque terrenos, loteamentos, condomínios e coberturas valorizando o entorno, a vizinhança e acelerando a tomada de decisão de compra.</p>
+        <p>Acelere a venda de loteamentos, terrenos, coberturas e condomínios apresentando a amplitude do imóvel e localização privilegiada.</p>
       </div>
 
       <div class="service-card">
         <h3>🏗️ Acompanhamento de Obras</h3>
-        <p>Registros técnicos e evolutivos em alta definição para medição física de etapas, relatórios de engenharia e prestação de contas a investidores.</p>
+        <p>Documentação evolutiva periódica para relatórios técnicos de engenharia, medição de etapas e transparência com investidores.</p>
       </div>
 
       <div class="service-card">
-        <h3>🎬 Comercial & Institucional</h3>
-        <p>Produção de vídeos dinâmicos em alta resolução para Instagram, sites, YouTube e materiais corporativos de alto impacto.</p>
+        <h3>🎬 Produções Comerciais & Redes</h3>
+        <p>Takes dinâmicos no formato ideal para Reels, TikTok, YouTube e campanhas publicitárias de alto engajamento.</p>
       </div>
 
       <div class="service-card">
         <h3>🔍 Inspeções Técnicas & Telhados</h3>
-        <p>Vistorias visuais seguras e detalhadas em telhados, fachadas, estruturas metálicas e painéis solares sem risco de acidentes com andaimes.</p>
+        <p>Vistorias minuciosas em coberturas, estruturas metálicas, galpões e painéis solares sem necessidade de andaimes ou riscos humanos.</p>
       </div>
 
       <div class="service-card">
-        <h3>🌾 Sítios, Haras & Agronegócio</h3>
-        <p>Mapeamento visual e captação panorâmica para documentação de propriedades rurais, áreas verdes, pastagens e divisas territoriais.</p>
+        <h3>🌾 Propriedades Rurais & Agronegócio</h3>
+        <p>Registros detalhados de áreas de plantio, sítios, haras, divisas de terra e mapeamento visual de grandes perímetros.</p>
       </div>
     </div>
   </section>
 
-  <!-- Portfólio com Gestão Dinâmica -->
-  <section class="portfolio-section" id="portfolio">
+  <!-- Como Funciona -->
+  <section class="section-container" style="padding-top: 0;">
+    <div class="section-title">
+      <h2>Como Funciona o Atendimento</h2>
+      <p>Processo simplificado do contato inicial até a entrega dos arquivos</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="step-number">1</div>
+        <h4>Briefing</h4>
+        <p>Alinhamos o objetivo do voo, local e estilo visual desejado.</p>
+      </div>
+      <div class="process-card">
+        <div class="step-number">2</div>
+        <h4>Planejamento</h4>
+        <p>Análise do espaço aéreo, clima e segurança da operação.</p>
+      </div>
+      <div class="process-card">
+        <div class="step-number">3</div>
+        <h4>Captação</h4>
+        <p>Voo profissional com enquadramentos estratégicos e precisos.</p>
+      </div>
+      <div class="process-card">
+        <div class="step-number">4</div>
+        <h4>Entrega 4K</h4>
+        <p>Imagens tratadas e editadas enviadas em nuvem de alta velocidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfólio -->
+  <section class="section-container" id="portfolio">
     <div class="portfolio-header">
       <div>
-        <h2>Portfólio Recente</h2>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Confira algumas de nossas captações aéreas</p>
+        <h2>Portfólio em Destaque</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Exemplos de captações e registros aéreos</p>
       </div>
       
-      <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+      <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
         <div class="filters">
           <button class="filter-btn active" onclick="filterGallery('all', this)">Todos</button>
           <button class="filter-btn" onclick="filterGallery('foto', this)">Fotos</button>
@@ -450,29 +653,29 @@
   <!-- Modal para adicionar mídia -->
   <div class="modal" id="mediaModal">
     <div class="modal-content">
-      <h2>Adicionar Nova Mídia</h2>
+      <h3 style="margin-bottom: 1.2rem; font-size: 1.3rem;">Adicionar ao Portfólio</h3>
       <div class="form-group">
-        <label>Tipo de Mídia</label>
+        <label>Tipo</label>
         <select id="mediaType">
           <option value="foto">Foto (URL da Imagem)</option>
-          <option value="video">Vídeo (Link Embed do YouTube/Vimeo)</option>
+          <option value="video">Vídeo (Embed do YouTube)</option>
         </select>
       </div>
       <div class="form-group">
-        <label>Título do Projeto</label>
-        <input type="text" id="mediaTitle" placeholder="Ex: Pousada Vista Mar" />
+        <label>Título</label>
+        <input type="text" id="mediaTitle" placeholder="Ex: Pousada & Vista Mar" />
       </div>
       <div class="form-group">
         <label>Categoria</label>
-        <input type="text" id="mediaCategory" placeholder="Ex: Hotelaria, Imobiliário, Obras" />
+        <input type="text" id="mediaCategory" placeholder="Ex: Hotelaria, Obras, Imóveis" />
       </div>
       <div class="form-group">
-        <label>URL / Link da Mídia</label>
-        <input type="text" id="mediaUrl" placeholder="https://exemplo.com/imagem.jpg ou embed do Youtube" />
+        <label>Link da Mídia</label>
+        <input type="text" id="mediaUrl" placeholder="URL da imagem ou https://www.youtube.com/embed/..." />
       </div>
       <div class="form-actions">
         <button class="btn btn-outline" onclick="closeModal()">Cancelar</button>
-        <button class="btn btn-whatsapp" onclick="saveMedia()">Adicionar</button>
+        <button class="btn btn-primary" onclick="saveMedia()">Salvar</button>
       </div>
     </div>
   </div>
@@ -482,7 +685,13 @@
     💬
   </a>
 
-  <!-- Script de Gerenciamento do Portfólio -->
+  <!-- Footer -->
+  <footer>
+    <p><strong>Drone Vision</strong> • Foto e Filmagem Aérea Profissional</p>
+    <p style="font-size: 0.8rem; color: #64748b;">Operações aéreas realizadas com responsabilidade técnica e segurança.</p>
+  </footer>
+
+  <!-- Script da Galeria -->
   <script>
     const defaultMedia = [
       {
@@ -499,13 +708,13 @@
       },
       {
         type: 'foto',
-        title: 'Acompanhamento de Obra',
+        title: 'Acompanhamento Estrutural',
         category: 'Obras',
         url: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80'
       },
       {
         type: 'video',
-        title: 'Showreel de Demonstração',
+        title: 'Showreel Institucional',
         category: 'Comercial',
         url: 'https://www.youtube.com/embed/ScMzIvxBSi4'
       }
@@ -544,7 +753,7 @@
               <h4>${item.title}</h4>
               <span>${item.category} • ${item.type}</span>
             </div>
-            <button class="btn-delete" title="Excluir mídia" onclick="deleteMedia(${index})">🗑️</button>
+            <button onclick="deleteMedia(${index})" style="background:none; border:none; color:#ef4444; cursor:pointer; font-size:1rem;" title="Excluir">🗑️</button>
           </div>
         `;
         container.appendChild(card);
@@ -572,7 +781,7 @@
       const url = document.getElementById('mediaUrl').value.trim();
 
       if (!title || !url) {
-        alert('Por favor, preencha o título e o link da mídia.');
+        alert('Por favor, preencha todos os campos.');
         return;
       }
 
@@ -583,14 +792,13 @@
       closeModal();
       renderGallery(currentFilter);
 
-      // Limpar campos
       document.getElementById('mediaTitle').value = '';
       document.getElementById('mediaCategory').value = '';
       document.getElementById('mediaUrl').value = '';
     }
 
     function deleteMedia(index) {
-      if (confirm('Tem certeza que deseja remover esta mídia da galeria?')) {
+      if (confirm('Deseja remover este item da visualização?')) {
         const mediaList = getStoredMedia();
         mediaList.splice(index, 1);
         localStorage.setItem('drone_portfolio', JSON.stringify(mediaList));
@@ -598,7 +806,6 @@
       }
     }
 
-    // Inicializar galeria
     renderGallery();
   </script>
 </body>

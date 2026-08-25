@@ -15,6 +15,7 @@
       --primary: #00d2ff;
       --primary-hover: #00a8cc;
       --whatsapp: #25d366;
+      --danger: #ef4444;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --border: rgba(255, 255, 255, 0.08);
@@ -126,13 +127,32 @@
       background: var(--bg-card);
     }
 
-    /* Serviços */
-    .services {
-      padding: 4rem 5%;
+    /* Serviços / Segmentos */
+    .services-container {
       max-width: 1200px;
       margin: 0 auto;
+      padding: 4rem 5% 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 1.5rem;
     }
 
@@ -141,17 +161,27 @@
       padding: 2rem;
       border-radius: 16px;
       border: 1px solid var(--border);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 210, 255, 0.3);
     }
 
     .service-card h3 {
       font-size: 1.2rem;
       margin-bottom: 0.75rem;
       color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .service-card p {
       color: var(--text-muted);
       font-size: 0.95rem;
+      line-height: 1.5;
     }
 
     /* Portfólio */
@@ -216,18 +246,38 @@
 
     .gallery-info {
       padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .gallery-info h4 {
+    .gallery-text h4 {
       font-size: 1rem;
       margin-bottom: 0.25rem;
     }
 
-    .gallery-info span {
+    .gallery-text span {
       font-size: 0.8rem;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.5px;
+    }
+
+    /* Botão de Excluir Mídia */
+    .btn-delete {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      color: var(--danger);
+      padding: 0.4rem 0.6rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-delete:hover {
+      background: var(--danger);
+      color: #ffffff;
     }
 
     /* Modal de Cadastro */
@@ -311,6 +361,7 @@
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.2rem; }
       .portfolio-header { flex-direction: column; align-items: flex-start; }
+      .services-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -326,27 +377,52 @@
   <section class="hero">
     <span class="tagline">Captação Aérea Profissional em 4K</span>
     <h1>Eleve o nível visual dos seus projetos e empreendimentos</h1>
-    <p>Fotos e vídeos aéreos de alta resolução para o setor imobiliário, eventos corporativos, acompanhamento de obras e vídeos institucionais.</p>
+    <p>Fotos e vídeos aéreos de alta resolução para hotelaria, mercado imobiliário, acompanhamento de obras e vídeos institucionais.</p>
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://wa.me/5521988545380?text=Olá!%20Gostaria%20de%20um%20orçamento%20de%20filmagens%20aéreas." target="_blank" class="btn btn-whatsapp">
         Solicitar Orçamento Rápido
       </a>
       <a href="#portfolio" class="btn btn-outline">Ver Portfólio</a>
     </div>
   </section>
 
-  <!-- Serviços -->
-  <section class="services">
-    <div class="service-card">
-      <h3>🏢 Mercado Imobiliário</h3>
-      <p>Destaque terrenos, loteamentos, condomínios e fachadas com ângulos amplos que valorizam o entorno e aceleram as vendas.</p>
+  <!-- Serviços & Segmentos Atendidos -->
+  <section class="services-container">
+    <div class="section-title">
+      <h2>Segmentos Atendidos</h2>
+      <p>Soluções visuais sob medida para valorizar sua estrutura e atrair mais clientes</p>
     </div>
-    <div class="service-card">
-      <h3>🏗️ Acompanhamento de Obras</h3>
-      <p>Registros periódicos em alta definição para medição de evolução física e relatórios para construtoras e investidores.</p>
-    </div>
-    <div class="service-card">
-      <h3>🎬 Vídeos Comerciais & Eventos</h3>
-      <p>Imagens cinematográficas e dinâmicas preparadas para redes sociais, campanhas publicitárias e coberturas abertas.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>🏨 Hotéis, Pousadas & Resorts</h3>
+        <p>Apresente sua área de lazer, piscinas, chalés e localização privilegiada com ângulos cinematográficos que aumentam as reservas diretas.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>🏢 Mercado Imobiliário</h3>
+        <p>Destaque terrenos, loteamentos, condomínios e coberturas valorizando o entorno, a vizinhança e acelerando a tomada de decisão de compra.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>🏗️ Acompanhamento de Obras</h3>
+        <p>Registros técnicos e evolutivos em alta definição para medição física de etapas, relatórios de engenharia e prestação de contas a investidores.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>🎬 Comercial & Institucional</h3>
+        <p>Produção de vídeos dinâmicos em alta resolução para Instagram, sites, YouTube e materiais corporativos de alto impacto.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>🔍 Inspeções Técnicas & Telhados</h3>
+        <p>Vistorias visuais seguras e detalhadas em telhados, fachadas, estruturas metálicas e painéis solares sem risco de acidentes com andaimes.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>🌾 Sítios, Haras & Agronegócio</h3>
+        <p>Mapeamento visual e captação panorâmica para documentação de propriedades rurais, áreas verdes, pastagens e divisas territoriais.</p>
+      </div>
     </div>
   </section>
 
@@ -384,11 +460,11 @@
       </div>
       <div class="form-group">
         <label>Título do Projeto</label>
-        <input type="text" id="mediaTitle" placeholder="Ex: Fachada Edifício Horizon" />
+        <input type="text" id="mediaTitle" placeholder="Ex: Pousada Vista Mar" />
       </div>
       <div class="form-group">
         <label>Categoria</label>
-        <input type="text" id="mediaCategory" placeholder="Ex: Imobiliário, Obra, Evento" />
+        <input type="text" id="mediaCategory" placeholder="Ex: Hotelaria, Imobiliário, Obras" />
       </div>
       <div class="form-group">
         <label>URL / Link da Mídia</label>
@@ -411,13 +487,19 @@
     const defaultMedia = [
       {
         type: 'foto',
+        title: 'Pousada e Área de Lazer',
+        category: 'Hotelaria',
+        url: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        type: 'foto',
         title: 'Vista Panorâmica Loteamento',
         category: 'Imobiliário',
         url: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80'
       },
       {
         type: 'foto',
-        title: 'Acompanhamento Estrutural',
+        title: 'Acompanhamento de Obra',
         category: 'Obras',
         url: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80'
       },
@@ -429,17 +511,20 @@
       }
     ];
 
+    let currentFilter = 'all';
+
     function getStoredMedia() {
       const stored = localStorage.getItem('drone_portfolio');
       return stored ? JSON.parse(stored) : defaultMedia;
     }
 
-    function renderGallery(filter = 'all') {
+    function renderGallery(filter = currentFilter) {
+      currentFilter = filter;
       const container = document.getElementById('galleryContainer');
       const items = getStoredMedia();
       container.innerHTML = '';
 
-      items.forEach(item => {
+      items.forEach((item, index) => {
         if (filter !== 'all' && item.type !== filter) return;
 
         const card = document.createElement('div');
@@ -455,8 +540,11 @@
         card.innerHTML = `
           ${mediaHtml}
           <div class="gallery-info">
-            <h4>${item.title}</h4>
-            <span>${item.category} • ${item.type}</span>
+            <div class="gallery-text">
+              <h4>${item.title}</h4>
+              <span>${item.category} • ${item.type}</span>
+            </div>
+            <button class="btn-delete" title="Excluir mídia" onclick="deleteMedia(${index})">🗑️</button>
           </div>
         `;
         container.appendChild(card);
@@ -493,12 +581,21 @@
       localStorage.setItem('drone_portfolio', JSON.stringify(mediaList));
 
       closeModal();
-      renderGallery();
+      renderGallery(currentFilter);
 
       // Limpar campos
       document.getElementById('mediaTitle').value = '';
       document.getElementById('mediaCategory').value = '';
       document.getElementById('mediaUrl').value = '';
+    }
+
+    function deleteMedia(index) {
+      if (confirm('Tem certeza que deseja remover esta mídia da galeria?')) {
+        const mediaList = getStoredMedia();
+        mediaList.splice(index, 1);
+        localStorage.setItem('drone_portfolio', JSON.stringify(mediaList));
+        renderGallery(currentFilter);
+      }
     }
 
     // Inicializar galeria

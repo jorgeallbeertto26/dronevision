@@ -16,6 +16,7 @@
       --primary: #00b4d8;
       --primary-glow: rgba(0, 180, 216, 0.25);
       --whatsapp: #25d366;
+      --danger: #ef4444;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --border: rgba(255, 255, 255, 0.08);
@@ -354,6 +355,22 @@
       letter-spacing: 0.5px;
     }
 
+    .btn-delete {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      color: var(--danger);
+      padding: 0.4rem 0.6rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-delete:hover {
+      background: var(--danger);
+      color: #ffffff;
+    }
+
     /* Processo */
     .process-grid {
       display: grid;
@@ -491,10 +508,10 @@
 </head>
 <body>
 
-  <!-- Header com a Nova Logo -->
+  <!-- Header -->
   <header>
     <a href="#" class="brand">
-      <img src="logo-banner.png" alt="Drone Vision Logo">
+      <img src="logo-banner.png" alt="Drone Vision Logo" onerror="this.outerHTML='<span style=\'font-weight:800; font-size:1.2rem; color:#fff;\'>DRONE<span style=\'color:#00b4d8;\'>VISION</span></span>'">
     </a>
     <a href="https://wa.me/5521988545380?text=Olá!%20Gostaria%20de%20um%20orçamento%20de%20filmagens%20aéreas." target="_blank" class="btn btn-whatsapp">
       Falar no WhatsApp
@@ -508,7 +525,7 @@
     </div>
 
     <!-- Banner Central em Destaque -->
-    <img src="logo-banner.png" alt="Drone Vision - Imagens Aéreas" class="hero-logo-banner">
+    <img src="logo-banner.png" alt="Drone Vision - Imagens Aéreas" class="hero-logo-banner" onerror="this.style.display='none'">
     
     <h1>Perspectivas aéreas que <span>valorizam seu negócio</span></h1>
     
@@ -733,7 +750,7 @@
               <h4>${item.title}</h4>
               <span>${item.category} • ${item.type}</span>
             </div>
-            <button onclick="deleteMedia(${index})" style="background:none; border:none; color:#ef4444; cursor:pointer; font-size:1rem;" title="Excluir">🗑️</button>
+            <button class="btn-delete" onclick="deleteMedia(${index})" title="Excluir">🗑️</button>
           </div>
         `;
         container.appendChild(card);

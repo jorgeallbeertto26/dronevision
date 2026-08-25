@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drone Vision | Foto & Vídeo Aéreo Profissional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --bg-card: #131b2e;
+      --primary: #00d2ff;
+      --primary-hover: #00a8cc;
+      --whatsapp: #25d366;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 1.5rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      background: rgba(11, 15, 25, 0.8);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--text-main);
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .hero {
+      padding: 6rem 5% 4rem;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .tagline {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      background: rgba(0, 210, 255, 0.1);
+      color: var(--primary);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.8rem;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .btn-whatsapp {
+      background-color: var(--whatsapp);
+      color: #fff;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1ebc57;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-main);
+    }
+
+    .btn-outline:hover {
+      background: var(--bg-card);
+    }
+
+    /* Serviços */
+    .services {
+      padding: 4rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .service-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      color: var(--primary);
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Portfólio */
+    .portfolio-section {
+      padding: 4rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .portfolio-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      gap: 1rem;
+    }
+
+    .filters {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .filter-btn {
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .filter-btn.active {
+      background: var(--primary);
+      color: #0b0f19;
+      font-weight: 700;
+      border-color: var(--primary);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      background: var(--bg-card);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .gallery-item img, .gallery-item iframe {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      border: none;
+    }
+
+    .gallery-info {
+      padding: 1rem;
+    }
+
+    .gallery-info h4 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .gallery-info span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Modal de Cadastro */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(5px);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-content {
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 480px;
+      border: 1px solid var(--border);
+    }
+
+    .modal-content h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
+      color: var(--text-muted);
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      outline: none;
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    /* Floating WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: var(--whatsapp);
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      z-index: 99;
+      text-decoration: none;
+      font-size: 1.8rem;
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .portfolio-header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">DRONE<span>VISION</span></div>
+    <a href="https://wa.me/5521988545380?text=Olá!%20Gostaria%20de%20um%20orçamento%20de%20filmagens%20aéreas." target="_blank" class="btn btn-whatsapp">Falar no WhatsApp</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <span class="tagline">Captação Aérea Profissional em 4K</span>
+    <h1>Eleve o nível visual dos seus projetos e empreendimentos</h1>
+    <p>Fotos e vídeos aéreos de alta resolução para o setor imobiliário, eventos corporativos, acompanhamento de obras e vídeos institucionais.</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        Solicitar Orçamento Rápido
+      </a>
+      <a href="#portfolio" class="btn btn-outline">Ver Portfólio</a>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="services">
+    <div class="service-card">
+      <h3>🏢 Mercado Imobiliário</h3>
+      <p>Destaque terrenos, loteamentos, condomínios e fachadas com ângulos amplos que valorizam o entorno e aceleram as vendas.</p>
+    </div>
+    <div class="service-card">
+      <h3>🏗️ Acompanhamento de Obras</h3>
+      <p>Registros periódicos em alta definição para medição de evolução física e relatórios para construtoras e investidores.</p>
+    </div>
+    <div class="service-card">
+      <h3>🎬 Vídeos Comerciais & Eventos</h3>
+      <p>Imagens cinematográficas e dinâmicas preparadas para redes sociais, campanhas publicitárias e coberturas abertas.</p>
+    </div>
+  </section>
+
+  <!-- Portfólio com Gestão Dinâmica -->
+  <section class="portfolio-section" id="portfolio">
+    <div class="portfolio-header">
+      <div>
+        <h2>Portfólio Recente</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Confira algumas de nossas captações aéreas</p>
+      </div>
+      
+      <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+        <div class="filters">
+          <button class="filter-btn active" onclick="filterGallery('all', this)">Todos</button>
+          <button class="filter-btn" onclick="filterGallery('foto', this)">Fotos</button>
+          <button class="filter-btn" onclick="filterGallery('video', this)">Vídeos</button>
+        </div>
+        <button class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem 1rem;" onclick="openModal()">+ Adicionar Mídia</button>
+      </div>
+    </div>
+
+    <div class="gallery-grid" id="galleryContainer"></div>
+  </section>
+
+  <!-- Modal para adicionar mídia -->
+  <div class="modal" id="mediaModal">
+    <div class="modal-content">
+      <h2>Adicionar Nova Mídia</h2>
+      <div class="form-group">
+        <label>Tipo de Mídia</label>
+        <select id="mediaType">
+          <option value="foto">Foto (URL da Imagem)</option>
+          <option value="video">Vídeo (Link Embed do YouTube/Vimeo)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Título do Projeto</label>
+        <input type="text" id="mediaTitle" placeholder="Ex: Fachada Edifício Horizon" />
+      </div>
+      <div class="form-group">
+        <label>Categoria</label>
+        <input type="text" id="mediaCategory" placeholder="Ex: Imobiliário, Obra, Evento" />
+      </div>
+      <div class="form-group">
+        <label>URL / Link da Mídia</label>
+        <input type="text" id="mediaUrl" placeholder="https://exemplo.com/imagem.jpg ou embed do Youtube" />
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-outline" onclick="closeModal()">Cancelar</button>
+        <button class="btn btn-whatsapp" onclick="saveMedia()">Adicionar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão Flutuante WhatsApp -->
+  <a href="https://wa.me/5521988545380?text=Olá!%20Gostaria%20de%20um%20orçamento%20de%20filmagens%20aéreas." target="_blank" class="whatsapp-float" title="Falar no WhatsApp">
+    💬
+  </a>
+
+  <!-- Script de Gerenciamento do Portfólio -->
+  <script>
+    const defaultMedia = [
+      {
+        type: 'foto',
+        title: 'Vista Panorâmica Loteamento',
+        category: 'Imobiliário',
+        url: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        type: 'foto',
+        title: 'Acompanhamento Estrutural',
+        category: 'Obras',
+        url: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        type: 'video',
+        title: 'Showreel de Demonstração',
+        category: 'Comercial',
+        url: 'https://www.youtube.com/embed/ScMzIvxBSi4'
+      }
+    ];
+
+    function getStoredMedia() {
+      const stored = localStorage.getItem('drone_portfolio');
+      return stored ? JSON.parse(stored) : defaultMedia;
+    }
+
+    function renderGallery(filter = 'all') {
+      const container = document.getElementById('galleryContainer');
+      const items = getStoredMedia();
+      container.innerHTML = '';
+
+      items.forEach(item => {
+        if (filter !== 'all' && item.type !== filter) return;
+
+        const card = document.createElement('div');
+        card.className = 'gallery-item';
+
+        let mediaHtml = '';
+        if (item.type === 'foto') {
+          mediaHtml = `<img src="${item.url}" alt="${item.title}" loading="lazy" />`;
+        } else {
+          mediaHtml = `<iframe src="${item.url}" allowfullscreen></iframe>`;
+        }
+
+        card.innerHTML = `
+          ${mediaHtml}
+          <div class="gallery-info">
+            <h4>${item.title}</h4>
+            <span>${item.category} • ${item.type}</span>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function filterGallery(type, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderGallery(type);
+    }
+
+    function openModal() {
+      document.getElementById('mediaModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('mediaModal').style.display = 'none';
+    }
+
+    function saveMedia() {
+      const type = document.getElementById('mediaType').value;
+      const title = document.getElementById('mediaTitle').value.trim();
+      const category = document.getElementById('mediaCategory').value.trim();
+      const url = document.getElementById('mediaUrl').value.trim();
+
+      if (!title || !url) {
+        alert('Por favor, preencha o título e o link da mídia.');
+        return;
+      }
+
+      const mediaList = getStoredMedia();
+      mediaList.unshift({ type, title, category: category || 'Geral', url });
+      localStorage.setItem('drone_portfolio', JSON.stringify(mediaList));
+
+      closeModal();
+      renderGallery();
+
+      // Limpar campos
+      document.getElementById('mediaTitle').value = '';
+      document.getElementById('mediaCategory').value = '';
+      document.getElementById('mediaUrl').value = '';
+    }
+
+    // Inicializar galeria
+    renderGallery();
+  </script>
+</body>
+</html>

@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Drone Vision | Imagens e Filmagem Aérea Profissional 4K</title>
+  <title>Drone Vision | Foto & Vídeo Aéreo Profissional 4K</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --bg-dark: #070a12;
-      --bg-card: rgba(18, 25, 43, 0.7);
-      --bg-card-hover: rgba(26, 36, 61, 0.85);
-      --primary: #38bdf8;
-      --primary-glow: rgba(56, 189, 248, 0.25);
+      --bg-dark: #07090e;
+      --bg-card: rgba(15, 20, 32, 0.75);
+      --bg-card-hover: rgba(22, 30, 48, 0.9);
+      --primary: #00b4d8;
+      --primary-glow: rgba(0, 180, 216, 0.25);
       --whatsapp: #25d366;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --border: rgba(255, 255, 255, 0.08);
-      --border-accent: rgba(56, 189, 248, 0.3);
+      --border-accent: rgba(0, 180, 216, 0.35);
     }
 
     * {
@@ -36,8 +36,8 @@
     body {
       background-color: var(--bg-dark);
       background-image: 
-        radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 85% 85%, rgba(37, 211, 102, 0.04) 0%, transparent 40%);
+        radial-gradient(circle at 10% 10%, rgba(0, 180, 216, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(37, 211, 102, 0.05) 0%, transparent 40%);
       color: var(--text-main);
       line-height: 1.6;
       overflow-x: hidden;
@@ -45,12 +45,12 @@
 
     /* Header */
     header {
-      padding: 1rem 6%;
+      padding: 0.8rem 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid var(--border);
-      background: rgba(7, 10, 18, 0.85);
+      background: rgba(7, 9, 14, 0.85);
       backdrop-filter: blur(14px);
       position: sticky;
       top: 0;
@@ -60,26 +60,14 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
       text-decoration: none;
     }
 
     .brand img {
-      height: 44px;
+      height: 38px;
       width: auto;
       object-fit: contain;
-      border-radius: 6px;
-    }
-
-    .brand-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      color: #fff;
-    }
-
-    .brand-title span {
-      color: var(--primary);
+      border-radius: 4px;
     }
 
     /* Botões */
@@ -110,15 +98,15 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
-      color: #070a12;
+      background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
+      color: #07090e;
       font-weight: 700;
       box-shadow: 0 4px 20px var(--primary-glow);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(56, 189, 248, 0.4);
+      box-shadow: 0 8px 28px rgba(0, 180, 216, 0.4);
     }
 
     .btn-outline {
@@ -134,9 +122,9 @@
 
     /* Hero */
     .hero {
-      padding: 5rem 6% 4rem;
+      padding: 4rem 6% 3rem;
       text-align: center;
-      max-width: 980px;
+      max-width: 1000px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -148,7 +136,7 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.4rem 1.1rem;
-      background: rgba(56, 189, 248, 0.08);
+      background: rgba(0, 180, 216, 0.08);
       border: 1px solid var(--border-accent);
       color: var(--primary);
       border-radius: 50px;
@@ -159,29 +147,26 @@
       letter-spacing: 0.8px;
     }
 
-    .hero-logo-center {
-      width: 130px;
-      height: 130px;
-      margin-bottom: 1.5rem;
-      filter: drop-shadow(0 10px 25px rgba(56, 189, 248, 0.3));
-      animation: float 4s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
+    .hero-logo-banner {
+      width: 100%;
+      max-width: 620px;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 180, 216, 0.15);
+      border: 1px solid var(--border);
     }
 
     .hero h1 {
-      font-size: 3.2rem;
+      font-size: 2.8rem;
       font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 1.25rem;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
       letter-spacing: -0.5px;
     }
 
     .hero h1 span {
-      background: linear-gradient(135deg, #ffffff 40%, var(--primary) 100%);
+      background: linear-gradient(135deg, #ffffff 30%, var(--primary) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -190,8 +175,7 @@
       font-size: 1.15rem;
       color: var(--text-muted);
       margin-bottom: 2.5rem;
-      max-width: 720px;
-      line-height: 1.6;
+      max-width: 740px;
     }
 
     .hero-actions {
@@ -201,7 +185,7 @@
       flex-wrap: wrap;
     }
 
-    /* Trust Stats / Credenciais */
+    /* Trust Stats */
     .trust-bar {
       max-width: 1100px;
       margin: 1rem auto 4rem;
@@ -227,7 +211,7 @@
       color: var(--text-muted);
     }
 
-    /* Container de Seção */
+    /* Seções */
     .section-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -251,7 +235,7 @@
       font-size: 1rem;
     }
 
-    /* Cards de Serviços / Segmentos */
+    /* Cards de Serviços */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -265,9 +249,6 @@
       border: 1px solid var(--border);
       transition: all 0.3s ease;
       backdrop-filter: blur(8px);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
     }
 
     .service-card:hover {
@@ -320,7 +301,7 @@
 
     .filter-btn.active {
       background: var(--primary);
-      color: #070a12;
+      color: #07090e;
       border-color: var(--primary);
     }
 
@@ -373,7 +354,7 @@
       letter-spacing: 0.5px;
     }
 
-    /* Etapas de Trabalho */
+    /* Processo */
     .process-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -393,7 +374,7 @@
       width: 40px;
       height: 40px;
       margin: 0 auto 1rem;
-      background: rgba(56, 189, 248, 0.1);
+      background: rgba(0, 180, 216, 0.1);
       color: var(--primary);
       border: 1px solid var(--border-accent);
       border-radius: 50%;
@@ -450,7 +431,7 @@
       width: 100%;
       padding: 0.8rem;
       border-radius: 8px;
-      background: #070a12;
+      background: #07090e;
       border: 1px solid var(--border);
       color: var(--text-main);
       outline: none;
@@ -492,7 +473,7 @@
       border-top: 1px solid var(--border);
       padding: 3rem 6%;
       text-align: center;
-      background: rgba(7, 10, 18, 0.95);
+      background: rgba(7, 9, 14, 0.95);
       color: var(--text-muted);
       font-size: 0.9rem;
     }
@@ -502,8 +483,7 @@
     }
 
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2.3rem; }
-      .hero-logo-center { width: 100px; height: 100px; }
+      .hero h1 { font-size: 2.1rem; }
       .portfolio-header { flex-direction: column; align-items: flex-start; }
       .services-grid { grid-template-columns: 1fr; }
     }
@@ -511,11 +491,10 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header com a Nova Logo -->
   <header>
     <a href="#" class="brand">
-      <img src="logo.png" alt="Drone Vision Logo" onerror="this.style.display='none'">
-      <div class="brand-title">DRONE<span>VISION</span></div>
+      <img src="logo-banner.png" alt="Drone Vision Logo">
     </a>
     <a href="https://wa.me/5521988545380?text=Olá!%20Gostaria%20de%20um%20orçamento%20de%20filmagens%20aéreas." target="_blank" class="btn btn-whatsapp">
       Falar no WhatsApp
@@ -524,15 +503,16 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <img src="logo.png" alt="Drone Vision" class="hero-logo-center" onerror="this.style.display='none'">
-    
     <div class="hero-badge">
-      ⚡ Captação Aérea de Alta Resolução • 4K HDR
+      ⚡ Captação Aérea Profissional em 4K HDR
     </div>
+
+    <!-- Banner Central em Destaque -->
+    <img src="logo-banner.png" alt="Drone Vision - Imagens Aéreas" class="hero-logo-banner">
     
     <h1>Perspectivas aéreas que <span>valorizam seu negócio</span></h1>
     
-    <p>Produções audiovisuais cinematográficas com drones para hotelaria, mercado imobiliário, vistorias técnicas e campanhas comerciais.</p>
+    <p>Fotos e filmagens aéreas cinematográficas com drones para hotelaria, mercado imobiliário, vistorias técnicas e campanhas comerciais.</p>
     
     <div class="hero-actions">
       <a href="https://wa.me/5521988545380?text=Olá!%20Gostaria%20de%20um%20orçamento%20de%20filmagens%20aéreas." target="_blank" class="btn btn-primary">
@@ -542,19 +522,19 @@
     </div>
   </section>
 
-  <!-- Barra de Destaques / Credenciais -->
+  <!-- Credenciais e Vantagens -->
   <div class="trust-bar">
     <div class="trust-item">
       <h4>4K / 60 FPS</h4>
-      <p>Qualidade ultra nítida e cores cinematográficas</p>
+      <p>Captação ultra nítida e cores cinematográficas</p>
     </div>
     <div class="trust-item">
-      <h4>100% Seguro</h4>
-      <p>Operação técnica conforme normas da ANATEL e DECEA</p>
+      <h4>100% Regulamentado</h4>
+      <p>Voo técnico seguro seguindo ANATEL e DECEA</p>
     </div>
     <div class="trust-item">
-      <h4>Entrega Ágil</h4>
-      <p>Arquivos tratados e prontos para publicação rápida</p>
+      <h4>Entrega Rápida</h4>
+      <p>Arquivos tratados prontos para uso comercial</p>
     </div>
   </div>
 
@@ -562,7 +542,7 @@
   <section class="section-container" id="segmentos">
     <div class="section-title">
       <h2>Segmentos Especializados</h2>
-      <p>Soluções visuais desenhadas para o objetivo de cada mercado</p>
+      <p>Soluções audiovisuais desenhadas para o objetivo de cada mercado</p>
     </div>
 
     <div class="services-grid">
@@ -602,7 +582,7 @@
   <section class="section-container" style="padding-top: 0;">
     <div class="section-title">
       <h2>Como Funciona o Atendimento</h2>
-      <p>Processo simplificado do contato inicial até a entrega dos arquivos</p>
+      <p>Processo descomplicado do planejamento inicial até a entrega final</p>
     </div>
 
     <div class="process-grid">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Fontes Google: Anton (Títulos impactantes) e Space Mono / Inter (Subtítulos e Textos) -->
+  <!-- Google Fonts: Anton (Títulos condensados e imponentes) e Space Mono / Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -21,11 +21,11 @@
             brand: {
               orange: '#f38230',
               orangeHover: '#d96c1d',
-              darkBg: '#0b1622',
-              cardBg: '#0f1f31',
-              borderDark: '#1c2f46',
-              tagBg: '#1e344f',
-              tagText: '#4ea8de'
+              darkBg: '#09131e',
+              cardBg: '#0d1b2a',
+              borderDark: '#1b2d42',
+              tagBg: '#1b324d',
+              tagText: '#58a6ff'
             }
           },
           fontFamily: {
@@ -39,19 +39,16 @@
   </script>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     body {
-      background-color: #0b1622;
+      background-color: #09131e;
       color: #e2e8f0;
     }
   </style>
 </head>
 <body class="font-sans antialiased selection:bg-brand-orange selection:text-white">
 
-  <!-- NAVBAR FIXA -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0b1622]/90 backdrop-blur-md border-b border-brand-borderDark">
+  <!-- NAVBAR TRANSPARENTE / FLUTUANTE -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#09131e]/80 backdrop-blur-md border-b border-brand-borderDark/60">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       
       <!-- LOGO -->
@@ -61,15 +58,15 @@
         </div>
         <div class="flex flex-col">
           <span class="font-impact text-xl tracking-wider text-white uppercase group-hover:text-brand-orange transition">DRONE VISION</span>
-          <span class="font-mono text-[10px] tracking-widest text-slate-400 uppercase">IMAGENS AÉREAS · RIO DE JANEIRO</span>
+          <span class="font-mono text-[9px] tracking-widest text-slate-400 uppercase">IMAGENS AÉREAS · RIO DE JANEIRO</span>
         </div>
       </a>
 
-      <!-- MENU LINKS -->
+      <!-- LINKS DESKTOP -->
       <nav class="hidden md:flex items-center gap-8 font-mono text-xs tracking-wider text-slate-300 uppercase">
-        <a href="#servicos" class="hover:text-brand-orange transition">Serviços</a>
-        <a href="#portfolio" class="hover:text-brand-orange transition">Portfólio</a>
-        <a href="#contato" class="hover:text-brand-orange transition">Contato</a>
+        <a href="#servicos" class="hover:text-brand-orange transition">SERVIÇOS</a>
+        <a href="#portfolio" class="hover:text-brand-orange transition">PORTFÓLIO</a>
+        <a href="#contato" class="hover:text-brand-orange transition">CONTATO</a>
         <a href="https://wa.me/5521988545380" target="_blank" class="bg-brand-orange hover:bg-brand-orangeHover text-slate-950 font-bold px-6 py-2.5 rounded-sm transition tracking-wider">
           WHATSAPP
         </a>
@@ -82,21 +79,24 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="relative min-h-screen flex items-center justify-start pt-28 pb-16 px-6 overflow-hidden">
-    <!-- IMAGEM DE FUNDO COM OVERLAY ESCURO -->
+  <!-- HERO SECTION PANORÂMICA (IDENTICA AO MODELO) -->
+  <section class="relative min-h-screen flex items-center justify-start pt-28 pb-16 px-6 lg:px-20 overflow-hidden">
+    
+    <!-- FOTO AÉREA DE FUNDO COM GRADIENTE SUAVE -->
     <div class="absolute inset-0 z-0">
+      <!-- Substitua a URL abaixo pela sua imagem panorâmica se desejar -->
       <img 
-        src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2000&auto=format&fit=crop" 
-        alt="Drone Vision Background" 
-        class="w-full h-full object-cover object-center brightness-75 scale-105 transform motion-safe:animate-pulse transition duration-1000"
+        src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2400&auto=format&fit=crop" 
+        alt="Panorâmica Aérea Drone Vision" 
+        class="w-full h-full object-cover object-center"
       />
-      <div class="absolute inset-0 bg-gradient-to-r from-[#0b1622] via-[#0b1622]/80 to-transparent"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#0b1622] via-transparent to-[#0b1622]/60"></div>
+      <!-- Gradientes que garantem contraste para o texto sem cobrir a paisagem -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#09131e]/95 via-[#09131e]/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#09131e] via-transparent to-[#09131e]/40"></div>
     </div>
 
     <!-- CONTEÚDO HERO -->
-    <div class="relative z-10 max-w-4xl mx-auto md:mx-0 md:ml-12 lg:ml-24">
+    <div class="relative z-10 max-w-3xl">
       <div class="font-mono text-xs tracking-[0.25em] text-brand-orange uppercase mb-4 font-semibold">
         DRONE VISION — REGISTROS AÉREOS
       </div>
@@ -109,22 +109,23 @@
       </h1>
       
       <p class="text-slate-300 text-base sm:text-lg max-w-xl font-normal leading-relaxed mb-8">
-        Captações cinematográficas para hotelaria, mercado imobiliário, acompanhamento de obras, inspeções técnicas e eventos corporativos no Rio de Janeiro e região.
+        Sobrevoos para hotelaria, mercado imobiliário, obras, inspeções técnicas e propriedades rurais no Rio de Janeiro e Região.
       </p>
 
-      <div class="flex flex-wrap items-center gap-4">
-        <a href="https://wa.me/5521988545380" target="_blank" class="bg-brand-orange hover:bg-brand-orangeHover text-slate-950 font-mono text-xs font-bold uppercase tracking-wider px-7 py-3.5 rounded-sm transition flex items-center gap-2">
+      <div class="flex flex-wrap items-center gap-6">
+        <a href="https://wa.me/5521988545380" target="_blank" class="bg-brand-orange hover:bg-brand-orangeHover text-slate-950 font-mono text-xs font-bold uppercase tracking-wider px-7 py-3.5 rounded-sm transition">
           FALAR NO WHATSAPP
         </a>
-        <a href="#portfolio" class="font-mono text-xs font-bold text-slate-300 hover:text-white uppercase tracking-wider px-5 py-3.5 underline underline-offset-8 transition">
+        <a href="#portfolio" class="font-mono text-xs font-bold text-slate-300 hover:text-white uppercase tracking-wider underline underline-offset-8 transition">
           VER REGISTROS AÉREOS ↓
         </a>
       </div>
     </div>
+
   </section>
 
-  <!-- BASE DE OPERAÇÃO & METADADOS -->
-  <section class="border-t border-b border-brand-borderDark bg-[#09121c] py-14 px-6">
+  <!-- BASE DE OPERAÇÃO -->
+  <section class="border-t border-b border-brand-borderDark bg-[#060e17] py-14 px-6 lg:px-20">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10">
       
       <div class="lg:col-span-7">
@@ -132,10 +133,10 @@
           BASE DE OPERAÇÃO
         </div>
         <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-snug">
-          Um olhar de cima sobre o Rio de Janeiro e região, a serviço de quem precisa valorizar seu espaço.
+          Um olhar de cima sobre o Rio de Janeiro e região, agora a serviço de quem precisa mostrar um lugar por inteiro.
         </h2>
         <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
-          A Drone Vision registra perspectivas aéreas estratégicas em 4K — de pousadas na serra e orla marítima a empreendimentos urbanos, inspeções de engenharia e coberturas. Soluções audiovisuais sob medida para fortalecer a sua autoridade no mercado.
+          A Drone Vision fotografa e filma do ar — de pousadas na serra e orla marítima a loteamentos urbanos, parques e inspeções industriais. Esse repertório virou serviço: imagens aéreas sob medida para hotelaria, imóveis, obras, vistorias e propriedades rurais.
         </p>
       </div>
 
@@ -152,12 +153,12 @@
         </div>
         <div>
           <div class="font-mono text-[10px] tracking-wider text-slate-400 uppercase mb-1">FORMATOS</div>
-          <div class="font-mono text-xs text-white">Foto e vídeo aéreo 4K / RAW</div>
+          <div class="font-mono text-xs text-white">Foto e vídeo aéreo 4K</div>
         </div>
         <div>
-          <div class="font-mono text-[10px] tracking-wider text-slate-400 uppercase mb-1">CONTATO / WHATSAPP</div>
+          <div class="font-mono text-[10px] tracking-wider text-slate-400 uppercase mb-1">CONTATO</div>
           <a href="https://wa.me/5521988545380" target="_blank" class="font-mono text-xs text-white underline underline-offset-4 hover:text-brand-orange transition">
-            (21) 98854-5380
+            WhatsApp (21) 98854-5380
           </a>
         </div>
       </div>
@@ -165,8 +166,8 @@
     </div>
   </section>
 
-  <!-- FRENTES DE ATUAÇÃO (GRID DE SERVIÇOS) -->
-  <section id="servicos" class="py-20 px-6 max-w-7xl mx-auto">
+  <!-- FRENTES DE ATUAÇÃO (GRID ESTRUTURADO 2x3) -->
+  <section id="servicos" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto">
     <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
       FRENTES DE ATUAÇÃO
     </div>
@@ -174,45 +175,42 @@
       ONDE A VISTA AÉREA FAZ DIFERENÇA
     </h2>
     <p class="text-slate-400 text-sm sm:text-base max-w-2xl mb-12">
-      Seis áreas estratégicas onde capturar o conjunto a partir do alto muda a forma de apresentar, acompanhar e valorizar o seu negócio.
+      Seis frentes onde ver o conjunto de cima muda a forma de apresentar, acompanhar ou avaliar um lugar.
     </p>
 
-    <!-- GRID 2x3 COM BORDA ESTRUTURADA -->
+    <!-- TABELA GRID 2x3 -->
     <div class="border border-brand-borderDark divide-y divide-brand-borderDark">
       
       <!-- LINHA 1 -->
       <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-borderDark">
         
-        <!-- CARD 1 -->
-        <div class="p-8 hover:bg-brand-cardBg/40 transition">
+        <div class="p-8 hover:bg-brand-cardBg/50 transition">
           <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">
             HTL
           </span>
           <h3 class="text-lg font-bold text-white mb-3">Hotéis, pousadas e resorts</h3>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            Imagens aéreas que mostram a propriedade por inteiro — piscina, áreas verdes, proximidade com a praia ou montanha —, fortalecendo o material de divulgação e reservas.
+            Imagens aéreas que mostram a propriedade por inteiro — piscina, jardim, praia ou serra ao redor — para fortalecer o material de divulgação de hotelaria e turismo.
           </p>
         </div>
 
-        <!-- CARD 2 -->
-        <div class="p-8 hover:bg-brand-cardBg/40 transition">
+        <div class="p-8 hover:bg-brand-cardBg/50 transition">
           <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">
             IMO
           </span>
           <h3 class="text-lg font-bold text-white mb-3">Mercado imobiliário</h3>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            Registros aéreos de terrenos, condomínios e empreendimentos, revelando localização e entorno em um ângulo que valoriza o imóvel antes mesmo da visita presencial.
+            Registros aéreos de terrenos, condomínios e empreendimentos, mostrando localização e entorno — um ângulo que valoriza o imóvel antes mesmo da visita.
           </p>
         </div>
 
-        <!-- CARD 3 -->
-        <div class="p-8 hover:bg-brand-cardBg/40 transition">
+        <div class="p-8 hover:bg-brand-cardBg/50 transition">
           <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">
             OBR
           </span>
           <h3 class="text-lg font-bold text-white mb-3">Construção civil e acompanhamento de obras</h3>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            Sobrevoos periódicos para documentar o avanço da obra e comparar etapas ao longo do tempo, dando mais visibilidade ao canteiro para investidores e engenheiros.
+            Sobrevoos periódicos para documentar o avanço da obra e comparar etapas ao longo do tempo, dando mais visibilidade ao canteiro para engenheiros e construtoras.
           </p>
         </div>
 
@@ -221,36 +219,33 @@
       <!-- LINHA 2 -->
       <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-borderDark">
         
-        <!-- CARD 4 -->
-        <div class="p-8 hover:bg-brand-cardBg/40 transition">
+        <div class="p-8 hover:bg-brand-cardBg/50 transition">
           <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">
             TEC
           </span>
           <h3 class="text-lg font-bold text-white mb-3">Inspeções técnicas</h3>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            Apoio visual aéreo para vistorias técnicas estruturais, com acesso preciso a pontos altos ou de difícil alcance sem a necessidade de andaimes ou riscos humanos.
+            Apoio visual aéreo para vistorias técnicas, com acesso a pontos altos ou de difícil alcance sem a necessidade de andaimes.
           </p>
         </div>
 
-        <!-- CARD 5 -->
-        <div class="p-8 hover:bg-brand-cardBg/40 transition">
+        <div class="p-8 hover:bg-brand-cardBg/50 transition">
           <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">
             TLH
           </span>
           <h3 class="text-lg font-bold text-white mb-3">Inspeções de telhados e coberturas</h3>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            Imagens de alta resolução de telhas, calhas, rufos e estruturas solares para identificar trincas, vazamentos e desgastes com rapidez e total segurança.
+            Imagens de perto de telhas, calhas, rufos e coberturas metálicas para identificar infiltrações, trincas e desgaste sem que ninguém precise subir no telhado.
           </p>
         </div>
 
-        <!-- CARD 6 -->
-        <div class="p-8 hover:bg-brand-cardBg/40 transition">
+        <div class="p-8 hover:bg-brand-cardBg/50 transition">
           <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">
             RUR
           </span>
           <h3 class="text-lg font-bold text-white mb-3">Propriedades rurais e agronegócio</h3>
           <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            Vista panorâmica de sítios, fazendas, plantações e limites de terreno — uma leitura completa da propriedade rural para gestão e apresentação comercial.
+            Vista aérea de fazendas, plantações, cercas, currais e represas — uma leitura rápida da propriedade rural inteira, útil para gestão e apresentação do imóvel.
           </p>
         </div>
 
@@ -259,8 +254,8 @@
     </div>
   </section>
 
-  <!-- REGISTROS AÉREOS (GALERIA / PORTFÓLIO) -->
-  <section id="portfolio" class="py-20 px-6 max-w-7xl mx-auto border-t border-brand-borderDark">
+  <!-- REGISTROS AÉREOS (PORTFÓLIO) -->
+  <section id="portfolio" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto border-t border-brand-borderDark">
     <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
       REGISTROS AÉREOS
     </div>
@@ -268,13 +263,13 @@
       UM POUCO DO QUE JÁ FOI REGISTRADO DO AR
     </h2>
     <p class="text-slate-400 text-sm sm:text-base max-w-2xl mb-12">
-      Uma seleção de sobrevoos recentes. O portfólio completo com vídeos dinâmicos e fotos em alta resolução está disponível nos nossos canais.
+      Uma seleção de sobrevoos recentes. O portfólio completo, com fotos e vídeos, está no Instagram.
     </p>
 
-    <!-- GRID DE PROJETOS -->
+    <!-- CARDS DE PROJETOS -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       
-      <!-- ITEM 1 -->
+      <!-- CARD 1 -->
       <div class="group flex flex-col">
         <div class="aspect-[4/5] overflow-hidden bg-brand-cardBg border border-brand-borderDark mb-4">
           <img 
@@ -283,14 +278,14 @@
             class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
           />
         </div>
-        <h3 class="text-base font-bold text-white mb-1">Hotelaria & Pousadas — Região Serrana</h3>
+        <h3 class="text-base font-bold text-white mb-1">Hotelaria & Pousadas — Penedo / Serra</h3>
         <div class="flex items-center justify-between font-mono text-xs mt-auto">
           <span class="text-slate-500 uppercase">AGOSTO DE 2026</span>
-          <a href="https://wa.me/5521988545380" target="_blank" class="text-brand-orange hover:underline">Ver projeto ↗</a>
+          <a href="https://wa.me/5521988545380" target="_blank" class="text-brand-orange hover:underline">Ver post ↗</a>
         </div>
       </div>
 
-      <!-- ITEM 2 -->
+      <!-- CARD 2 -->
       <div class="group flex flex-col">
         <div class="aspect-[4/5] overflow-hidden bg-brand-cardBg border border-brand-borderDark mb-4">
           <img 
@@ -299,14 +294,14 @@
             class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
           />
         </div>
-        <h3 class="text-base font-bold text-white mb-1">Acompanhamento Estrutural e Obras</h3>
+        <h3 class="text-base font-bold text-white mb-1">Acompanhamento de Obras & Estruturas</h3>
         <div class="flex items-center justify-between font-mono text-xs mt-auto">
           <span class="text-slate-500 uppercase">JULHO DE 2026</span>
-          <a href="https://wa.me/5521988545380" target="_blank" class="text-brand-orange hover:underline">Ver projeto ↗</a>
+          <a href="https://wa.me/5521988545380" target="_blank" class="text-brand-orange hover:underline">Ver post ↗</a>
         </div>
       </div>
 
-      <!-- ITEM 3 -->
+      <!-- CARD 3 -->
       <div class="group flex flex-col">
         <div class="aspect-[4/5] overflow-hidden bg-brand-cardBg border border-brand-borderDark mb-4">
           <img 
@@ -318,15 +313,15 @@
         <h3 class="text-base font-bold text-white mb-1">Empreendimentos & Residências de Alto Padrão</h3>
         <div class="flex items-center justify-between font-mono text-xs mt-auto">
           <span class="text-slate-500 uppercase">JULHO DE 2026</span>
-          <a href="https://wa.me/5521988545380" target="_blank" class="text-brand-orange hover:underline">Ver projeto ↗</a>
+          <a href="https://wa.me/5521988545380" target="_blank" class="text-brand-orange hover:underline">Ver post ↗</a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- RODAPÉ E CONTATO -->
-  <footer id="contato" class="border-t border-brand-borderDark bg-[#070e17] py-16 px-6">
+  <!-- FOOTER -->
+  <footer id="contato" class="border-t border-brand-borderDark bg-[#060e17] py-16 px-6 lg:px-20">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
       
       <div class="flex items-center gap-3">

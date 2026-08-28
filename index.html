@@ -8,7 +8,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Google Fonts: Anton (Títulos condensados e imponentes) e Space Mono / Inter -->
+  <!-- Google Fonts: Anton e Space Mono / Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -47,8 +47,8 @@
 </head>
 <body class="font-sans antialiased selection:bg-brand-orange selection:text-white">
 
-  <!-- NAVBAR TRANSPARENTE / FLUTUANTE -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-[#09131e]/80 backdrop-blur-md border-b border-brand-borderDark/60">
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-[#09131e]/80 backdrop-blur-md border-b border-brand-borderDark/60">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       
       <!-- LOGO -->
@@ -79,18 +79,16 @@
     </div>
   </header>
 
-  <!-- HERO SECTION PANORÂMICA (IDENTICA AO MODELO) -->
+  <!-- HERO SECTION -->
   <section class="relative min-h-screen flex items-center justify-start pt-28 pb-16 px-6 lg:px-20 overflow-hidden">
     
-    <!-- FOTO AÉREA DE FUNDO COM GRADIENTE SUAVE -->
+    <!-- FOTO AÉREA DE FUNDO -->
     <div class="absolute inset-0 z-0">
-      <!-- Substitua a URL abaixo pela sua imagem panorâmica se desejar -->
       <img 
         src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2400&auto=format&fit=crop" 
         alt="Panorâmica Aérea Drone Vision" 
         class="w-full h-full object-cover object-center"
       />
-      <!-- Gradientes que garantem contraste para o texto sem cobrir a paisagem -->
       <div class="absolute inset-0 bg-gradient-to-r from-[#09131e]/95 via-[#09131e]/60 to-transparent"></div>
       <div class="absolute inset-0 bg-gradient-to-t from-[#09131e] via-transparent to-[#09131e]/40"></div>
     </div>
@@ -166,7 +164,7 @@
     </div>
   </section>
 
-  <!-- FRENTES DE ATUAÇÃO (GRID ESTRUTURADO 2x3) -->
+  <!-- FRENTES DE ATUAÇÃO -->
   <section id="servicos" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto">
     <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
       FRENTES DE ATUAÇÃO
@@ -178,12 +176,10 @@
       Seis frentes onde ver o conjunto de cima muda a forma de apresentar, acompanhar ou avaliar um lugar.
     </p>
 
-    <!-- TABELA GRID 2x3 -->
+    <!-- GRID 2x3 -->
     <div class="border border-brand-borderDark divide-y divide-brand-borderDark">
       
-      <!-- LINHA 1 -->
       <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-borderDark">
-        
         <div class="p-8 hover:bg-brand-cardBg/50 transition">
           <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">
             HTL
@@ -213,12 +209,9 @@
             Sobrevoos periódicos para documentar o avanço da obra e comparar etapas ao longo do tempo, dando mais visibilidade ao canteiro para engenheiros e construtoras.
           </p>
         </div>
-
       </div>
 
-      <!-- LINHA 2 -->
       <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-borderDark">
-        
         <div class="p-8 hover:bg-brand-cardBg/50 transition">
           <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">
             TEC
@@ -248,75 +241,35 @@
             Vista aérea de fazendas, plantações, cercas, currais e represas — uma leitura rápida da propriedade rural inteira, útil para gestão e apresentação do imóvel.
           </p>
         </div>
-
       </div>
 
     </div>
   </section>
 
-  <!-- REGISTROS AÉREOS (PORTFÓLIO) -->
+  <!-- REGISTROS AÉREOS (PORTFÓLIO DINÂMICO) -->
   <section id="portfolio" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto border-t border-brand-borderDark">
-    <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
-      REGISTROS AÉREOS
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div>
+        <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
+          REGISTROS AÉREOS
+        </div>
+        <h2 class="font-impact text-4xl sm:text-6xl tracking-tight text-white uppercase leading-none mb-4">
+          UM POUCO DO QUE JÁ FOI REGISTRADO DO AR
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base max-w-2xl">
+          Uma seleção de sobrevoos recentes. O portfólio completo, com fotos e vídeos, está no Instagram.
+        </p>
+      </div>
+
+      <!-- BOTÃO PARA ABRIR O GERENCIADOR -->
+      <button onclick="openModal()" class="font-mono text-xs bg-brand-cardBg hover:bg-brand-borderDark text-brand-tagText border border-brand-borderDark px-4 py-2.5 rounded-sm transition flex items-center gap-2 self-start md:self-auto">
+        <span>⚙️</span> Adicionar / Remover Fotos
+      </button>
     </div>
-    <h2 class="font-impact text-4xl sm:text-6xl tracking-tight text-white uppercase leading-none mb-4">
-      UM POUCO DO QUE JÁ FOI REGISTRADO DO AR
-    </h2>
-    <p class="text-slate-400 text-sm sm:text-base max-w-2xl mb-12">
-      Uma seleção de sobrevoos recentes. O portfólio completo, com fotos e vídeos, está no Instagram.
-    </p>
 
-    <!-- CARDS DE PROJETOS -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <!-- CARD 1 -->
-      <div class="group flex flex-col">
-        <div class="aspect-[4/5] overflow-hidden bg-brand-cardBg border border-brand-borderDark mb-4">
-          <img 
-            src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop" 
-            alt="Pousadas e Hotelaria" 
-            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-          />
-        </div>
-        <h3 class="text-base font-bold text-white mb-1">Hotelaria & Pousadas — Penedo / Serra</h3>
-        <div class="flex items-center justify-between font-mono text-xs mt-auto">
-          <span class="text-slate-500 uppercase">AGOSTO DE 2026</span>
-          <a href="https://wa.me/5521988545380" target="_blank" class="text-brand-orange hover:underline">Ver post ↗</a>
-        </div>
-      </div>
-
-      <!-- CARD 2 -->
-      <div class="group flex flex-col">
-        <div class="aspect-[4/5] overflow-hidden bg-brand-cardBg border border-brand-borderDark mb-4">
-          <img 
-            src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?q=80&w=800&auto=format&fit=crop" 
-            alt="Acompanhamento de Obras" 
-            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-          />
-        </div>
-        <h3 class="text-base font-bold text-white mb-1">Acompanhamento de Obras & Estruturas</h3>
-        <div class="flex items-center justify-between font-mono text-xs mt-auto">
-          <span class="text-slate-500 uppercase">JULHO DE 2026</span>
-          <a href="https://wa.me/5521988545380" target="_blank" class="text-brand-orange hover:underline">Ver post ↗</a>
-        </div>
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="group flex flex-col">
-        <div class="aspect-[4/5] overflow-hidden bg-brand-cardBg border border-brand-borderDark mb-4">
-          <img 
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" 
-            alt="Mercado Imobiliário" 
-            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-          />
-        </div>
-        <h3 class="text-base font-bold text-white mb-1">Empreendimentos & Residências de Alto Padrão</h3>
-        <div class="flex items-center justify-between font-mono text-xs mt-auto">
-          <span class="text-slate-500 uppercase">JULHO DE 2026</span>
-          <a href="https://wa.me/5521988545380" target="_blank" class="text-brand-orange hover:underline">Ver post ↗</a>
-        </div>
-      </div>
-
+    <!-- CONTAINER DOS CARDS DINÂMICOS -->
+    <div id="portfolio-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Cards serão injetados aqui pelo JavaScript -->
     </div>
   </section>
 
@@ -346,6 +299,262 @@
 
     </div>
   </footer>
+
+  <!-- MODAL / PAINEL ADMINISTRATIVO DE PORTFÓLIO -->
+  <div id="admin-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-[#0c1826] border border-brand-borderDark w-full max-w-2xl max-h-[90vh] flex flex-col rounded-sm overflow-hidden shadow-2xl">
+      
+      <!-- CABEÇALHO DO MODAL -->
+      <div class="px-6 py-4 border-b border-brand-borderDark flex items-center justify-between bg-[#08111c]">
+        <div class="flex items-center gap-2">
+          <span class="text-brand-orange text-lg">⚙️</span>
+          <h3 class="font-impact text-xl text-white uppercase tracking-wide">Gerenciar Fotos do Portfólio</h3>
+        </div>
+        <button onclick="closeModal()" class="text-slate-400 hover:text-white font-mono text-lg">&times;</button>
+      </div>
+
+      <div class="p-6 overflow-y-auto space-y-8">
+        
+        <!-- FORMULÁRIO DE CADASTRO -->
+        <form id="add-photo-form" onsubmit="handleAddPhoto(event)" class="space-y-4 bg-brand-cardBg/40 p-5 border border-brand-borderDark rounded-sm">
+          <div class="font-mono text-xs text-brand-orange font-bold uppercase tracking-wider">
+            + Adicionar Nova Foto
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono text-slate-300 mb-1">Título / Local da Foto *</label>
+            <input type="text" id="photo-title" required placeholder="Ex: Pousada Chiclé — Penedo" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-mono text-slate-300 mb-1">Data / Mês de Referência *</label>
+              <input type="text" id="photo-date" required placeholder="Ex: AGOSTO DE 2026" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-300 mb-1">Link do Post / WhatsApp</label>
+              <input type="url" id="photo-link" placeholder="https://wa.me/5521988545380" value="https://wa.me/5521988545380" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
+            </div>
+          </div>
+
+          <!-- URL DA IMAGEM OU ARQUIVO LOCAL -->
+          <div>
+            <label class="block text-xs font-mono text-slate-300 mb-1">Link da Imagem (URL) ou Enviar Arquivo</label>
+            <input type="text" id="photo-url" placeholder="https://... (ou escolha o arquivo abaixo)" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-orange mb-2" />
+            
+            <input type="file" id="photo-file" accept="image/*" class="w-full text-xs font-mono text-slate-400 file:mr-3 file:py-1.5 file:px-3 file:rounded-sm file:border-0 file:bg-brand-tagBg file:text-brand-tagText hover:file:bg-brand-tagBg/80 file:cursor-pointer cursor-pointer" />
+          </div>
+
+          <button type="submit" class="w-full bg-brand-orange hover:bg-brand-orangeHover text-slate-950 font-mono text-xs font-bold uppercase py-3 rounded-sm transition tracking-wider">
+            Adicionar ao Portfólio
+          </button>
+        </form>
+
+        <!-- LISTA DE FOTOS ATUAIS PARA EXCLUSÃO -->
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <h4 class="font-mono text-xs text-slate-300 uppercase font-bold">Fotos Ativas no Site (<span id="count-photos">0</span>)</h4>
+            <button onclick="restoreDefaults()" type="button" class="text-[11px] font-mono text-slate-400 hover:text-brand-orange underline">
+              Restaurar Padrões
+            </button>
+          </div>
+
+          <div id="admin-photo-list" class="space-y-3">
+            <!-- Lista gerada via JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RODAPÉ DO MODAL -->
+      <div class="px-6 py-3 border-t border-brand-borderDark bg-[#08111c] flex justify-end">
+        <button onclick="closeModal()" class="font-mono text-xs bg-slate-800 hover:bg-slate-700 text-white px-5 py-2 rounded-sm transition">
+          Fechar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SCRIPT DE GERENCIAMENTO DE PORTFÓLIO -->
+  <script>
+    // ITENS PADRÃO INICIAIS
+    const defaultPortfolio = [
+      {
+        id: 1,
+        title: "Hotelaria & Pousadas — Penedo / Serra",
+        date: "AGOSTO DE 2026",
+        image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop",
+        link: "https://wa.me/5521988545380"
+      },
+      {
+        id: 2,
+        title: "Acompanhamento de Obras & Estruturas",
+        date: "JULHO DE 2026",
+        image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?q=80&w=800&auto=format&fit=crop",
+        link: "https://wa.me/5521988545380"
+      },
+      {
+        id: 3,
+        title: "Empreendimentos & Residências de Alto Padrão",
+        date: "JULHO DE 2026",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
+        link: "https://wa.me/5521988545380"
+      }
+    ];
+
+    // CARREGAR DO LOCALSTORAGE OU INICIALIZAR
+    function getPortfolio() {
+      const saved = localStorage.getItem('dronevision_portfolio');
+      if (saved) {
+        try {
+          return JSON.parse(saved);
+        } catch (e) {
+          return defaultPortfolio;
+        }
+      }
+      localStorage.setItem('dronevision_portfolio', JSON.stringify(defaultPortfolio));
+      return defaultPortfolio;
+    }
+
+    function savePortfolio(items) {
+      localStorage.setItem('dronevision_portfolio', JSON.stringify(items));
+      renderGallery();
+      renderAdminList();
+    }
+
+    // RENDERIZAR NA LANDING PAGE
+    function renderGallery() {
+      const items = getPortfolio();
+      const container = document.getElementById('portfolio-container');
+      
+      if (items.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-12 text-center text-slate-500 font-mono text-sm border border-dashed border-brand-borderDark">
+            Nenhuma foto cadastrada no momento. Clique em "Adicionar / Remover Fotos" acima.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = items.map(item => `
+        <div class="group flex flex-col">
+          <div class="aspect-[4/5] overflow-hidden bg-brand-cardBg border border-brand-borderDark mb-4">
+            <img 
+              src="${item.image}" 
+              alt="${item.title}" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              onerror="this.src='https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=800&auto=format&fit=crop'"
+            />
+          </div>
+          <h3 class="text-base font-bold text-white mb-1">${item.title}</h3>
+          <div class="flex items-center justify-between font-mono text-xs mt-auto">
+            <span class="text-slate-500 uppercase">${item.date}</span>
+            <a href="${item.link || 'https://wa.me/5521988545380'}" target="_blank" class="text-brand-orange hover:underline">Ver post ↗</a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // RENDERIZAR NO PAINEL ADMIN
+    function renderAdminList() {
+      const items = getPortfolio();
+      const list = document.getElementById('admin-photo-list');
+      document.getElementById('count-photos').innerText = items.length;
+
+      if (items.length === 0) {
+        list.innerHTML = `<div class="text-slate-500 text-xs font-mono">Nenhum item salvo.</div>`;
+        return;
+      }
+
+      list.innerHTML = items.map(item => `
+        <div class="flex items-center justify-between gap-3 bg-[#08111c] border border-brand-borderDark p-2.5 rounded-sm">
+          <div class="flex items-center gap-3 min-w-0">
+            <img src="${item.image}" alt="${item.title}" class="w-12 h-12 object-cover rounded-sm flex-shrink-0 border border-brand-borderDark" onerror="this.src='https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=200'" />
+            <div class="min-w-0">
+              <div class="text-xs font-bold text-white truncate">${item.title}</div>
+              <div class="text-[10px] font-mono text-slate-400">${item.date}</div>
+            </div>
+          </div>
+          <button onclick="deletePhoto(${item.id})" class="px-3 py-1 bg-red-900/30 hover:bg-red-800 text-red-300 font-mono text-[11px] rounded-sm transition flex-shrink-0 border border-red-800/40">
+            Excluir
+          </button>
+        </div>
+      `).join('');
+    }
+
+    // ADICIONAR FOTO
+    function handleAddPhoto(event) {
+      event.preventDefault();
+      const title = document.getElementById('photo-title').value.trim();
+      const date = document.getElementById('photo-date').value.trim();
+      const link = document.getElementById('photo-link').value.trim();
+      const urlInput = document.getElementById('photo-url').value.trim();
+      const fileInput = document.getElementById('photo-file');
+
+      function saveItemWithImage(imageSource) {
+        const items = getPortfolio();
+        const newItem = {
+          id: Date.now(),
+          title: title,
+          date: date,
+          image: imageSource,
+          link: link || 'https://wa.me/5521988545380'
+        };
+        items.unshift(newItem); // Adiciona no início da galeria
+        savePortfolio(items);
+
+        // Reset formulário
+        document.getElementById('add-photo-form').reset();
+        document.getElementById('photo-link').value = 'https://wa.me/5521988545380';
+      }
+
+      if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          saveItemWithImage(e.target.result);
+        };
+        reader.readAsDataURL(fileInput.files[0]);
+      } else if (urlInput) {
+        saveItemWithImage(urlInput);
+      } else {
+        alert("Por favor, insira uma URL de imagem ou selecione um arquivo.");
+      }
+    }
+
+    // EXCLUIR FOTO
+    function deletePhoto(id) {
+      if (confirm("Tem certeza que deseja remover esta foto do portfólio?")) {
+        let items = getPortfolio();
+        items = items.filter(item => item.id !== id);
+        savePortfolio(items);
+      }
+    }
+
+    // RESTAURAR PADRÕES
+    function restoreDefaults() {
+      if (confirm("Deseja restaurar as fotos padrão de demonstração?")) {
+        savePortfolio(defaultPortfolio);
+      }
+    }
+
+    // CONTROLES DO MODAL
+    function openModal() {
+      document.getElementById('admin-modal').classList.remove('hidden');
+      document.getElementById('admin-modal').classList.add('flex');
+      renderAdminList();
+    }
+
+    function closeModal() {
+      document.getElementById('admin-modal').classList.add('hidden');
+      document.getElementById('admin-modal').classList.remove('flex');
+    }
+
+    // INICIALIZAÇÃO
+    window.addEventListener('DOMContentLoaded', () => {
+      renderGallery();
+    });
+  </script>
 
 </body>
 </html>

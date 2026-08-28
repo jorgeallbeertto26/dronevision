@@ -8,7 +8,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Google Fonts: Anton e Space Mono / Inter -->
+  <!-- Fontes Google: Anton e Space Mono / Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -51,7 +51,6 @@
   <header class="fixed top-0 left-0 right-0 z-40 bg-[#09131e]/80 backdrop-blur-md border-b border-brand-borderDark/60">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       
-      <!-- LOGO -->
       <a href="#" class="flex items-center gap-3 group">
         <div class="w-10 h-10 rounded-full bg-brand-tagBg border border-brand-tagText/30 flex items-center justify-center text-xl">
           🛸
@@ -62,7 +61,6 @@
         </div>
       </a>
 
-      <!-- LINKS DESKTOP -->
       <nav class="hidden md:flex items-center gap-8 font-mono text-xs tracking-wider text-slate-300 uppercase">
         <a href="#servicos" class="hover:text-brand-orange transition">SERVIÇOS</a>
         <a href="#portfolio" class="hover:text-brand-orange transition">PORTFÓLIO</a>
@@ -72,7 +70,6 @@
         </a>
       </nav>
 
-      <!-- BOTÃO MOBILE -->
       <a href="https://wa.me/5521988545380" target="_blank" class="md:hidden bg-brand-orange text-slate-950 font-mono text-xs font-bold px-4 py-2 rounded-sm">
         WHATSAPP
       </a>
@@ -82,7 +79,6 @@
   <!-- HERO SECTION -->
   <section class="relative min-h-screen flex items-center justify-start pt-28 pb-16 px-6 lg:px-20 overflow-hidden">
     
-    <!-- FOTO AÉREA DE FUNDO -->
     <div class="absolute inset-0 z-0">
       <img 
         src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2400&auto=format&fit=crop" 
@@ -93,7 +89,6 @@
       <div class="absolute inset-0 bg-gradient-to-t from-[#09131e] via-transparent to-[#09131e]/40"></div>
     </div>
 
-    <!-- CONTEÚDO HERO -->
     <div class="relative z-10 max-w-3xl">
       <div class="font-mono text-xs tracking-[0.25em] text-brand-orange uppercase mb-4 font-semibold">
         DRONE VISION — REGISTROS AÉREOS
@@ -134,7 +129,7 @@
           Um olhar de cima sobre o Rio de Janeiro e região, agora a serviço de quem precisa mostrar um lugar por inteiro.
         </h2>
         <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
-          A Drone Vision fotografa e filma do ar — de pousadas na serra e orla marítima a loteamentos urbanos, parques e inspeções industriais. Esse repertório virou serviço: imagens aéreas sob medida para hotelaria, imóveis, obras, vistorias e propriedades rurais.
+          A Drone Vision fotografa e filma do ar — de pousadas na serra e orla marítima a loteamentos urbanos, parques e inspeções industriais. Imagens aéreas sob medida para hotelaria, imóveis, obras, vistorias e propriedades rurais.
         </p>
       </div>
 
@@ -176,111 +171,143 @@
       Seis frentes onde ver o conjunto de cima muda a forma de apresentar, acompanhar ou avaliar um lugar.
     </p>
 
-    <!-- GRID 2x3 -->
     <div class="border border-brand-borderDark divide-y divide-brand-borderDark">
       
       <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-borderDark">
         <div class="p-8 hover:bg-brand-cardBg/50 transition">
-          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">
-            HTL
-          </span>
+          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">HTL</span>
           <h3 class="text-lg font-bold text-white mb-3">Hotéis, pousadas e resorts</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            Imagens aéreas que mostram a propriedade por inteiro — piscina, jardim, praia ou serra ao redor — para fortalecer o material de divulgação de hotelaria e turismo.
-          </p>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Imagens aéreas que mostram a propriedade por inteiro para fortalecer o material de divulgação de hotelaria e turismo.</p>
         </div>
 
         <div class="p-8 hover:bg-brand-cardBg/50 transition">
-          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">
-            IMO
-          </span>
+          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">IMO</span>
           <h3 class="text-lg font-bold text-white mb-3">Mercado imobiliário</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            Registros aéreos de terrenos, condomínios e empreendimentos, mostrando localização e entorno — um ângulo que valoriza o imóvel antes mesmo da visita.
-          </p>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Registros aéreos de terrenos, condomínios e empreendimentos, revelando localização e entorno antes mesmo da visita.</p>
         </div>
 
         <div class="p-8 hover:bg-brand-cardBg/50 transition">
-          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">
-            OBR
-          </span>
-          <h3 class="text-lg font-bold text-white mb-3">Construção civil e acompanhamento de obras</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            Sobrevoos periódicos para documentar o avanço da obra e comparar etapas ao longo do tempo, dando mais visibilidade ao canteiro para engenheiros e construtoras.
-          </p>
+          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">OBR</span>
+          <h3 class="text-lg font-bold text-white mb-3">Construção civil e obras</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Sobrevoos periódicos para documentar o avanço da obra e comparar etapas ao longo do tempo.</p>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-borderDark">
         <div class="p-8 hover:bg-brand-cardBg/50 transition">
-          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">
-            TEC
-          </span>
+          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">TEC</span>
           <h3 class="text-lg font-bold text-white mb-3">Inspeções técnicas</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            Apoio visual aéreo para vistorias técnicas, com acesso a pontos altos ou de difícil alcance sem a necessidade de andaimes.
-          </p>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Apoio visual aéreo para vistorias técnicas com acesso a pontos altos sem risco ou necessidade de andaimes.</p>
         </div>
 
         <div class="p-8 hover:bg-brand-cardBg/50 transition">
-          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">
-            TLH
-          </span>
-          <h3 class="text-lg font-bold text-white mb-3">Inspeções de telhados e coberturas</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            Imagens de perto de telhas, calhas, rufos e coberturas metálicas para identificar infiltrações, trincas e desgaste sem que ninguém precise subir no telhado.
-          </p>
+          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">TLH</span>
+          <h3 class="text-lg font-bold text-white mb-3">Telhados e coberturas</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Imagens de perto de telhas, calhas e coberturas solares para identificar trincas e infiltrações com precisão.</p>
         </div>
 
         <div class="p-8 hover:bg-brand-cardBg/50 transition">
-          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">
-            RUR
-          </span>
-          <h3 class="text-lg font-bold text-white mb-3">Propriedades rurais e agronegócio</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            Vista aérea de fazendas, plantações, cercas, currais e represas — uma leitura rápida da propriedade rural inteira, útil para gestão e apresentação do imóvel.
-          </p>
+          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">RUR</span>
+          <h3 class="text-lg font-bold text-white mb-3">Propriedades rurais</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Vista panorâmica de fazendas, cercas e divisas de terreno para gestão territorial e apresentação comercial.</p>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- REGISTROS AÉREOS (PORTFÓLIO DINÂMICO) -->
+  <!-- PORTFÓLIO DINÂMICO (LIMPO PARA O PÚBLICO) -->
   <section id="portfolio" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto border-t border-brand-borderDark">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-      <div>
-        <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
-          REGISTROS AÉREOS
-        </div>
-        <h2 class="font-impact text-4xl sm:text-6xl tracking-tight text-white uppercase leading-none mb-4">
-          UM POUCO DO QUE JÁ FOI REGISTRADO DO AR
-        </h2>
-        <p class="text-slate-400 text-sm sm:text-base max-w-2xl">
-          Uma seleção de sobrevoos recentes. O portfólio completo, com fotos e vídeos, está no Instagram.
-        </p>
+    <div class="mb-12">
+      <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
+        REGISTROS AÉREOS
       </div>
-
-      <!-- BOTÃO PARA ABRIR O GERENCIADOR -->
-      <button onclick="openModal()" class="font-mono text-xs bg-brand-cardBg hover:bg-brand-borderDark text-brand-tagText border border-brand-borderDark px-4 py-2.5 rounded-sm transition flex items-center gap-2 self-start md:self-auto">
-        <span>⚙️</span> Adicionar / Remover Fotos
-      </button>
+      <h2 class="font-impact text-4xl sm:text-6xl tracking-tight text-white uppercase leading-none mb-4">
+        UM POUCO DO QUE JÁ FOI REGISTRADO DO AR
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base max-w-2xl">
+        Uma seleção de sobrevoos recentes. O portfólio completo com vídeos dinâmicos e fotos em alta resolução está disponível nos nossos canais.
+      </p>
     </div>
 
-    <!-- CONTAINER DOS CARDS DINÂMICOS -->
-    <div id="portfolio-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Cards serão injetados aqui pelo JavaScript -->
+    <!-- GRID DINÂMICO -->
+    <div id="portfolio-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </section>
+
+  <!-- PAINEL ADMINISTRATIVO SECRETO (OCULTO POR PADRÃO) -->
+  <section id="secret-admin-panel" class="hidden py-16 px-6 lg:px-20 max-w-7xl mx-auto border-t-2 border-brand-orange bg-[#060e17]">
+    <div class="max-w-4xl mx-auto">
+      
+      <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🔒</span>
+          <div>
+            <h3 class="font-impact text-2xl text-white uppercase tracking-wide">
+              Painel do Administrador (Modo Secreto)
+            </h3>
+            <p class="text-slate-400 font-mono text-xs">Apenas você está visualizando esta área de edição.</p>
+          </div>
+        </div>
+        <button onclick="exitAdmin()" class="font-mono text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-sm transition">
+          Fechar Painel
+        </button>
+      </div>
+
+      <!-- FORMULÁRIO -->
+      <form id="add-photo-form" onsubmit="handleAddPhoto(event)" class="bg-[#0b1622] border border-brand-borderDark p-6 rounded-sm space-y-4 mb-8">
+        <div class="font-mono text-xs text-brand-orange font-bold uppercase tracking-wider">
+          + Inserir Novo Registro no Portfólio
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Título / Identificação do Local *</label>
+          <input type="text" id="photo-title" required placeholder="Ex: Pousada Chiclé — Penedo" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-mono text-slate-300 mb-1">Mês / Ano de Referência *</label>
+            <input type="text" id="photo-date" required placeholder="Ex: AGOSTO DE 2026" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
+          </div>
+          <div>
+            <label class="block text-xs font-mono text-slate-300 mb-1">Link de Destino</label>
+            <input type="url" id="photo-link" placeholder="https://wa.me/5521988545380" value="https://wa.me/5521988545380" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">URL da Imagem ou Selecionar do Arquivo Local *</label>
+          <input type="text" id="photo-url" placeholder="Cole o link da foto (ou selecione abaixo)" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-orange mb-2" />
+          <input type="file" id="photo-file" accept="image/*" class="w-full text-xs font-mono text-slate-400 file:mr-4 file:py-1.5 file:px-3 file:rounded-sm file:border-0 file:bg-brand-tagBg file:text-brand-tagText cursor-pointer" />
+        </div>
+
+        <button type="submit" class="w-full bg-brand-orange hover:bg-brand-orangeHover text-slate-950 font-mono text-xs font-bold uppercase py-3 rounded-sm transition tracking-wider">
+          Publicar Foto no Portfólio
+        </button>
+      </form>
+
+      <!-- LISTA DE REMOÇÃO -->
+      <div>
+        <div class="flex items-center justify-between mb-4">
+          <h4 class="font-mono text-xs text-slate-300 uppercase font-bold">
+            Fotos Publicadas (<span id="count-photos">0</span>)
+          </h4>
+          <button onclick="restoreDefaults()" type="button" class="text-xs font-mono text-slate-400 hover:text-brand-orange underline">
+            Restaurar Demonstração
+          </button>
+        </div>
+
+        <div id="admin-photo-list" class="space-y-3"></div>
+      </div>
+
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer id="contato" class="border-t border-brand-borderDark bg-[#060e17] py-16 px-6 lg:px-20">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-      
       <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-full bg-brand-tagBg flex items-center justify-center text-lg">
-          🛸
-        </div>
+        <div class="w-9 h-9 rounded-full bg-brand-tagBg flex items-center justify-center text-lg">🛸</div>
         <div>
           <div class="font-impact text-lg text-white uppercase tracking-wider">DRONE VISION</div>
           <div class="text-slate-500 text-xs font-mono">Soluções Aéreas & Imagens Corporativas</div>
@@ -296,89 +323,15 @@
       <div class="text-slate-500 font-mono text-[11px]">
         © 2026 Drone Vision. Todos os direitos reservados.
       </div>
-
     </div>
   </footer>
 
-  <!-- MODAL / PAINEL ADMINISTRATIVO DE PORTFÓLIO -->
-  <div id="admin-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="bg-[#0c1826] border border-brand-borderDark w-full max-w-2xl max-h-[90vh] flex flex-col rounded-sm overflow-hidden shadow-2xl">
-      
-      <!-- CABEÇALHO DO MODAL -->
-      <div class="px-6 py-4 border-b border-brand-borderDark flex items-center justify-between bg-[#08111c]">
-        <div class="flex items-center gap-2">
-          <span class="text-brand-orange text-lg">⚙️</span>
-          <h3 class="font-impact text-xl text-white uppercase tracking-wide">Gerenciar Fotos do Portfólio</h3>
-        </div>
-        <button onclick="closeModal()" class="text-slate-400 hover:text-white font-mono text-lg">&times;</button>
-      </div>
-
-      <div class="p-6 overflow-y-auto space-y-8">
-        
-        <!-- FORMULÁRIO DE CADASTRO -->
-        <form id="add-photo-form" onsubmit="handleAddPhoto(event)" class="space-y-4 bg-brand-cardBg/40 p-5 border border-brand-borderDark rounded-sm">
-          <div class="font-mono text-xs text-brand-orange font-bold uppercase tracking-wider">
-            + Adicionar Nova Foto
-          </div>
-
-          <div>
-            <label class="block text-xs font-mono text-slate-300 mb-1">Título / Local da Foto *</label>
-            <input type="text" id="photo-title" required placeholder="Ex: Pousada Chiclé — Penedo" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs font-mono text-slate-300 mb-1">Data / Mês de Referência *</label>
-              <input type="text" id="photo-date" required placeholder="Ex: AGOSTO DE 2026" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
-            </div>
-            <div>
-              <label class="block text-xs font-mono text-slate-300 mb-1">Link do Post / WhatsApp</label>
-              <input type="url" id="photo-link" placeholder="https://wa.me/5521988545380" value="https://wa.me/5521988545380" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
-            </div>
-          </div>
-
-          <!-- URL DA IMAGEM OU ARQUIVO LOCAL -->
-          <div>
-            <label class="block text-xs font-mono text-slate-300 mb-1">Link da Imagem (URL) ou Enviar Arquivo</label>
-            <input type="text" id="photo-url" placeholder="https://... (ou escolha o arquivo abaixo)" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-orange mb-2" />
-            
-            <input type="file" id="photo-file" accept="image/*" class="w-full text-xs font-mono text-slate-400 file:mr-3 file:py-1.5 file:px-3 file:rounded-sm file:border-0 file:bg-brand-tagBg file:text-brand-tagText hover:file:bg-brand-tagBg/80 file:cursor-pointer cursor-pointer" />
-          </div>
-
-          <button type="submit" class="w-full bg-brand-orange hover:bg-brand-orangeHover text-slate-950 font-mono text-xs font-bold uppercase py-3 rounded-sm transition tracking-wider">
-            Adicionar ao Portfólio
-          </button>
-        </form>
-
-        <!-- LISTA DE FOTOS ATUAIS PARA EXCLUSÃO -->
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <h4 class="font-mono text-xs text-slate-300 uppercase font-bold">Fotos Ativas no Site (<span id="count-photos">0</span>)</h4>
-            <button onclick="restoreDefaults()" type="button" class="text-[11px] font-mono text-slate-400 hover:text-brand-orange underline">
-              Restaurar Padrões
-            </button>
-          </div>
-
-          <div id="admin-photo-list" class="space-y-3">
-            <!-- Lista gerada via JS -->
-          </div>
-        </div>
-
-      </div>
-
-      <!-- RODAPÉ DO MODAL -->
-      <div class="px-6 py-3 border-t border-brand-borderDark bg-[#08111c] flex justify-end">
-        <button onclick="closeModal()" class="font-mono text-xs bg-slate-800 hover:bg-slate-700 text-white px-5 py-2 rounded-sm transition">
-          Fechar
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- SCRIPT DE GERENCIAMENTO DE PORTFÓLIO -->
+  <!-- SCRIPT DE GERENCIAMENTO SEGURO -->
   <script>
-    // ITENS PADRÃO INICIAIS
+    // SENHA SECRETA DE ACESSO
+    const ADMIN_PASSWORD = "drone2026";
+
+    // ITENS INICIAIS
     const defaultPortfolio = [
       {
         id: 1,
@@ -403,15 +356,10 @@
       }
     ];
 
-    // CARREGAR DO LOCALSTORAGE OU INICIALIZAR
     function getPortfolio() {
       const saved = localStorage.getItem('dronevision_portfolio');
       if (saved) {
-        try {
-          return JSON.parse(saved);
-        } catch (e) {
-          return defaultPortfolio;
-        }
+        try { return JSON.parse(saved); } catch (e) { return defaultPortfolio; }
       }
       localStorage.setItem('dronevision_portfolio', JSON.stringify(defaultPortfolio));
       return defaultPortfolio;
@@ -423,7 +371,6 @@
       renderAdminList();
     }
 
-    // RENDERIZAR NA LANDING PAGE
     function renderGallery() {
       const items = getPortfolio();
       const container = document.getElementById('portfolio-container');
@@ -431,7 +378,7 @@
       if (items.length === 0) {
         container.innerHTML = `
           <div class="col-span-full py-12 text-center text-slate-500 font-mono text-sm border border-dashed border-brand-borderDark">
-            Nenhuma foto cadastrada no momento. Clique em "Adicionar / Remover Fotos" acima.
+            Nenhuma foto disponível no momento.
           </div>
         `;
         return;
@@ -456,34 +403,32 @@
       `).join('');
     }
 
-    // RENDERIZAR NO PAINEL ADMIN
     function renderAdminList() {
       const items = getPortfolio();
       const list = document.getElementById('admin-photo-list');
       document.getElementById('count-photos').innerText = items.length;
 
       if (items.length === 0) {
-        list.innerHTML = `<div class="text-slate-500 text-xs font-mono">Nenhum item salvo.</div>`;
+        list.innerHTML = `<div class="text-slate-500 text-xs font-mono p-4 border border-brand-borderDark text-center">Nenhuma foto no portfólio.</div>`;
         return;
       }
 
       list.innerHTML = items.map(item => `
-        <div class="flex items-center justify-between gap-3 bg-[#08111c] border border-brand-borderDark p-2.5 rounded-sm">
+        <div class="flex items-center justify-between gap-4 bg-[#0b1622] border border-brand-borderDark p-3 rounded-sm">
           <div class="flex items-center gap-3 min-w-0">
             <img src="${item.image}" alt="${item.title}" class="w-12 h-12 object-cover rounded-sm flex-shrink-0 border border-brand-borderDark" onerror="this.src='https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=200'" />
             <div class="min-w-0">
               <div class="text-xs font-bold text-white truncate">${item.title}</div>
-              <div class="text-[10px] font-mono text-slate-400">${item.date}</div>
+              <div class="text-[11px] font-mono text-slate-400">${item.date}</div>
             </div>
           </div>
-          <button onclick="deletePhoto(${item.id})" class="px-3 py-1 bg-red-900/30 hover:bg-red-800 text-red-300 font-mono text-[11px] rounded-sm transition flex-shrink-0 border border-red-800/40">
+          <button onclick="deletePhoto(${item.id})" class="px-3 py-1 bg-red-900/40 hover:bg-red-800 text-red-300 font-mono text-xs rounded-sm transition border border-red-700/50">
             Excluir
           </button>
         </div>
       `).join('');
     }
 
-    // ADICIONAR FOTO
     function handleAddPhoto(event) {
       event.preventDefault();
       const title = document.getElementById('photo-title').value.trim();
@@ -492,65 +437,75 @@
       const urlInput = document.getElementById('photo-url').value.trim();
       const fileInput = document.getElementById('photo-file');
 
-      function saveItemWithImage(imageSource) {
+      function saveItem(imgSrc) {
         const items = getPortfolio();
-        const newItem = {
+        items.unshift({
           id: Date.now(),
           title: title,
           date: date,
-          image: imageSource,
+          image: imgSrc,
           link: link || 'https://wa.me/5521988545380'
-        };
-        items.unshift(newItem); // Adiciona no início da galeria
+        });
         savePortfolio(items);
-
-        // Reset formulário
         document.getElementById('add-photo-form').reset();
         document.getElementById('photo-link').value = 'https://wa.me/5521988545380';
       }
 
       if (fileInput.files && fileInput.files[0]) {
         const reader = new FileReader();
-        reader.onload = function(e) {
-          saveItemWithImage(e.target.result);
-        };
+        reader.onload = (e) => saveItem(e.target.result);
         reader.readAsDataURL(fileInput.files[0]);
       } else if (urlInput) {
-        saveItemWithImage(urlInput);
+        saveItem(urlInput);
       } else {
-        alert("Por favor, insira uma URL de imagem ou selecione um arquivo.");
+        alert("Insira a URL ou envie o arquivo da foto.");
       }
     }
 
-    // EXCLUIR FOTO
     function deletePhoto(id) {
-      if (confirm("Tem certeza que deseja remover esta foto do portfólio?")) {
-        let items = getPortfolio();
-        items = items.filter(item => item.id !== id);
+      if (confirm("Remover esta imagem do portfólio?")) {
+        let items = getPortfolio().filter(item => item.id !== id);
         savePortfolio(items);
       }
     }
 
-    // RESTAURAR PADRÕES
     function restoreDefaults() {
-      if (confirm("Deseja restaurar as fotos padrão de demonstração?")) {
+      if (confirm("Restaurar as imagens padrão?")) {
         savePortfolio(defaultPortfolio);
       }
     }
 
-    // CONTROLES DO MODAL
-    function openModal() {
-      document.getElementById('admin-modal').classList.remove('hidden');
-      document.getElementById('admin-modal').classList.add('flex');
-      renderAdminList();
+    // CONTROLE DE ACESSO SECRETO
+    function checkAdminAuth() {
+      const pass = prompt("Área Restrita Drone Vision.\nDigite a senha do administrador:");
+      if (pass === ADMIN_PASSWORD) {
+        document.getElementById('secret-admin-panel').classList.remove('hidden');
+        renderAdminList();
+        window.location.hash = '#secret-admin-panel';
+      } else if (pass !== null) {
+        alert("Senha incorreta.");
+      }
     }
 
-    function closeModal() {
-      document.getElementById('admin-modal').classList.add('hidden');
-      document.getElementById('admin-modal').classList.remove('flex');
+    function exitAdmin() {
+      document.getElementById('secret-admin-panel').classList.add('hidden');
+      window.location.hash = '#portfolio';
     }
 
-    // INICIALIZAÇÃO
+    // GATILHO POR URL (?admin=true)
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('admin') === 'true') {
+      checkAdminAuth();
+    }
+
+    // GATILHO POR ATALHO DO TECLADO: Ctrl + Shift + A
+    window.addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+        e.preventDefault();
+        checkAdminAuth();
+      }
+    });
+
     window.addEventListener('DOMContentLoaded', () => {
       renderGallery();
     });

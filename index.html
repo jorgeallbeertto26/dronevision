@@ -136,7 +136,7 @@
       <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-6 border-l border-brand-borderDark/60 lg:pl-10">
         <div>
           <div class="font-mono text-[10px] tracking-wider text-slate-400 uppercase mb-1">PORTFÓLIO</div>
-          <a href="https://instagram.com" target="_blank" class="font-mono text-xs text-white underline underline-offset-4 hover:text-brand-orange transition">
+          <a href="https://instagram.com/dronevision456" target="_blank" class="font-mono text-xs text-white underline underline-offset-4 hover:text-brand-orange transition">
             @dronevision no Instagram
           </a>
         </div>
@@ -226,12 +226,33 @@
         UM POUCO DO QUE JÁ FOI REGISTRADO DO AR
       </h2>
       <p class="text-slate-400 text-sm sm:text-base max-w-2xl">
-        Uma seleção de sobrevoos recentes. O portfólio completo com vídeos dinâmicos e fotos em alta resolução está disponível nos nossos canais.
+        Uma seleção de sobrevoos locais em destaque. 
       </p>
     </div>
 
     <!-- GRID DINÂMICO -->
     <div id="portfolio-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </section>
+
+  <!-- INTEGRAÇÃO COM INSTAGRAM (ELFSIGHT) PADRONIZADA -->
+  <section id="portfolio-instagram" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto border-t border-brand-borderDark text-center">
+    <div class="mb-12">
+      <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
+        PORTFÓLIO AO VIVO
+      </div>
+      <h2 class="font-impact text-4xl sm:text-6xl tracking-tight text-white uppercase leading-none mb-4">
+        CONFIRA NOSSOS VOOS RECENTES
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto">
+        Acompanhe nosso feed e veja a qualidade das captações aéreas da Drone Vision em tempo real.
+      </p>
+    </div>
+
+    <!-- Container do Widget Elfsight -->
+    <div class="rounded-xl overflow-hidden shadow-2xl shadow-black/50 bg-[#060e17] border border-brand-borderDark">
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-dd114066-13df-4586-a819-ec57861ada6b" data-elfsight-app-lazy></div>
+    </div>
   </section>
 
   <!-- PAINEL ADMINISTRATIVO SECRETO (OCULTO POR PADRÃO) -->
@@ -256,7 +277,7 @@
       <!-- FORMULÁRIO -->
       <form id="add-photo-form" onsubmit="handleAddPhoto(event)" class="bg-[#0b1622] border border-brand-borderDark p-6 rounded-sm space-y-4 mb-8">
         <div class="font-mono text-xs text-brand-orange font-bold uppercase tracking-wider">
-          + Inserir Novo Registro no Portfólio
+          + Inserir Novo Registro no Portfólio Local
         </div>
 
         <div>
@@ -282,7 +303,7 @@
         </div>
 
         <button type="submit" class="w-full bg-brand-orange hover:bg-brand-orangeHover text-slate-950 font-mono text-xs font-bold uppercase py-3 rounded-sm transition tracking-wider">
-          Publicar Foto no Portfólio
+          Publicar Foto no Portfólio Local
         </button>
       </form>
 
@@ -290,7 +311,7 @@
       <div>
         <div class="flex items-center justify-between mb-4">
           <h4 class="font-mono text-xs text-slate-300 uppercase font-bold">
-            Fotos Publicadas (<span id="count-photos">0</span>)
+            Fotos Locais Publicadas (<span id="count-photos">0</span>)
           </h4>
           <button onclick="restoreDefaults()" type="button" class="text-xs font-mono text-slate-400 hover:text-brand-orange underline">
             Restaurar Demonstração

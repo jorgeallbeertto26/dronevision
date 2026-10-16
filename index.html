@@ -1,4 +1,223 @@
-<!-- CONSULTORIA EM REGULAÇÃO E HOMOLOGAÇÃO -->
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drone Vision | Imagens Aéreas & Soluções Corporativas</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fontes Google: Anton e Space Mono / Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#f38230',
+              orangeHover: '#d96c1d',
+              darkBg: '#09131e',
+              cardBg: '#0d1b2a',
+              borderDark: '#1b2d42',
+              tagBg: '#1b324d',
+              tagText: '#58a6ff'
+            }
+          },
+          fontFamily: {
+            impact: ['Anton', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #09131e;
+      color: #e2e8f0;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-brand-orange selection:text-white">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-[#09131e]/80 backdrop-blur-md border-b border-brand-borderDark/60">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-brand-tagBg border border-brand-tagText/30 flex items-center justify-center text-xl">
+          🛸
+        </div>
+        <div class="flex flex-col">
+          <span class="font-impact text-xl tracking-wider text-white uppercase group-hover:text-brand-orange transition">DRONE VISION</span>
+          <span class="font-mono text-[9px] tracking-widest text-slate-400 uppercase">IMAGENS AÉREAS · RIO DE JANEIRO</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 font-mono text-xs tracking-wider text-slate-300 uppercase">
+        <a href="#servicos" class="hover:text-brand-orange transition">SERVIÇOS</a>
+        <a href="#consultoria-regulatoria" class="hover:text-brand-orange transition">REGULARIZAÇÃO</a>
+        <a href="#portfolio" class="hover:text-brand-orange transition">PORTFÓLIO</a>
+        <a href="#contato" class="hover:text-brand-orange transition">CONTATO</a>
+        <a href="https://wa.me/5521988545380" target="_blank" class="bg-brand-orange hover:bg-brand-orangeHover text-slate-950 font-bold px-6 py-2.5 rounded-sm transition tracking-wider">
+          WHATSAPP
+        </a>
+      </nav>
+
+      <a href="https://wa.me/5521988545380" target="_blank" class="md:hidden bg-brand-orange text-slate-950 font-mono text-xs font-bold px-4 py-2 rounded-sm">
+        WHATSAPP
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-screen flex items-center justify-start pt-28 pb-16 px-6 lg:px-20 overflow-hidden">
+    
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2400&auto=format&fit=crop" 
+        alt="Panorâmica Aérea Drone Vision" 
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#09131e]/95 via-[#09131e]/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#09131e] via-transparent to-[#09131e]/40"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl">
+      <div class="font-mono text-xs tracking-[0.25em] text-brand-orange uppercase mb-4 font-semibold">
+        DRONE VISION — REGISTROS AÉREOS
+      </div>
+      
+      <h1 class="font-impact text-5xl sm:text-7xl lg:text-8xl tracking-tight text-white uppercase leading-[0.95] mb-6">
+        TODA PROPRIEDADE<br />
+        TEM UM ÂNGULO<br />
+        QUE SÓ EXISTE<br />
+        VISTO DO ALTO
+      </h1>
+      
+      <p class="text-slate-300 text-base sm:text-lg max-w-xl font-normal leading-relaxed mb-8">
+        Sobrevoos para hotelaria, mercado imobiliário, obras, inspeções técnicas e propriedades rurais no Rio de Janeiro e Região.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-6">
+        <a href="https://wa.me/5521988545380" target="_blank" class="bg-brand-orange hover:bg-brand-orangeHover text-slate-950 font-mono text-xs font-bold uppercase tracking-wider px-7 py-3.5 rounded-sm transition">
+          FALAR NO WHATSAPP
+        </a>
+        <a href="#portfolio" class="font-mono text-xs font-bold text-slate-300 hover:text-white uppercase tracking-wider underline underline-offset-8 transition">
+          VER REGISTROS AÉREOS ↓
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- BASE DE OPERAÇÃO -->
+  <section class="border-t border-b border-brand-borderDark bg-[#060e17] py-14 px-6 lg:px-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10">
+      
+      <div class="lg:col-span-7">
+        <div class="font-mono text-[11px] tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
+          BASE DE OPERAÇÃO
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-snug">
+          Um olhar de cima sobre o Rio de Janeiro e região, agora a serviço de quem precisa mostrar um lugar por inteiro.
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          A Drone Vision fotografa e filma do ar — de pousadas na serra e orla marítima a loteamentos urbanos, parques e inspeções industriais. Imagens aéreas sob medida para hotelaria, imóveis, obras, vistorias e propriedades rurais.
+        </p>
+      </div>
+
+      <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-6 border-l border-brand-borderDark/60 lg:pl-10">
+        <div>
+          <div class="font-mono text-[10px] tracking-wider text-slate-400 uppercase mb-1">PORTFÓLIO</div>
+          <a href="https://instagram.com/dronevision456" target="_blank" class="font-mono text-xs text-white underline underline-offset-4 hover:text-brand-orange transition">
+            @dronevision no Instagram
+          </a>
+        </div>
+        <div>
+          <div class="font-mono text-[10px] tracking-wider text-slate-400 uppercase mb-1">ÁREA DE ATUAÇÃO</div>
+          <div class="font-mono text-xs text-white">Rio de Janeiro e Região</div>
+        </div>
+        <div>
+          <div class="font-mono text-[10px] tracking-wider text-slate-400 uppercase mb-1">FORMATOS</div>
+          <div class="font-mono text-xs text-white">Foto e vídeo aéreo 4K</div>
+        </div>
+        <div>
+          <div class="font-mono text-[10px] tracking-wider text-slate-400 uppercase mb-1">CONTATO</div>
+          <a href="https://wa.me/5521988545380" target="_blank" class="font-mono text-xs text-white underline underline-offset-4 hover:text-brand-orange transition">
+            WhatsApp (21) 98854-5380
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FRENTES DE ATUAÇÃO -->
+  <section id="servicos" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto">
+    <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
+      FRENTES DE ATUAÇÃO
+    </div>
+    <h2 class="font-impact text-4xl sm:text-6xl tracking-tight text-white uppercase leading-none mb-4">
+      ONDE A VISTA AÉREA FAZ DIFERENÇA
+    </h2>
+    <p class="text-slate-400 text-sm sm:text-base max-w-2xl mb-12">
+      Seis frentes onde ver o conjunto de cima muda a forma de apresentar, acompanhar ou avaliar um lugar.
+    </p>
+
+    <div class="border border-brand-borderDark divide-y divide-brand-borderDark">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-borderDark">
+        <div class="p-8 hover:bg-brand-cardBg/50 transition">
+          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">HTL</span>
+          <h3 class="text-lg font-bold text-white mb-3">Hotéis, pousadas e resorts</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Imagens aéreas que mostram a propriedade por inteiro para fortalecer o material de divulgação de hotelaria e turismo.</p>
+        </div>
+
+        <div class="p-8 hover:bg-brand-cardBg/50 transition">
+          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">IMO</span>
+          <h3 class="text-lg font-bold text-white mb-3">Mercado imobiliário</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Registros aéreos de terrenos, condomínios e empreendimentos, revelando localização e entorno antes mesmo da visita.</p>
+        </div>
+
+        <div class="p-8 hover:bg-brand-cardBg/50 transition">
+          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">OBR</span>
+          <h3 class="text-lg font-bold text-white mb-3">Construção civil e obras</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Sobrevoos periódicos para documentar o avanço da obra e comparar etapas ao longo do tempo.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-borderDark">
+        <div class="p-8 hover:bg-brand-cardBg/50 transition">
+          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">TEC</span>
+          <h3 class="text-lg font-bold text-white mb-3">Inspeções técnicas</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Apoio visual aéreo para vistorias técnicas com acesso a pontos altos sem risco ou necessidade de andaimes.</p>
+        </div>
+
+        <div class="p-8 hover:bg-brand-cardBg/50 transition">
+          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">TLH</span>
+          <h3 class="text-lg font-bold text-white mb-3">Telhados e coberturas</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Imagens de perto de telhas, calhas e coberturas solares para identificar trincas e infiltrações com precisão.</p>
+        </div>
+
+        <div class="p-8 hover:bg-brand-cardBg/50 transition">
+          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">RUR</span>
+          <h3 class="text-lg font-bold text-white mb-3">Propriedades rurais</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Vista panorâmica de fazendas, cercas e divisas de terreno para gestão territorial e apresentação comercial.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONSULTORIA EM REGULAÇÃO E HOMOLOGAÇÃO -->
   <section id="consultoria-regulatoria" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto border-t border-brand-borderDark">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       
@@ -70,3 +289,322 @@
 
     </div>
   </section>
+
+  <!-- PORTFÓLIO DINÂMICO (LIMPO PARA O PÚBLICO) -->
+  <section id="portfolio" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto border-t border-brand-borderDark">
+    <div class="mb-12">
+      <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
+        REGISTROS AÉREOS
+      </div>
+      <h2 class="font-impact text-4xl sm:text-6xl tracking-tight text-white uppercase leading-none mb-4">
+        UM POUCO DO QUE JÁ FOI REGISTRADO DO AR
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base max-w-2xl">
+        Uma seleção de sobrevoos locais em destaque. 
+      </p>
+    </div>
+
+    <!-- GRID DINÂMICO -->
+    <div id="portfolio-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </section>
+
+  <!-- INTEGRAÇÃO COM INSTAGRAM (ELFSIGHT) PADRONIZADA -->
+  <section id="portfolio-instagram" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto border-t border-brand-borderDark text-center">
+    <div class="mb-12">
+      <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
+        PORTFÓLIO AO VIVO
+      </div>
+      <h2 class="font-impact text-4xl sm:text-6xl tracking-tight text-white uppercase leading-none mb-4">
+        CONFIRA NOSSOS VOOS RECENTES
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto">
+        Acompanhe nosso feed e veja a qualidade das captações aéreas da Drone Vision em tempo real.
+      </p>
+    </div>
+
+    <!-- Container do Widget Elfsight -->
+    <div class="rounded-xl overflow-hidden shadow-2xl shadow-black/50 bg-[#060e17] border border-brand-borderDark">
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-dd114066-13df-4586-a819-ec57861ada6b" data-elfsight-app-lazy></div>
+    </div>
+  </section>
+
+  <!-- PAINEL ADMINISTRATIVO SECRETO (OCULTO POR PADRÃO) -->
+  <section id="secret-admin-panel" class="hidden py-16 px-6 lg:px-20 max-w-7xl mx-auto border-t-2 border-brand-orange bg-[#060e17]">
+    <div class="max-w-4xl mx-auto">
+      
+      <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🔒</span>
+          <div>
+            <h3 class="font-impact text-2xl text-white uppercase tracking-wide">
+              Painel do Administrador (Modo Secreto)
+            </h3>
+            <p class="text-slate-400 font-mono text-xs">Apenas você está visualizando esta área de edição.</p>
+          </div>
+        </div>
+        <button onclick="exitAdmin()" class="font-mono text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-sm transition">
+          Fechar Painel
+        </button>
+      </div>
+
+      <!-- FORMULÁRIO -->
+      <form id="add-photo-form" onsubmit="handleAddPhoto(event)" class="bg-[#0b1622] border border-brand-borderDark p-6 rounded-sm space-y-4 mb-8">
+        <div class="font-mono text-xs text-brand-orange font-bold uppercase tracking-wider">
+          + Inserir Novo Registro no Portfólio Local
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Título / Identificação do Local *</label>
+          <input type="text" id="photo-title" required placeholder="Ex: Pousada Chiclé — Penedo" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-mono text-slate-300 mb-1">Mês / Ano de Referência *</label>
+            <input type="text" id="photo-date" required placeholder="Ex: AGOSTO DE 2026" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
+          </div>
+          <div>
+            <label class="block text-xs font-mono text-slate-300 mb-1">Link de Destino</label>
+            <input type="url" id="photo-link" placeholder="https://wa.me/5521988545380" value="https://wa.me/5521988545380" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">URL da Imagem ou Selecionar do Arquivo Local *</label>
+          <input type="text" id="photo-url" placeholder="Cole o link da foto (ou selecione abaixo)" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-orange mb-2" />
+          <input type="file" id="photo-file" accept="image/*" class="w-full text-xs font-mono text-slate-400 file:mr-4 file:py-1.5 file:px-3 file:rounded-sm file:border-0 file:bg-brand-tagBg file:text-brand-tagText cursor-pointer" />
+        </div>
+
+        <button type="submit" class="w-full bg-brand-orange hover:bg-brand-orangeHover text-slate-950 font-mono text-xs font-bold uppercase py-3 rounded-sm transition tracking-wider">
+          Publicar Foto no Portfólio Local
+        </button>
+      </form>
+
+      <!-- LISTA DE REMOÇÃO -->
+      <div>
+        <div class="flex items-center justify-between mb-4">
+          <h4 class="font-mono text-xs text-slate-300 uppercase font-bold">
+            Fotos Locais Publicadas (<span id="count-photos">0</span>)
+          </h4>
+          <button onclick="restoreDefaults()" type="button" class="text-xs font-mono text-slate-400 hover:text-brand-orange underline">
+            Restaurar Demonstração
+          </button>
+        </div>
+
+        <div id="admin-photo-list" class="space-y-3"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contato" class="border-t border-brand-borderDark bg-[#060e17] py-16 px-6 lg:px-20">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-brand-tagBg flex items-center justify-center text-lg">🛸</div>
+        <div>
+          <div class="font-impact text-lg text-white uppercase tracking-wider">DRONE VISION</div>
+          <div class="text-slate-500 text-xs font-mono">Soluções Aéreas & Imagens Corporativas</div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 font-mono text-xs text-slate-400">
+        <span>✉️ jorge@dronevision.com.br</span>
+        <span>📱 (21) 98854-5380</span>
+        <span>🌐 www.dronevision.com.br</span>
+      </div>
+
+      <div class="text-slate-500 font-mono text-[11px]">
+        © 2026 Drone Vision. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT DE GERENCIAMENTO SEGURO -->
+  <script>
+    // SENHA SECRETA DE ACESSO
+    const ADMIN_PASSWORD = "drone2026";
+
+    // ITENS INICIAIS
+    const defaultPortfolio = [
+      {
+        id: 1,
+        title: "Hotelaria & Pousadas — Penedo / Serra",
+        date: "AGOSTO DE 2026",
+        image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop",
+        link: "https://wa.me/5521988545380"
+      },
+      {
+        id: 2,
+        title: "Acompanhamento de Obras & Estruturas",
+        date: "JULHO DE 2026",
+        image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?q=80&w=800&auto=format&fit=crop",
+        link: "https://wa.me/5521988545380"
+      },
+      {
+        id: 3,
+        title: "Empreendimentos & Residências de Alto Padrão",
+        date: "JULHO DE 2026",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
+        link: "https://wa.me/5521988545380"
+      }
+    ];
+
+    function getPortfolio() {
+      const saved = localStorage.getItem('dronevision_portfolio');
+      if (saved) {
+        try { return JSON.parse(saved); } catch (e) { return defaultPortfolio; }
+      }
+      localStorage.setItem('dronevision_portfolio', JSON.stringify(defaultPortfolio));
+      return defaultPortfolio;
+    }
+
+    function savePortfolio(items) {
+      localStorage.setItem('dronevision_portfolio', JSON.stringify(items));
+      renderGallery();
+      renderAdminList();
+    }
+
+    function renderGallery() {
+      const items = getPortfolio();
+      const container = document.getElementById('portfolio-container');
+      
+      if (items.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-12 text-center text-slate-500 font-mono text-sm border border-dashed border-brand-borderDark">
+            Nenhuma foto disponível no momento.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = items.map(item => `
+        <div class="group flex flex-col">
+          <div class="aspect-[4/5] overflow-hidden bg-brand-cardBg border border-brand-borderDark mb-4">
+            <img 
+              src="${item.image}" 
+              alt="${item.title}" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              onerror="this.src='https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=800&auto=format&fit=crop'"
+            />
+          </div>
+          <h3 class="text-base font-bold text-white mb-1">${item.title}</h3>
+          <div class="flex items-center justify-between font-mono text-xs mt-auto">
+            <span class="text-slate-500 uppercase">${item.date}</span>
+            <a href="${item.link || 'https://wa.me/5521988545380'}" target="_blank" class="text-brand-orange hover:underline">Ver post ↗</a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderAdminList() {
+      const items = getPortfolio();
+      const list = document.getElementById('admin-photo-list');
+      document.getElementById('count-photos').innerText = items.length;
+
+      if (items.length === 0) {
+        list.innerHTML = `<div class="text-slate-500 text-xs font-mono p-4 border border-brand-borderDark text-center">Nenhuma foto no portfólio.</div>`;
+        return;
+      }
+
+      list.innerHTML = items.map(item => `
+        <div class="flex items-center justify-between gap-4 bg-[#0b1622] border border-brand-borderDark p-3 rounded-sm">
+          <div class="flex items-center gap-3 min-w-0">
+            <img src="${item.image}" alt="${item.title}" class="w-12 h-12 object-cover rounded-sm flex-shrink-0 border border-brand-borderDark" onerror="this.src='https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=200'" />
+            <div class="min-w-0">
+              <div class="text-xs font-bold text-white truncate">${item.title}</div>
+              <div class="text-[11px] font-mono text-slate-400">${item.date}</div>
+            </div>
+          </div>
+          <button onclick="deletePhoto(${item.id})" class="px-3 py-1 bg-red-900/40 hover:bg-red-800 text-red-300 font-mono text-xs rounded-sm transition border border-red-700/50">
+            Excluir
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function handleAddPhoto(event) {
+      event.preventDefault();
+      const title = document.getElementById('photo-title').value.trim();
+      const date = document.getElementById('photo-date').value.trim();
+      const link = document.getElementById('photo-link').value.trim();
+      const urlInput = document.getElementById('photo-url').value.trim();
+      const fileInput = document.getElementById('photo-file');
+
+      function saveItem(imgSrc) {
+        const items = getPortfolio();
+        items.unshift({
+          id: Date.now(),
+          title: title,
+          date: date,
+          image: imgSrc,
+          link: link || 'https://wa.me/5521988545380'
+        });
+        savePortfolio(items);
+        document.getElementById('add-photo-form').reset();
+        document.getElementById('photo-link').value = 'https://wa.me/5521988545380';
+      }
+
+      if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = (e) => saveItem(e.target.result);
+        reader.readAsDataURL(fileInput.files[0]);
+      } else if (urlInput) {
+        saveItem(urlInput);
+      } else {
+        alert("Insira a URL ou envie o arquivo da foto.");
+      }
+    }
+
+    function deletePhoto(id) {
+      if (confirm("Remover esta imagem do portfólio?")) {
+        let items = getPortfolio().filter(item => item.id !== id);
+        savePortfolio(items);
+      }
+    }
+
+    function restoreDefaults() {
+      if (confirm("Restaurar as imagens padrão?")) {
+        savePortfolio(defaultPortfolio);
+      }
+    }
+
+    // CONTROLE DE ACESSO SECRETO
+    function checkAdminAuth() {
+      const pass = prompt("Área Restrita Drone Vision.\nDigite a senha do administrador:");
+      if (pass === ADMIN_PASSWORD) {
+        document.getElementById('secret-admin-panel').classList.remove('hidden');
+        renderAdminList();
+        window.location.hash = '#secret-admin-panel';
+      } else if (pass !== null) {
+        alert("Senha incorreta.");
+      }
+    }
+
+    function exitAdmin() {
+      document.getElementById('secret-admin-panel').classList.add('hidden');
+      window.location.hash = '#portfolio';
+    }
+
+    // GATILHO POR URL (?admin=true)
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('admin') === 'true') {
+      checkAdminAuth();
+    }
+
+    // GATILHO POR ATALHO DO TECLADO: Ctrl + Shift + A
+    window.addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+        e.preventDefault();
+        checkAdminAuth();
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderGallery();
+    });
+  </script>
+
+</body>
+</html>

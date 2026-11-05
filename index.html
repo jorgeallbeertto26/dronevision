@@ -53,11 +53,13 @@ nav{display:flex;gap:1.6rem}nav a{text-decoration:none;color:var(--mute);font-we
 .stats ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
 .stats b{display:block;font:800 2.1rem Archivo,sans-serif;font-stretch:125%;color:var(--cyan)}.stats span{color:var(--mute);font-size:.95rem}
 /* segments */
-.seg{margin-top:2.5rem;border-top:1px solid var(--line);padding:0}
-.seg li{list-style:none;display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:1.5rem;padding:1.4rem 0;border-bottom:1px solid var(--line);transition:background .2s,padding .2s}
-.seg li:hover{background:linear-gradient(90deg,rgba(56,182,224,.08),transparent);padding-left:.8rem}
-.seg h3{font-size:1.4rem}.seg p{color:var(--mute)}
-@media(max-width:640px){.seg li{grid-template-columns:1fr;gap:.4rem}}
+.seg{margin-top:2.5rem;padding:0;display:grid;gap:1rem}
+.seg li{list-style:none;position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:1.5rem;align-items:center;padding:2.4rem 1.8rem;min-height:170px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
+.seg li::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--bg) center/cover no-repeat;transition:transform .7s}
+.seg li::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(7,11,20,.95) 0,rgba(7,11,20,.8) 45%,rgba(7,11,20,.35) 100%)}
+.seg li:hover::before{transform:scale(1.05)}
+.seg h3{font-size:1.4rem}.seg p{color:#c3d0de}
+@media(max-width:640px){.seg li{grid-template-columns:1fr;gap:.4rem;padding:1.6rem 1.2rem}.seg li::after{background:linear-gradient(180deg,rgba(7,11,20,.8),rgba(7,11,20,.92))}}
 /* regulation */
 .reg{background:var(--panel);border-block:1px solid var(--line)}
 .reg .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:start}
@@ -73,7 +75,7 @@ nav{display:flex;gap:1.6rem}nav a{text-decoration:none;color:var(--mute);font-we
 .bar{display:flex;gap:.6rem;margin:2rem 0 1.5rem;flex-wrap:wrap;align-items:center}
 .bar button,.bar select{background:transparent;color:var(--mute);border:1px solid var(--line);border-radius:99px;padding:.5rem 1.2rem;font:600 .95rem Manrope,sans-serif;cursor:pointer}
 .bar button[aria-pressed=true]{background:var(--cyan);color:#04141c;border-color:var(--cyan)}
-.bar select{margin-left:auto;background:var(--ink)}
+.bar select{margin-left:auto;background:var(--ink);width:auto;max-width:100%}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.2rem}
 .item{cursor:pointer}
 .item .ph{position:relative;aspect-ratio:4/5;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden}
@@ -183,6 +185,7 @@ input,select{background:var(--ink);border:1px solid var(--line);color:var(--whit
     <select id="catf" aria-label="Filtrar por categoria"><option value="">Todas as categorias</option></select>
   </div>
   <div class="grid" id="grid" aria-live="polite"></div>
+  <div class="cta" style="margin-top:2rem"><a class="btn btn-ghost" id="ig2" href="#" target="_blank" rel="noopener">Veja mais no Instagram</a></div>
 </div></section>
 </main>
 
@@ -190,7 +193,7 @@ input,select{background:var(--ink);border:1px solid var(--line);color:var(--whit
 
 <footer id="contato"><div class="wrap">
   <div><img src="logo.png" alt="Drone Vision"><p>Soluções Aéreas &amp; Imagens Corporativas</p></div>
-  <div><p><b style="color:var(--white)">Contato</b></p><p><a href="https://wa.me/5521966810304" target="_blank" rel="noopener">WhatsApp (21) 96681-0304</a></p><p><a href="mailto:jorge@dronevision.com.br">jorge@dronevision.com.br</a></p><p><a href="https://dronevision.com.br">dronevision.com.br</a></p></div>
+  <div><p><b style="color:var(--white)">Contato</b></p><p><a href="https://wa.me/5521966810304" target="_blank" rel="noopener">WhatsApp (21) 96681-0304</a></p><p><a href="mailto:jorge@dronevision.com.br">jorge@dronevision.com.br</a></p><p><a href="https://dronevision.com.br">dronevision.com.br</a></p><p><a id="ig" href="#" target="_blank" rel="noopener">Instagram</a></p></div>
   <div><p><b style="color:var(--white)">Atendimento</b></p><p>Rio de Janeiro, RJ</p><p>ANAC · ANATEL · DECEA</p></div>
   <div class="copy"><p>© <span id="yr"></span> Drone Vision. Todos os direitos reservados.</p><button type="button" id="adm">Área administrativa</button></div>
 </div></footer>
@@ -205,6 +208,7 @@ input,select{background:var(--ink);border:1px solid var(--line);color:var(--whit
     <div class="two"><label>Título do próximo envio<input id="tt" placeholder="ex.: Pousada em Penedo"></label><label>Categoria<select id="tc"></select></label></div>
     <button class="btn btn-cy" id="send" type="button">Enviar fotos e vídeos</button>
     <p id="msg" role="status"></p>
+    <label style="margin-top:1.2rem">Ou adicionar por link do Cloudinary<input id="lk" placeholder="https://res.cloudinary.com/iwmbn2fr/image/upload/..."></label><button class="btn btn-ghost sm" id="addlk" type="button">Adicionar link</button>
     <h3>2. Gerenciar itens</h3>
     <div id="list"></div>
     <h3>3. Publicar para todos</h3>
@@ -227,10 +231,12 @@ input,select{background:var(--ink);border:1px solid var(--line);color:var(--whit
 /* ===== CONFIGURAÇÃO =====
    cloud/preset: Cloudinary (preset "unsigned"). passHash: SHA-256 da senha do painel
    (digite uma senha no painel, copie o hash que aparecer e cole aqui). */
-const CFG = { cloud: "", preset: "", tag: "dronevision-portfolio", passHash: "" };
+const CFG = { cloud: "", preset: "", tag: "dronevision-portfolio", passHash: "", insta: "dronevision456" };
+const SEGS = [["hotelaria","Hotelaria e pousadas"],["imoveis","Imóveis"],["obras","Obras e estruturas"],["inspecoes","Inspeções técnicas"],["agro","Agronegócio"]];
 const CATS = ["Imagens aéreas","Hotelaria & Pousadas","Imóveis","Obras & Estruturas","Inspeções técnicas","Agronegócio"];
 
 const $ = s => document.querySelector(s);
+["#ig", "#ig2"].forEach((q, k) => { const a = document.querySelector(q); a.href = "https://www.instagram.com/" + CFG.insta + "/"; if (!k) a.textContent = "Instagram @" + CFG.insta });
 const st = { get(k){ try { return localStorage.getItem(k) } catch(e){ return null } }, set(k,v){ try { localStorage.setItem(k,v) } catch(e){} } };
 $("#yr").textContent = new Date().getFullYear();
 const opts = (sel, first) => { sel.innerHTML = (first ? `<option value="">${first}</option>` : "") + CATS.map(c => `<option>${c}</option>`).join("") };
@@ -238,13 +244,20 @@ opts($("#catf"), "Todas as categorias"); opts($("#tc"));
 
 /* ---------- portfólio ---------- */
 let items = [], type = "all", cat = "";
-const opt = (u, t, w = 800) => t === "video" ? u.replace("/upload/", `/upload/so_0,w_${w},f_jpg/`).replace(/\.\w+$/, ".jpg") : u.replace("/upload/", `/upload/f_auto,q_auto,w_${w}/`);
+const opt = (u, t, w = 1200) => t === "video" ? u.replace("/upload/", `/upload/so_0,w_${w},c_limit,q_auto:good,f_jpg/`).replace(/\.\w+$/, ".jpg") : u.replace("/upload/", `/upload/f_auto,q_auto:${w >= 1800 ? "best" : "good"},w_${w},c_limit/`);
 const save = () => st.set("dv2", JSON.stringify(items));
 const fmt = d => d ? new Date(d + "T12:00").toLocaleDateString("pt-BR", { month: "long", year: "numeric" }) : "";
+function paintSegs(){
+  document.querySelectorAll(".seg li").forEach((li, n) => {
+    const it = items.find(i => i.seg === SEGS[n][0] && i.type === "image");
+    li.style.setProperty("--bg", it ? `url("${opt(it.url, "image", 1920)}")` : "none");
+  });
+}
 function render(){
+  paintSegs();
   const g = $("#grid"), list = items.filter(i => (type === "all" || i.type === type) && (!cat || i.cat === cat));
   g.replaceChildren();
-  if (!list.length){ g.innerHTML = '<div class="empty">Nenhuma mídia nesta seleção ainda.</div>'; return }
+  if (!list.length){ g.innerHTML = `<div class="empty">${items.length ? "Nenhuma mídia nesta seleção ainda." : "Estamos atualizando o portfólio. Peça pelo WhatsApp exemplos de trabalhos recentes."}</div>`; return }
   list.forEach(i => {
     const f = document.createElement("figure"); f.className = "item"; f.tabIndex = 0;
     f.innerHTML = `<div class="ph"><img loading="lazy" alt=""><span class="pl" hidden></span></div><h3></h3><small></small>`;
@@ -256,11 +269,11 @@ function render(){
     g.append(f);
   });
   const first = items.find(i => i.type === "image");
-  if (first){ const v = $("#vfimg"); v.src = opt(first.url, "image", 900); v.className = "" }
+  if (first){ const v = $("#vfimg"); v.src = opt(first.url, "image", 1600); v.className = "" }
 }
 function lightbox(i){
   const m = document.createElement(i.type === "video" ? "video" : "img");
-  if (i.type === "video"){ m.src = i.url; m.controls = true; m.autoplay = true; m.playsInline = true } else { m.src = opt(i.url, "image", 1800); m.alt = i.title || "" }
+  if (i.type === "video"){ m.src = i.url; m.controls = true; m.autoplay = true; m.playsInline = true } else { m.src = opt(i.url, "image", 2400); m.alt = i.title || "" }
   $("#lbc").replaceChildren(m); $("#lbt").textContent = [i.title, i.cat].filter(Boolean).join(" · "); $("#lb").showModal();
 }
 $("#lbx").addEventListener("click", () => $("#lb").close());
@@ -299,10 +312,13 @@ function drawList(){
   if (!items.length){ l.innerHTML = '<p class="note">Nenhum item ainda.</p>'; return }
   items.forEach((i, n) => {
     const r = document.createElement("div"); r.className = "row";
-    r.innerHTML = `<img alt=""><div class="f"><input aria-label="Título"><button class="btn btn-ghost sm" type="button">Excluir</button><select aria-label="Categoria"></select></div>`;
+    r.innerHTML = `<img alt=""><div class="f"><input aria-label="Título"><button class="btn btn-ghost sm" type="button">Excluir</button><select aria-label="Categoria"></select><select class="sg" aria-label="Fundo de segmento"></select></div>`;
     r.querySelector("img").src = opt(i.url, i.type, 120);
     const inp = r.querySelector("input"), sel = r.querySelector("select"); opts(sel); sel.value = i.cat; inp.value = i.title || "";
     inp.addEventListener("change", () => { i.title = inp.value; save(); render() });
+    const sg = r.querySelector(".sg"); sg.hidden = i.type === "video";
+    sg.innerHTML = '<option value="">Sem fundo de segmento</option>' + SEGS.map(x => `<option value="${x[0]}">Fundo: ${x[1]}</option>`).join(""); sg.value = i.seg || "";
+    sg.addEventListener("change", () => { items.forEach(x => { if (sg.value && x !== i && x.seg === sg.value) delete x.seg }); if (sg.value) i.seg = sg.value; else delete i.seg; save(); render(); drawList() });
     sel.addEventListener("change", () => { i.cat = sel.value; save(); render() });
     r.querySelector("button").addEventListener("click", () => { items.splice(n, 1); save(); render(); drawList() });
     l.append(r);
@@ -321,6 +337,13 @@ $("#send").addEventListener("click", () => {
       save(); render(); drawList(); msg.textContent = "Enviado e já exibido no portfólio.";
     }
   }).open();
+});
+$("#addlk").addEventListener("click", () => {
+  const u = $("#lk").value.trim();
+  if (!/^https:\/\/res\.cloudinary\.com\/.+\/upload\//.test(u)){ msg.textContent = "Cole uma URL do Cloudinary (res.cloudinary.com/.../upload/...)."; return }
+  if (items.some(x => x.url === u)){ msg.textContent = "Esse link já está na lista."; return }
+  items.unshift({ type: /\/video\/upload\//.test(u) ? "video" : "image", url: u, title: $("#tt").value.trim(), cat: $("#tc").value, date: new Date().toISOString().slice(0, 10) });
+  save(); render(); drawList(); $("#lk").value = ""; msg.textContent = "Adicionado ao portfólio.";
 });
 $("#exp").addEventListener("click", () => {
   const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(items, null, 2)], { type: "application/json" })); a.download = "portfolio.json"; a.click();

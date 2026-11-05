@@ -231,7 +231,7 @@ input,select{background:var(--ink);border:1px solid var(--line);color:var(--whit
 /* ===== CONFIGURAÇÃO =====
    cloud/preset: Cloudinary (preset "unsigned"). passHash: SHA-256 da senha do painel
    (digite uma senha no painel, copie o hash que aparecer e cole aqui). */
-const CFG = { cloud: "", preset: "", tag: "dronevision-portfolio", passHash: "", insta: "dronevision456" };
+const CFG = { cloud: "iwmbn2fr", preset: "", tag: "dronevision-portfolio", passHash: "", insta: "dronevision456" };
 const SEGS = [["hotelaria","Hotelaria e pousadas"],["imoveis","Imóveis"],["obras","Obras e estruturas"],["inspecoes","Inspeções técnicas"],["agro","Agronegócio"]];
 const CATS = ["Imagens aéreas","Hotelaria & Pousadas","Imóveis","Obras & Estruturas","Inspeções técnicas","Agronegócio"];
 
@@ -284,11 +284,23 @@ document.querySelectorAll(".bar button").forEach(b => b.addEventListener("click"
 }));
 $("#catf").addEventListener("change", e => { cat = e.target.value; render() });
 
+async function fromCloud(){
+  const out = [];
+  for (const t of ["image", "video"]){
+    try {
+      const r = await fetch(`https://res.cloudinary.com/${CFG.cloud}/${t}/list/${CFG.tag}.json`);
+      if (!r.ok) continue;
+      (await r.json()).resources.forEach(x => out.push({ type: t, url: `https://res.cloudinary.com/${CFG.cloud}/${t}/upload/v${x.version}/${x.public_id}.${x.format}`, title: "", cat: "Imagens aéreas", date: (x.created_at || "").slice(0, 10) }));
+    } catch(e){}
+  }
+  return out.sort((a, b) => b.date.localeCompare(a.date));
+}
 async function boot(){
   let local = []; try { local = JSON.parse(st.get("dv2") || "[]") } catch(e){}
   if (local.length){ items = local } else {
     try { const r = await fetch("portfolio.json", { cache: "no-cache" }); if (r.ok) items = await r.json() } catch(e){}
   }
+  if (!items.length && CFG.cloud) items = await fromCloud();
   render(); drawList();
 }
 boot();

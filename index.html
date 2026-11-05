@@ -1,610 +1,329 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Drone Vision | Imagens Aéreas & Soluções Corporativas</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Fontes Google: Anton e Space Mono / Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              orange: '#f38230',
-              orangeHover: '#d96c1d',
-              darkBg: '#09131e',
-              cardBg: '#0d1b2a',
-              borderDark: '#1b2d42',
-              tagBg: '#1b324d',
-              tagText: '#58a6ff'
-            }
-          },
-          fontFamily: {
-            impact: ['Anton', 'sans-serif'],
-            mono: ['"Space Mono"', 'monospace'],
-            sans: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    body {
-      background-color: #09131e;
-      color: #e2e8f0;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drone Vision | Filmagens aéreas 4K HDR e consultoria regulatória no Rio de Janeiro</title>
+<meta name="description" content="Imagens e filmagens aéreas com drones 4K HDR para hotelaria, imóveis, obras, inspeções técnicas e agronegócio, com assessoria em ANAC, ANATEL e DECEA. Rio de Janeiro.">
+<meta property="og:title" content="Drone Vision | Filmagens aéreas 4K HDR">
+<meta property="og:description" content="Imagens aéreas 4K HDR e consultoria regulatória (ANAC, ANATEL, DECEA) no Rio de Janeiro.">
+<meta property="og:image" content="logo.png">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,300..900;125,300..900&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#080C16;--panel:#0E1525;--line:#1D2A42;--cyan:#38B6E0;--cyan-d:#1B7FA6;--white:#F4F8FC;--mute:#8DA0B6;--wa:#25D366}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--ink);color:var(--white);font:400 1.0625rem/1.65 Manrope,system-ui,sans-serif;overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+h1,h2,h3{font-family:Archivo,sans-serif;font-stretch:125%;font-weight:800;line-height:1.05;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4.5vw,3.1rem);max-width:18ch}
+.wrap{width:min(1160px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(4rem,9vw,7rem) 0}
+.lead{color:var(--mute);max-width:58ch;margin-top:1rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 1.4rem;border-radius:6px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;font:700 1rem Manrope,sans-serif;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#04210f}
+.btn-ghost{border-color:var(--line);color:var(--white);background:transparent}
+.btn-ghost:hover{border-color:var(--cyan)}
+.btn-cy{background:var(--cyan);color:#04141c}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(8,12,22,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
+header img{height:48px;width:auto}
+nav{display:flex;gap:1.6rem}
+nav a{text-decoration:none;color:var(--mute);font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--white)}
+@media(max-width:820px){nav{display:none}}
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 68px);display:grid;align-items:center;padding:3rem 0;isolation:isolate;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-20%;z-index:-1;background:repeating-radial-gradient(circle at 72% 40%,transparent 0 34px,rgba(56,182,224,.09) 35px 36px),radial-gradient(60% 60% at 72% 40%,rgba(56,182,224,.16),transparent 70%)}
+.hud{position:absolute;inset:1.25rem;pointer-events:none;font:500 .8rem/1 Manrope,sans-serif;color:var(--cyan);letter-spacing:.06em}
+.hud i{position:absolute;width:26px;height:26px;border:2px solid var(--cyan);opacity:.7}
+.hud .tl{top:0;left:0;border-right:0;border-bottom:0}.hud .tr{top:0;right:0;border-left:0;border-bottom:0}
+.hud .bl{bottom:0;left:0;border-right:0;border-top:0}.hud .br{bottom:0;right:0;border-left:0;border-top:0}
+.hud span{position:absolute;padding:.9rem 1.1rem}
+.hud .rec::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:#ff4d4d;margin-right:.5rem;animation:blink 1.2s steps(2) infinite}
+@keyframes blink{50%{opacity:.15}}
+.hero h1{font-size:clamp(2.4rem,7vw,5.2rem);max-width:15ch}
+.hero p{font-size:1.2rem;color:#c3d0de;max-width:50ch;margin:1.5rem 0 2rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+/* stats */
+.stats{border-block:1px solid var(--line);background:var(--panel);padding:2.2rem 0}
+.stats ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+.stats b{display:block;font:800 2.2rem Archivo,sans-serif;font-stretch:125%;color:var(--cyan)}
+.stats span{color:var(--mute);font-size:.95rem}
+/* segments */
+.seg{margin-top:2.5rem;border-top:1px solid var(--line)}
+.seg li{list-style:none;display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:1.5rem;padding:1.4rem 0;border-bottom:1px solid var(--line);transition:background .2s,padding .2s}
+.seg li:hover{background:linear-gradient(90deg,rgba(56,182,224,.08),transparent);padding-left:.8rem}
+.seg h3{font-size:1.4rem}
+.seg p{color:var(--mute)}
+@media(max-width:640px){.seg li{grid-template-columns:1fr;gap:.4rem}}
+/* regulation */
+.reg{background:var(--panel);border-block:1px solid var(--line)}
+.reg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:2.5rem}
+.reg-grid div{border-left:3px solid var(--cyan);padding:.4rem 0 .4rem 1.1rem}
+.reg-grid h3{font-size:1.6rem;margin-bottom:.4rem}
+.reg-grid p{color:var(--mute);font-size:.98rem}
+/* portfolio */
+.filters{display:flex;gap:.6rem;margin:2rem 0 1.5rem;flex-wrap:wrap}
+.filters button{background:transparent;color:var(--mute);border:1px solid var(--line);border-radius:99px;padding:.5rem 1.2rem;font:600 .95rem Manrope,sans-serif;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--cyan);color:#04141c;border-color:var(--cyan)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.item{position:relative;aspect-ratio:16/10;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.item img,.item video{width:100%;height:100%;object-fit:cover}
+.item em{position:absolute;left:.6rem;top:.6rem;background:rgba(8,12,22,.8);color:var(--cyan);font:600 .75rem Manrope,sans-serif;font-style:normal;padding:.2rem .6rem;border-radius:99px;pointer-events:none}
+.empty{grid-column:1/-1;border:1px dashed var(--line);border-radius:8px;padding:3rem 1.5rem;text-align:center;color:var(--mute)}
+/* admin */
+#admin{display:none;background:#0a1220;border-top:1px solid var(--cyan)}
+#admin.on{display:block}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1.5rem 0}
+label{display:grid;gap:.4rem;font-weight:700;font-size:.9rem}
+input{background:var(--ink);border:1px solid var(--line);color:var(--white);border-radius:6px;padding:.7rem .9rem;font:inherit}
+.note{color:var(--mute);font-size:.9rem;max-width:70ch}
+#msg{margin-top:1rem;color:var(--cyan);min-height:1.5em}
+/* footer */
+footer{border-top:1px solid var(--line);padding:3rem 0 2rem}
+footer .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;align-items:start}
+footer img{height:64px;margin-bottom:.8rem}
+footer p,footer a{color:var(--mute);font-size:.95rem;text-decoration:none}
+footer a:hover{color:var(--white)}
+.copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:1.2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+.copy button{background:none;border:0;color:var(--mute);cursor:pointer;font:inherit;font-size:.9rem}
+/* mini drone */
+#mini{position:fixed;left:0;top:0;width:72px;height:44px;z-index:15;pointer-events:none;filter:drop-shadow(0 14px 10px rgba(0,0,0,.55));will-change:transform}
+.rot{transform-box:fill-box;transform-origin:center;animation:spin .12s linear infinite}
+@keyframes spin{to{transform:scaleX(-1)}}
+@media(prefers-reduced-motion:reduce){.rot,.hud .rec::before{animation:none}html{scroll-behavior:auto}.btn{transition:none}}
+</style>
 </head>
-<body class="font-sans antialiased selection:bg-brand-orange selection:text-white">
+<body>
 
-  <!-- NAVBAR -->
-  <header class="fixed top-0 left-0 right-0 z-40 bg-[#09131e]/80 backdrop-blur-md border-b border-brand-borderDark/60">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-full bg-brand-tagBg border border-brand-tagText/30 flex items-center justify-center text-xl">
-          🛸
-        </div>
-        <div class="flex flex-col">
-          <span class="font-impact text-xl tracking-wider text-white uppercase group-hover:text-brand-orange transition">DRONE VISION</span>
-          <span class="font-mono text-[9px] tracking-widest text-slate-400 uppercase">IMAGENS AÉREAS · RIO DE JANEIRO</span>
-        </div>
-      </a>
+<header>
+  <div class="wrap">
+    <a href="#topo" aria-label="Drone Vision, início"><img src="logo.png" alt="Drone Vision"></a>
+    <nav aria-label="Principal">
+      <a href="#segmentos">Segmentos</a><a href="#regulacao">Regulação</a><a href="#portfolio">Portfólio</a><a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/5521966810304?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20de%20filmagem%20a%C3%A9rea." target="_blank" rel="noopener">Pedir orçamento</a>
+  </div>
+</header>
 
-      <nav class="hidden md:flex items-center gap-8 font-mono text-xs tracking-wider text-slate-300 uppercase">
-        <a href="#servicos" class="hover:text-brand-orange transition">SERVIÇOS</a>
-        <a href="#consultoria-regulatoria" class="hover:text-brand-orange transition">REGULARIZAÇÃO</a>
-        <a href="#portfolio" class="hover:text-brand-orange transition">PORTFÓLIO</a>
-        <a href="#contato" class="hover:text-brand-orange transition">CONTATO</a>
-        <a href="https://wa.me/5521966810304" target="_blank" class="bg-brand-orange hover:bg-brand-orangeHover text-slate-950 font-bold px-6 py-2.5 rounded-sm transition tracking-wider">
-          WHATSAPP
-        </a>
-      </nav>
-
-      <a href="https://wa.me/5521966810304" target="_blank" class="md:hidden bg-brand-orange text-slate-950 font-mono text-xs font-bold px-4 py-2 rounded-sm">
-        WHATSAPP
-      </a>
+<main id="topo">
+<section class="hero" style="padding-block:3rem">
+  <div class="hud" aria-hidden="true">
+    <i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i>
+    <span class="rec" style="top:0;left:0">REC &nbsp;4K HDR</span>
+    <span style="top:0;right:0">ALT <b id="alt">120</b> m</span>
+    <span style="bottom:0;left:0">22°54′S 43°12′O</span>
+    <span style="bottom:0;right:0">RIO DE JANEIRO</span>
+  </div>
+  <div class="wrap">
+    <h1>O ângulo que sua obra, seu hotel e sua lavoura ainda não mostraram.</h1>
+    <p>Imagens e filmagens aéreas em 4K HDR, com operação e documentação regulatória resolvidas por quem entende de espaço aéreo.</p>
+    <div class="cta">
+      <a class="btn btn-wa" href="https://wa.me/5521966810304?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20de%20filmagem%20a%C3%A9rea." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <a class="btn btn-ghost" href="#portfolio">Ver portfólio</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- HERO SECTION -->
-  <section class="relative min-h-screen flex items-center justify-start pt-28 pb-16 px-6 lg:px-20 overflow-hidden">
-    
-    <div class="absolute inset-0 z-0">
-      <img 
-        src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2400&auto=format&fit=crop" 
-        alt="Panorâmica Aérea Drone Vision" 
-        class="w-full h-full object-cover object-center"
-      />
-      <div class="absolute inset-0 bg-gradient-to-r from-[#09131e]/95 via-[#09131e]/60 to-transparent"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#09131e] via-transparent to-[#09131e]/40"></div>
+<div class="stats">
+  <div class="wrap"><ul>
+    <li><b>4K HDR</b><span>Imagem com faixa dinâmica ampla, pronta para cinema e web</span></li>
+    <li><b>5 segmentos</b><span>Hotelaria, imóveis, obras, inspeções e agro</span></li>
+    <li><b>3 órgãos</b><span>ANAC, ANATEL e DECEA tratados por nós</span></li>
+    <li><b>RJ</b><span>Base no Rio de Janeiro, atendimento sob consulta em outras regiões</span></li>
+  </ul></div>
+</div>
+
+<section id="segmentos">
+  <div class="wrap">
+    <h2>Quem contrata a Drone Vision</h2>
+    <p class="lead">Cada segmento pede um tipo de imagem diferente. Planejamos o voo para o resultado que você vai usar.</p>
+    <ul class="seg" style="padding:0">
+      <li><h3>Hotelaria</h3><p>Fachada, piscina, orla e estrutura de lazer vistas de cima, para site, OTAs e campanhas.</p></li>
+      <li><h3>Imóveis</h3><p>Terrenos, condomínios e casas com contexto de vizinhança, acesso e vista que a foto de solo não entrega.</p></li>
+      <li><h3>Obras</h3><p>Registro periódico do andamento, comparativo entre etapas e material para relatório de cliente.</p></li>
+      <li><h3>Inspeções técnicas</h3><p>Telhados, fachadas, torres e estruturas de difícil acesso, com imagem nítida e sem andaime.</p></li>
+      <li><h3>Agronegócio</h3><p>Visão geral de áreas de plantio, pastagens e infraestrutura rural, para acompanhamento e divulgação.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section id="regulacao" class="reg">
+  <div class="wrap">
+    <h2>Regulação sem dor de cabeça</h2>
+    <p class="lead">Voar com drone exige regularização. A Drone Vision orienta empresas e pilotos em cada etapa.</p>
+    <div class="reg-grid">
+      <div><h3>ANAC</h3><p>Cadastro da aeronave, requisitos do piloto remoto e enquadramento da operação conforme o tipo de voo.</p></div>
+      <div><h3>ANATEL</h3><p>Homologação dos equipamentos de radiofrequência usados no drone e no controle.</p></div>
+      <div><h3>DECEA</h3><p>Solicitação de acesso ao espaço aéreo e orientação sobre áreas restritas e aeródromos próximos.</p></div>
     </div>
-
-    <div class="relative z-10 max-w-3xl">
-      <div class="font-mono text-xs tracking-[0.25em] text-brand-orange uppercase mb-4 font-semibold">
-        DRONE VISION — REGISTROS AÉREOS
-      </div>
-      
-      <h1 class="font-impact text-5xl sm:text-7xl lg:text-8xl tracking-tight text-white uppercase leading-[0.95] mb-6">
-        TODA PROPRIEDADE<br />
-        TEM UM ÂNGULO<br />
-        QUE SÓ EXISTE<br />
-        VISTO DO ALTO
-      </h1>
-      
-      <p class="text-slate-300 text-base sm:text-lg max-w-xl font-normal leading-relaxed mb-8">
-        Sobrevoos para hotelaria, mercado imobiliário, obras, inspeções técnicas e propriedades rurais no Rio de Janeiro e Região.
-      </p>
-
-      <div class="flex flex-wrap items-center gap-6">
-        <a href="https://wa.me/5521966810304" target="_blank" class="bg-brand-orange hover:bg-brand-orangeHover text-slate-950 font-mono text-xs font-bold uppercase tracking-wider px-7 py-3.5 rounded-sm transition">
-          FALAR NO WHATSAPP
-        </a>
-        <a href="#portfolio" class="font-mono text-xs font-bold text-slate-300 hover:text-white uppercase tracking-wider underline underline-offset-8 transition">
-          VER REGISTROS AÉREOS ↓
-        </a>
-      </div>
+    <div class="cta" style="margin-top:2.5rem">
+      <a class="btn btn-cy" href="https://wa.me/5521966810304?text=Ol%C3%A1!%20Preciso%20de%20assessoria%20regulat%C3%B3ria%20para%20drone." target="_blank" rel="noopener">Pedir assessoria regulatória</a>
     </div>
+  </div>
+</section>
 
-  </section>
-
-  <!-- BASE DE OPERAÇÃO -->
-  <section class="border-t border-b border-brand-borderDark bg-[#060e17] py-14 px-6 lg:px-20">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10">
-      
-      <div class="lg:col-span-7">
-        <div class="font-mono text-[11px] tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
-          BASE DE OPERAÇÃO
-        </div>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4 leading-snug">
-          Um olhar de cima sobre o Rio de Janeiro e região, agora a serviço de quem precisa mostrar um lugar por inteiro.
-        </h2>
-        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
-          A Drone Vision fotografa e filma do ar — de pousadas na serra e orla marítima a loteamentos urbanos, parques e inspeções industriais. Imagens aéreas sob medida para hotelaria, imóveis, obras, vistorias e propriedades rurais.
-        </p>
-      </div>
-
-      <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-6 border-l border-brand-borderDark/60 lg:pl-10">
-        <div>
-          <div class="font-mono text-[10px] tracking-wider text-slate-400 uppercase mb-1">PORTFÓLIO</div>
-          <a href="https://instagram.com/dronevision456" target="_blank" class="font-mono text-xs text-white underline underline-offset-4 hover:text-brand-orange transition">
-            @dronevision no Instagram
-          </a>
-        </div>
-        <div>
-          <div class="font-mono text-[10px] tracking-wider text-slate-400 uppercase mb-1">ÁREA DE ATUAÇÃO</div>
-          <div class="font-mono text-xs text-white">Rio de Janeiro e Região</div>
-        </div>
-        <div>
-          <div class="font-mono text-[10px] tracking-wider text-slate-400 uppercase mb-1">FORMATOS</div>
-          <div class="font-mono text-xs text-white">Foto e vídeo aéreo 4K</div>
-        </div>
-        <div>
-          <div class="font-mono text-[10px] tracking-wider text-slate-400 uppercase mb-1">CONTATO</div>
-          <a href="https://wa.me/5521966810304" target="_blank" class="font-mono text-xs text-white underline underline-offset-4 hover:text-brand-orange transition">
-            WhatsApp (21) 96681-0304
-          </a>
-        </div>
-      </div>
-
+<section id="portfolio">
+  <div class="wrap">
+    <h2>Portfólio</h2>
+    <p class="lead">Fotos e vídeos de trabalhos da Drone Vision.</p>
+    <div class="filters" role="group" aria-label="Filtrar portfólio">
+      <button data-f="all" aria-pressed="true">Todos</button>
+      <button data-f="image" aria-pressed="false">Fotos</button>
+      <button data-f="video" aria-pressed="false">Vídeos</button>
     </div>
-  </section>
+    <div class="grid" id="grid" aria-live="polite"></div>
+  </div>
+</section>
 
-  <!-- FRENTES DE ATUAÇÃO -->
-  <section id="servicos" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto">
-    <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
-      FRENTES DE ATUAÇÃO
+<section id="admin">
+  <div class="wrap">
+    <h2>Painel de upload</h2>
+    <p class="note" style="margin-top:1rem">Envie fotos e vídeos direto do navegador para o Cloudinary. A URL gerada entra no portfólio na hora.</p>
+    <div class="form">
+      <label>Cloud name<input id="cn" autocomplete="off" placeholder="ex.: dronevision"></label>
+      <label>Upload preset (unsigned)<input id="up" autocomplete="off" placeholder="ex.: dronevision_unsigned"></label>
     </div>
-    <h2 class="font-impact text-4xl sm:text-6xl tracking-tight text-white uppercase leading-none mb-4">
-      ONDE A VISTA AÉREA FAZ DIFERENÇA
-    </h2>
-    <p class="text-slate-400 text-sm sm:text-base max-w-2xl mb-12">
-      Seis frentes onde ver o conjunto de cima muda a forma de apresentar, acompanhar ou avaliar um lugar.
-    </p>
-
-    <div class="border border-brand-borderDark divide-y divide-brand-borderDark">
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-borderDark">
-        <div class="p-8 hover:bg-brand-cardBg/50 transition">
-          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">HTL</span>
-          <h3 class="text-lg font-bold text-white mb-3">Hotéis, pousadas e resorts</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Imagens aéreas que mostram a propriedade por inteiro para fortalecer o material de divulgação de hotelaria e turismo.</p>
-        </div>
-
-        <div class="p-8 hover:bg-brand-cardBg/50 transition">
-          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">IMO</span>
-          <h3 class="text-lg font-bold text-white mb-3">Mercado imobiliário</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Registros aéreos de terrenos, condomínios e empreendimentos, revelando localização e entorno antes mesmo da visita.</p>
-        </div>
-
-        <div class="p-8 hover:bg-brand-cardBg/50 transition">
-          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">OBR</span>
-          <h3 class="text-lg font-bold text-white mb-3">Construção civil e obras</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Sobrevoos periódicos para documentar o avanço da obra e comparar etapas ao longo do tempo.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-borderDark">
-        <div class="p-8 hover:bg-brand-cardBg/50 transition">
-          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">TEC</span>
-          <h3 class="text-lg font-bold text-white mb-3">Inspeções técnicas</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Apoio visual aéreo para vistorias técnicas com acesso a pontos altos sem risco ou necessidade de andaimes.</p>
-        </div>
-
-        <div class="p-8 hover:bg-brand-cardBg/50 transition">
-          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">TLH</span>
-          <h3 class="text-lg font-bold text-white mb-3">Telhados e coberturas</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Imagens de perto de telhas, calhas e coberturas solares para identificar trincas e infiltrações com precisão.</p>
-        </div>
-
-        <div class="p-8 hover:bg-brand-cardBg/50 transition">
-          <span class="inline-block px-2 py-0.5 mb-5 bg-brand-tagBg text-brand-tagText font-mono text-[11px] font-bold rounded-sm">RUR</span>
-          <h3 class="text-lg font-bold text-white mb-3">Propriedades rurais</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Vista panorâmica de fazendas, cercas e divisas de terreno para gestão territorial e apresentação comercial.</p>
-        </div>
-      </div>
-
+    <div class="cta">
+      <button class="btn btn-cy" id="send" type="button">Enviar fotos e vídeos</button>
+      <button class="btn btn-ghost" id="clear" type="button">Limpar itens locais</button>
     </div>
-  </section>
+    <p id="msg" role="status"></p>
+  </div>
+</section>
+</main>
 
-  <!-- CONSULTORIA EM REGULAÇÃO E HOMOLOGAÇÃO -->
-  <section id="consultoria-regulatoria" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto border-t border-brand-borderDark">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      
-      <!-- Textos e Benefícios -->
-      <div>
-        <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
-          ASSESSORIA DOCUMENTAL & LEGAL
-        </div>
-        <h2 class="font-impact text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white uppercase leading-none mb-6">
-          REGULAÇÃO E HOMOLOGAÇÃO DE DRONES E PILOTOS
-        </h2>
-        <p class="text-slate-400 text-sm sm:text-base mb-8 leading-relaxed">
-          Voe com segurança e dentro da lei. Oferecemos consultoria completa para a regularização de equipamentos e adequação de pilotos junto aos órgãos reguladores brasileiros.
-        </p>
-        
-        <ul class="space-y-6 font-mono text-xs sm:text-sm text-slate-300">
-          <li class="flex items-start gap-4">
-            <div class="mt-0.5 w-6 h-6 rounded-full bg-brand-tagBg flex items-center justify-center text-brand-tagText flex-shrink-0">✓</div>
-            <div>
-              <strong class="text-white block mb-1 uppercase tracking-wider text-sm">Cadastro de Drone na ANAC</strong>
-              Assessoria no registro do equipamento no SISANT e obtenção da Certidão de Cadastro obrigatória.
-            </div>
-          </li>
-          <li class="flex items-start gap-4">
-            <div class="mt-0.5 w-6 h-6 rounded-full bg-brand-tagBg flex items-center justify-center text-brand-tagText flex-shrink-0">✓</div>
-            <div>
-              <strong class="text-white block mb-1 uppercase tracking-wider text-sm">Homologação ANATEL</strong>
-              Adequação e certificação de radiofrequência para equipamentos (incluindo linhas DJI e montagens personalizadas).
-            </div>
-          </li>
-          <li class="flex items-start gap-4">
-            <div class="mt-0.5 w-6 h-6 rounded-full bg-brand-tagBg flex items-center justify-center text-brand-tagText flex-shrink-0">✓</div>
-            <div>
-              <strong class="text-white block mb-1 uppercase tracking-wider text-sm">Carteira de Piloto & DECEA</strong>
-              Orientação sobre a prova da ANAC, emissão da carteira de piloto, além do uso do SARPAS para solicitação de espaço aéreo.
-            </div>
-          </li>
-        </ul>
+<footer id="contato">
+  <div class="wrap">
+    <div><img src="logo.png" alt="Drone Vision"><p>Imagens e filmagens aéreas 4K HDR e consultoria regulatória.</p></div>
+    <div><p><b style="color:var(--white)">Contato</b></p><p><a href="https://wa.me/5521966810304" target="_blank" rel="noopener">WhatsApp (21) 96681-0304</a></p><p><a href="https://dronevision.com.br">dronevision.com.br</a></p></div>
+    <div><p><b style="color:var(--white)">Atendimento</b></p><p>Rio de Janeiro, RJ</p><p>ANAC · ANATEL · DECEA</p></div>
+    <div class="copy"><p>© <span id="yr"></span> Drone Vision. Todos os direitos reservados.</p><button type="button" id="adm">Área administrativa</button></div>
+  </div>
+</footer>
 
-        <div class="mt-10">
-          <a href="https://wa.me/5521966810304?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20de%20homologação%20e%20regulação%20de%20drones." target="_blank" class="inline-block bg-brand-orange hover:bg-brand-orangeHover text-slate-950 font-mono text-xs font-bold uppercase tracking-wider px-8 py-4 rounded-sm transition">
-            SOLICITAR CONSULTORIA
-          </a>
-        </div>
-      </div>
-      
-      <!-- Card de Destaque lateral -->
-      <div class="relative lg:ml-8 mt-10 lg:mt-0">
-        <!-- Elemento de Sombra Decorativo -->
-        <div class="absolute inset-0 border border-brand-orange/30 transform translate-x-4 translate-y-4 rounded-sm z-0"></div>
-        
-        <div class="relative z-10 bg-brand-cardBg border border-brand-borderDark p-8 sm:p-10 rounded-sm">
-          <div class="flex items-center gap-4 mb-6 pb-6 border-b border-brand-borderDark">
-            <div class="w-12 h-12 rounded-full bg-[#060e17] border border-brand-borderDark flex items-center justify-center text-xl">⚖️</div>
-            <h3 class="font-impact text-2xl text-white uppercase tracking-wide">
-              Por que regularizar?
-            </h3>
-          </div>
-          <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-            A operação de aeronaves não tripuladas sem a devida homologação e cadastro pode resultar em <strong>apreensão do equipamento</strong>, multas severas e responsabilização civil. Garanta que os seus voos comerciais ou recreativos estejam 100% resguardados legalmente.
-          </p>
-          <div class="flex flex-wrap gap-3">
-             <span class="px-3 py-1.5 bg-brand-tagBg border border-brand-tagText/20 text-brand-tagText font-mono text-[10px] font-bold rounded-sm tracking-wider">ANAC</span>
-             <span class="px-3 py-1.5 bg-brand-tagBg border border-brand-tagText/20 text-brand-tagText font-mono text-[10px] font-bold rounded-sm tracking-wider">ANATEL</span>
-             <span class="px-3 py-1.5 bg-brand-tagBg border border-brand-tagText/20 text-brand-tagText font-mono text-[10px] font-bold rounded-sm tracking-wider">DECEA / SARPAS</span>
-          </div>
-        </div>
-      </div>
+<!-- mini drone -->
+<svg id="mini" viewBox="0 0 72 44" aria-hidden="true">
+  <path d="M36 30 L58 44 L14 44Z" fill="#38B6E0" opacity=".12"/>
+  <g stroke="#9fdcf2" stroke-width="2.4" stroke-linecap="round"><path d="M36 20 L12 12M36 20 L60 12"/></g>
+  <ellipse cx="36" cy="21" rx="11" ry="6" fill="#dff3fb"/><ellipse cx="36" cy="19.5" rx="7" ry="3" fill="#38B6E0"/>
+  <circle cx="36" cy="28" r="3.4" fill="#0E1525" stroke="#38B6E0" stroke-width="1.6"/><circle cx="36" cy="28" r="1" fill="#38B6E0"/>
+  <g fill="#38B6E0"><ellipse class="rot" cx="12" cy="9" rx="10" ry="1.6"/><ellipse class="rot" cx="60" cy="9" rx="10" ry="1.6"/></g>
+  <circle cx="12" cy="12" r="2" fill="#dff3fb"/><circle cx="60" cy="12" r="2" fill="#dff3fb"/>
+</svg>
 
-    </div>
-  </section>
+<script src="https://upload-widget.cloudinary.com/global/all.js" async></script>
+<script>
+/* ===== CONFIGURAÇÃO CLOUDINARY =====
+   Preencha aqui (ou no painel, que salva no navegador).
+   Preset deve ser "unsigned". TAG agrupa as mídias do portfólio. */
+const CFG = { cloud: "", preset: "", tag: "dronevision-portfolio" };
 
-  <!-- PORTFÓLIO DINÂMICO (LIMPO PARA O PÚBLICO) -->
-  <section id="portfolio" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto border-t border-brand-borderDark">
-    <div class="mb-12">
-      <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
-        REGISTROS AÉREOS
-      </div>
-      <h2 class="font-impact text-4xl sm:text-6xl tracking-tight text-white uppercase leading-none mb-4">
-        UM POUCO DO QUE JÁ FOI REGISTRADO DO AR
-      </h2>
-      <p class="text-slate-400 text-sm sm:text-base max-w-2xl">
-        Uma seleção de sobrevoos locais em destaque. 
-      </p>
-    </div>
+const $ = s => document.querySelector(s);
+const store = { get(k){ try { return localStorage.getItem(k) } catch(e){ return null } }, set(k,v){ try { localStorage.setItem(k,v) } catch(e){} } };
+$("#yr").textContent = new Date().getFullYear();
 
-    <!-- GRID DINÂMICO -->
-    <div id="portfolio-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-  </section>
+/* ---------- portfólio ---------- */
+let items = [], filter = "all";
+const optimize = (u, t) => u.replace("/upload/", t === "video" ? "/upload/q_auto/" : "/upload/f_auto,q_auto,w_1200/");
+function add(it, save = true){
+  if (items.some(x => x.url === it.url)) return;
+  items.unshift(it);
+  if (save) store.set("dv_items", JSON.stringify(items.slice(0, 60)));
+  render();
+}
+function render(){
+  const g = $("#grid"), list = items.filter(i => filter === "all" || i.type === filter);
+  g.replaceChildren();
+  if (!list.length){
+    const d = document.createElement("div"); d.className = "empty";
+    d.textContent = "Nenhuma mídia por aqui ainda. Os trabalhos enviados aparecem neste espaço.";
+    g.append(d); return;
+  }
+  list.forEach(i => {
+    const f = document.createElement("figure"); f.className = "item";
+    const m = document.createElement(i.type === "video" ? "video" : "img");
+    if (i.type === "video"){ m.src = optimize(i.url, "video"); m.controls = true; m.preload = "metadata"; m.playsInline = true }
+    else { m.src = optimize(i.url, "image"); m.loading = "lazy"; m.alt = "Imagem aérea da Drone Vision" }
+    const b = document.createElement("em"); b.textContent = i.type === "video" ? "Vídeo" : "Foto";
+    f.append(m, b); g.append(f);
+  });
+}
+document.querySelectorAll(".filters button").forEach(b => b.addEventListener("click", () => {
+  filter = b.dataset.f;
+  document.querySelectorAll(".filters button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  render();
+}));
+async function loadRemote(){
+  const cloud = CFG.cloud || store.get("dv_cloud"); if (!cloud) return;
+  for (const type of ["image", "video"]){
+    try {
+      const r = await fetch(`https://res.cloudinary.com/${cloud}/${type}/list/${CFG.tag}.json`);
+      if (!r.ok) continue;
+      (await r.json()).resources.forEach(x => add({ type, url: `https://res.cloudinary.com/${cloud}/${type}/upload/v${x.version}/${x.public_id}.${x.format}` }, false));
+    } catch(e){}
+  }
+}
+try { JSON.parse(store.get("dv_items") || "[]").forEach(i => items.push(i)) } catch(e){}
+render(); loadRemote();
 
-  <!-- INTEGRAÇÃO COM INSTAGRAM (ELFSIGHT) PADRONIZADA -->
-  <section id="portfolio-instagram" class="py-20 px-6 lg:px-20 max-w-7xl mx-auto border-t border-brand-borderDark text-center">
-    <div class="mb-12">
-      <div class="font-mono text-xs tracking-[0.2em] text-brand-orange uppercase font-bold mb-3">
-        PORTFÓLIO AO VIVO
-      </div>
-      <h2 class="font-impact text-4xl sm:text-6xl tracking-tight text-white uppercase leading-none mb-4">
-        CONFIRA NOSSOS VOOS RECENTES
-      </h2>
-      <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto">
-        Acompanhe nosso feed e veja a qualidade das captações aéreas da Drone Vision em tempo real.
-      </p>
-    </div>
-
-    <!-- Container do Widget Elfsight -->
-    <div class="rounded-xl overflow-hidden shadow-2xl shadow-black/50 bg-[#060e17] border border-brand-borderDark">
-        <script src="https://elfsightcdn.com/platform.js" async></script>
-        <div class="elfsight-app-dd114066-13df-4586-a819-ec57861ada6b" data-elfsight-app-lazy></div>
-    </div>
-  </section>
-
-  <!-- PAINEL ADMINISTRATIVO SECRETO (OCULTO POR PADRÃO) -->
-  <section id="secret-admin-panel" class="hidden py-16 px-6 lg:px-20 max-w-7xl mx-auto border-t-2 border-brand-orange bg-[#060e17]">
-    <div class="max-w-4xl mx-auto">
-      
-      <div class="flex items-center justify-between mb-6">
-        <div class="flex items-center gap-3">
-          <span class="text-2xl">🔒</span>
-          <div>
-            <h3 class="font-impact text-2xl text-white uppercase tracking-wide">
-              Painel do Administrador (Modo Secreto)
-            </h3>
-            <p class="text-slate-400 font-mono text-xs">Apenas você está visualizando esta área de edição.</p>
-          </div>
-        </div>
-        <button onclick="exitAdmin()" class="font-mono text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-sm transition">
-          Fechar Painel
-        </button>
-      </div>
-
-      <!-- FORMULÁRIO -->
-      <form id="add-photo-form" onsubmit="handleAddPhoto(event)" class="bg-[#0b1622] border border-brand-borderDark p-6 rounded-sm space-y-4 mb-8">
-        <div class="font-mono text-xs text-brand-orange font-bold uppercase tracking-wider">
-          + Inserir Novo Registro no Portfólio Local
-        </div>
-
-        <div>
-          <label class="block text-xs font-mono text-slate-300 mb-1">Título / Identificação do Local *</label>
-          <input type="text" id="photo-title" required placeholder="Ex: Pousada Chiclé — Penedo" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-mono text-slate-300 mb-1">Mês / Ano de Referência *</label>
-            <input type="text" id="photo-date" required placeholder="Ex: AGOSTO DE 2026" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
-          </div>
-          <div>
-            <label class="block text-xs font-mono text-slate-300 mb-1">Link de Destino</label>
-            <input type="url" id="photo-link" placeholder="https://wa.me/5521966810304" value="https://wa.me/5521966810304" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-orange" />
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-xs font-mono text-slate-300 mb-1">URL da Imagem ou Selecionar do Arquivo Local *</label>
-          <input type="text" id="photo-url" placeholder="Cole o link da foto (ou selecione abaixo)" class="w-full bg-[#060e17] border border-brand-borderDark rounded-sm px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-orange mb-2" />
-          <input type="file" id="photo-file" accept="image/*" class="w-full text-xs font-mono text-slate-400 file:mr-4 file:py-1.5 file:px-3 file:rounded-sm file:border-0 file:bg-brand-tagBg file:text-brand-tagText cursor-pointer" />
-        </div>
-
-        <button type="submit" class="w-full bg-brand-orange hover:bg-brand-orangeHover text-slate-950 font-mono text-xs font-bold uppercase py-3 rounded-sm transition tracking-wider">
-          Publicar Foto no Portfólio Local
-        </button>
-      </form>
-
-      <!-- LISTA DE REMOÇÃO -->
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <h4 class="font-mono text-xs text-slate-300 uppercase font-bold">
-            Fotos Locais Publicadas (<span id="count-photos">0</span>)
-          </h4>
-          <button onclick="restoreDefaults()" type="button" class="text-xs font-mono text-slate-400 hover:text-brand-orange underline">
-            Restaurar Demonstração
-          </button>
-        </div>
-
-        <div id="admin-photo-list" class="space-y-3"></div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer id="contato" class="border-t border-brand-borderDark bg-[#060e17] py-16 px-6 lg:px-20">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-full bg-brand-tagBg flex items-center justify-center text-lg">🛸</div>
-        <div>
-          <div class="font-impact text-lg text-white uppercase tracking-wider">DRONE VISION</div>
-          <div class="text-slate-500 text-xs font-mono">Soluções Aéreas & Imagens Corporativas</div>
-        </div>
-      </div>
-
-      <div class="flex flex-wrap items-center justify-center gap-6 font-mono text-xs text-slate-400">
-        <span>✉️ jorge@dronevision.com.br</span>
-        <span>📱  (21) 96681-0304</span>
-        <span>🌐 www.dronevision.com.br</span>
-      </div>
-
-      <div class="text-slate-500 font-mono text-[11px]">
-        © 2026 Drone Vision. Todos os direitos reservados.
-      </div>
-    </div>
-  </footer>
-
-  <!-- SCRIPT DE GERENCIAMENTO SEGURO -->
-  <script>
-    // SENHA SECRETA DE ACESSO
-    const ADMIN_PASSWORD = "drone2026";
-
-    // ITENS INICIAIS
-    const defaultPortfolio = [
-      {
-        id: 1,
-        title: "Hotelaria & Pousadas — Penedo / Serra",
-        date: "AGOSTO DE 2026",
-        image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop",
-        link: "https://wa.me/5521966810304"
-      },
-      {
-        id: 2,
-        title: "Acompanhamento de Obras & Estruturas",
-        date: "JULHO DE 2026",
-        image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?q=80&w=800&auto=format&fit=crop",
-        link: "https://wa.me/5521966810304"
-      },
-      {
-        id: 3,
-        title: "Empreendimentos & Residências de Alto Padrão",
-        date: "JULHO DE 2026",
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
-        link: "https://wa.me/5521966810304"
-      }
-    ];
-
-    function getPortfolio() {
-      const saved = localStorage.getItem('dronevision_portfolio');
-      if (saved) {
-        try { return JSON.parse(saved); } catch (e) { return defaultPortfolio; }
-      }
-      localStorage.setItem('dronevision_portfolio', JSON.stringify(defaultPortfolio));
-      return defaultPortfolio;
+/* ---------- painel admin ---------- */
+const panel = $("#admin"), msg = $("#msg");
+function openAdmin(){ panel.classList.add("on"); panel.scrollIntoView() }
+$("#adm").addEventListener("click", openAdmin);
+if (location.hash === "#admin") openAdmin();
+$("#cn").value = CFG.cloud || store.get("dv_cloud") || "";
+$("#up").value = CFG.preset || store.get("dv_preset") || "";
+$("#send").addEventListener("click", () => {
+  const cloud = $("#cn").value.trim(), preset = $("#up").value.trim();
+  if (!cloud || !preset){ msg.textContent = "Preencha o Cloud name e o Upload preset para enviar."; return }
+  if (!window.cloudinary){ msg.textContent = "O widget do Cloudinary ainda está carregando. Tente de novo em instantes."; return }
+  store.set("dv_cloud", cloud); store.set("dv_preset", preset);
+  cloudinary.createUploadWidget({
+    cloudName: cloud, uploadPreset: preset, sources: ["local", "camera", "url"],
+    multiple: true, resourceType: "auto", tags: [CFG.tag],
+    clientAllowedFormats: ["jpg", "jpeg", "png", "webp", "mp4", "mov", "webm"],
+    language: "pt", text: { pt: { local: { browse: "Escolher arquivos" } } }
+  }, (err, res) => {
+    if (err){ msg.textContent = "O envio falhou. Confira o Cloud name e se o preset é unsigned."; return }
+    if (res && res.event === "success"){
+      add({ type: res.info.resource_type === "video" ? "video" : "image", url: res.info.secure_url });
+      msg.textContent = "Enviado. A mídia já aparece no portfólio.";
+      document.getElementById("portfolio").scrollIntoView();
     }
+  }).open();
+});
+$("#clear").addEventListener("click", () => { items = []; store.set("dv_items", "[]"); render(); msg.textContent = "Itens locais removidos deste navegador." });
 
-    function savePortfolio(items) {
-      localStorage.setItem('dronevision_portfolio', JSON.stringify(items));
-      renderGallery();
-      renderAdminList();
-    }
+/* ---------- altitude do HUD ---------- */
+let a = 120; setInterval(() => { a += Math.round((Math.random() - .5) * 4); $("#alt").textContent = a }, 1200);
 
-    function renderGallery() {
-      const items = getPortfolio();
-      const container = document.getElementById('portfolio-container');
-      
-      if (items.length === 0) {
-        container.innerHTML = `
-          <div class="col-span-full py-12 text-center text-slate-500 font-mono text-sm border border-dashed border-brand-borderDark">
-            Nenhuma foto disponível no momento.
-          </div>
-        `;
-        return;
-      }
-
-      container.innerHTML = items.map(item => `
-        <div class="group flex flex-col">
-          <div class="aspect-[4/5] overflow-hidden bg-brand-cardBg border border-brand-borderDark mb-4">
-            <img 
-              src="${item.image}" 
-              alt="${item.title}" 
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.src='https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=800&auto=format&fit=crop'"
-            />
-          </div>
-          <h3 class="text-base font-bold text-white mb-1">${item.title}</h3>
-          <div class="flex items-center justify-between font-mono text-xs mt-auto">
-            <span class="text-slate-500 uppercase">${item.date}</span>
-            <a href="${item.link || 'https://wa.me/5521966810304'}" target="_blank" class="text-brand-orange hover:underline">Ver post ↗</a>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    function renderAdminList() {
-      const items = getPortfolio();
-      const list = document.getElementById('admin-photo-list');
-      document.getElementById('count-photos').innerText = items.length;
-
-      if (items.length === 0) {
-        list.innerHTML = `<div class="text-slate-500 text-xs font-mono p-4 border border-brand-borderDark text-center">Nenhuma foto no portfólio.</div>`;
-        return;
-      }
-
-      list.innerHTML = items.map(item => `
-        <div class="flex items-center justify-between gap-4 bg-[#0b1622] border border-brand-borderDark p-3 rounded-sm">
-          <div class="flex items-center gap-3 min-w-0">
-            <img src="${item.image}" alt="${item.title}" class="w-12 h-12 object-cover rounded-sm flex-shrink-0 border border-brand-borderDark" onerror="this.src='https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=200'" />
-            <div class="min-w-0">
-              <div class="text-xs font-bold text-white truncate">${item.title}</div>
-              <div class="text-[11px] font-mono text-slate-400">${item.date}</div>
-            </div>
-          </div>
-          <button onclick="deletePhoto(${item.id})" class="px-3 py-1 bg-red-900/40 hover:bg-red-800 text-red-300 font-mono text-xs rounded-sm transition border border-red-700/50">
-            Excluir
-          </button>
-        </div>
-      `).join('');
-    }
-
-    function handleAddPhoto(event) {
-      event.preventDefault();
-      const title = document.getElementById('photo-title').value.trim();
-      const date = document.getElementById('photo-date').value.trim();
-      const link = document.getElementById('photo-link').value.trim();
-      const urlInput = document.getElementById('photo-url').value.trim();
-      const fileInput = document.getElementById('photo-file');
-
-      function saveItem(imgSrc) {
-        const items = getPortfolio();
-        items.unshift({
-          id: Date.now(),
-          title: title,
-          date: date,
-          image: imgSrc,
-          link: link || 'https://wa.me/5521966810304'
-        });
-        savePortfolio(items);
-        document.getElementById('add-photo-form').reset();
-        document.getElementById('photo-link').value = 'https://wa.me/5521966810304';
-      }
-
-      if (fileInput.files && fileInput.files[0]) {
-        const reader = new FileReader();
-        reader.onload = (e) => saveItem(e.target.result);
-        reader.readAsDataURL(fileInput.files[0]);
-      } else if (urlInput) {
-        saveItem(urlInput);
-      } else {
-        alert("Insira a URL ou envie o arquivo da foto.");
-      }
-    }
-
-    function deletePhoto(id) {
-      if (confirm("Remover esta imagem do portfólio?")) {
-        let items = getPortfolio().filter(item => item.id !== id);
-        savePortfolio(items);
-      }
-    }
-
-    function restoreDefaults() {
-      if (confirm("Restaurar as imagens padrão?")) {
-        savePortfolio(defaultPortfolio);
-      }
-    }
-
-    // CONTROLE DE ACESSO SECRETO
-    function checkAdminAuth() {
-      const pass = prompt("Área Restrita Drone Vision.\nDigite a senha do administrador:");
-      if (pass === ADMIN_PASSWORD) {
-        document.getElementById('secret-admin-panel').classList.remove('hidden');
-        renderAdminList();
-        window.location.hash = '#secret-admin-panel';
-      } else if (pass !== null) {
-        alert("Senha incorreta.");
-      }
-    }
-
-    function exitAdmin() {
-      document.getElementById('secret-admin-panel').classList.add('hidden');
-      window.location.hash = '#portfolio';
-    }
-
-    // GATILHO POR URL (?admin=true)
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('admin') === 'true') {
-      checkAdminAuth();
-    }
-
-    // GATILHO POR ATALHO DO TECLADO: Ctrl + Shift + A
-    window.addEventListener('keydown', (e) => {
-      if (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
-        e.preventDefault();
-        checkAdminAuth();
-      }
-    });
-
-    window.addEventListener('DOMContentLoaded', () => {
-      renderGallery();
-    });
-  </script>
-
+/* ---------- mini drone ---------- */
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const dr = $("#mini");
+if (reduce){ dr.style.display = "none" }
+else {
+  let x = innerWidth * .6, y = 140, vx = 0, mx = null, my = null, last = 0;
+  addEventListener("pointermove", e => { mx = e.clientX; my = e.clientY }, { passive: true });
+  (function loop(t){
+    const w = innerWidth, h = innerHeight;
+    // rota própria (lemniscata suave) com atração leve pelo cursor
+    let tx = w * (.5 + .38 * Math.sin(t / 5200)), ty = h * (.32 + .2 * Math.sin(t / 2600)) + 30 * Math.sin(t / 900);
+    if (mx !== null){ tx = tx * .55 + (mx + 70) * .45; ty = ty * .55 + (my - 60) * .45 }
+    const px = x; x += (tx - x) * .02; y += (ty - y) * .02; vx = x - px;
+    const bob = 4 * Math.sin(t / 260);
+    dr.style.transform = `translate(${x - 36}px,${y - 22 + bob}px) rotate(${Math.max(-16, Math.min(16, vx * 5))}deg)`;
+    requestAnimationFrame(loop);
+  })(0);
+}
+</script>
 </body>
 </html>

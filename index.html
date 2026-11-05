@@ -311,6 +311,7 @@ const sha = async s => [...new Uint8Array(await crypto.subtle.digest("SHA-256", 
 const show = on => { panel.classList.toggle("on", on); panel.setAttribute("aria-hidden", !on) };
 $("#adm").addEventListener("click", () => show(true)); $("#pc").addEventListener("click", () => show(false));
 if (location.hash === "#admin") show(true);
+addEventListener("hashchange", () => { if (location.hash === "#admin") show(true) });
 addEventListener("keydown", e => { if (e.key === "Escape") show(false) });
 $("#lock").addEventListener("submit", async e => {
   e.preventDefault(); const h = await sha($("#pw").value), lm = $("#lmsg");

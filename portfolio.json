@@ -1,6 +1,14 @@
 [
   {
     "type": "video",
+    "url": "/assets/video/academia-perfect-body-vertical.mp4",
+    "thumb": "/assets/video/academia-perfect-body-vertical-poster.jpg",
+    "title": "Academia Perfect Body CT, vídeo vertical para redes",
+    "cat": "Imagens aéreas",
+    "date": "2026-11-04"
+  },
+  {
+    "type": "video",
     "url": "/assets/video/inspecao-telhado-solar.mp4",
     "thumb": "/assets/video/inspecao-telhado-solar-poster.jpg",
     "title": "Inspeção de telhado com placas solares (vídeo)",

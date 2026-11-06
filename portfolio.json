@@ -1,0 +1,58 @@
+[
+  {
+    "type": "video",
+    "url": "/assets/video/inspecao-telhado-solar.mp4",
+    "thumb": "/assets/video/inspecao-telhado-solar-poster.jpg",
+    "title": "Inspeção de telhado com placas solares (vídeo)",
+    "cat": "Inspeções técnicas",
+    "date": "2026-05-28"
+  },
+  {
+    "type": "image",
+    "url": "/assets/img/inspecao-telhado-solar-01-1920.webp",
+    "thumb": "/assets/img/inspecao-telhado-solar-01-960.webp",
+    "title": "Telhado e módulos fotovoltaicos vistos de cima",
+    "cat": "Inspeções técnicas",
+    "date": "2026-05-28"
+  },
+  {
+    "type": "image",
+    "url": "/assets/img/inspecao-telhado-solar-02-1920.webp",
+    "thumb": "/assets/img/inspecao-telhado-solar-02-960.webp",
+    "title": "Detalhe da cumeeira e das placas solares",
+    "cat": "Obras & Estruturas",
+    "date": "2026-05-28"
+  },
+  {
+    "type": "image",
+    "url": "/assets/img/inspecao-telhado-solar-03-1920.webp",
+    "thumb": "/assets/img/inspecao-telhado-solar-03-960.webp",
+    "title": "Estado das telhas e fixação dos módulos",
+    "cat": "Inspeções técnicas",
+    "date": "2026-05-28"
+  },
+  {
+    "type": "image",
+    "url": "/assets/img/cidade-noite-aerea-01-1920.webp",
+    "thumb": "/assets/img/cidade-noite-aerea-01-960.webp",
+    "title": "Cidade à noite, vista aérea",
+    "cat": "Imagens aéreas",
+    "date": "2026-05-25"
+  },
+  {
+    "type": "image",
+    "url": "/assets/img/cidade-noite-aerea-02-1920.webp",
+    "thumb": "/assets/img/cidade-noite-aerea-02-960.webp",
+    "title": "Avenida iluminada e bairros vistos do alto",
+    "cat": "Imagens aéreas",
+    "date": "2026-05-25"
+  },
+  {
+    "type": "video",
+    "url": "/assets/video/cidade-noite-aerea.mp4",
+    "thumb": "/assets/video/cidade-noite-aerea-poster.jpg",
+    "title": "Sobrevoo noturno da cidade (vídeo)",
+    "cat": "Imagens aéreas",
+    "date": "2026-05-25"
+  }
+]

@@ -3,220 +3,112 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Drone Vision | Filmagens aéreas 4K HDR e regularização de drones no Rio de Janeiro</title>
-<meta name="description" content="Imagens e filmagens aéreas 4K HDR para hotelaria, imóveis, obras, inspeções e agro, com assessoria em ANAC, ANATEL e DECEA. Rio de Janeiro.">
-<meta property="og:title" content="Drone Vision | Soluções Aéreas & Imagens Corporativas">
-<meta property="og:image" content="logo.png">
-<link rel="icon" href="logo.png">
+<title>Drone Vision | Filmagem aérea com drone 4K HDR no Rio de Janeiro</title>
+<meta name="description" content="Fotos e filmagens aéreas com drone em 4K HDR para hotelaria, imóveis, obras, inspeções e agro no Rio de Janeiro, com assessoria em ANAC, ANATEL e DECEA.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://dronevision.com.br/">
+<meta name="theme-color" content="#070B14">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Drone Vision">
+<meta property="og:title" content="Drone Vision | Filmagem aérea com drone 4K HDR no Rio de Janeiro">
+<meta property="og:description" content="Fotos e filmagens aéreas com drone em 4K HDR para hotelaria, imóveis, obras, inspeções e agro no Rio de Janeiro, com assessoria em ANAC, ANATEL e DECEA.">
+<meta property="og:url" content="https://dronevision.com.br/">
+<meta property="og:image" content="https://dronevision.com.br/assets/img/og-dronevision.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,300..900;125,300..900&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#070B14;--panel:#0E1525;--line:#1D2A42;--cyan:#38B6E0;--white:#F4F8FC;--mute:#8DA0B6;--wa:#25D366}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{background:var(--ink);color:var(--white);font:400 1.0625rem/1.65 Manrope,system-ui,sans-serif;overflow-x:hidden}
-img,video{max-width:100%;display:block}a{color:inherit}
-:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
-h1,h2,h3{font-family:Archivo,sans-serif;font-stretch:125%;font-weight:800;line-height:1.05;letter-spacing:-.02em}
-h2{font-size:clamp(1.9rem,4.5vw,3.1rem);max-width:20ch}
-.wrap{width:min(1160px,100% - 2.5rem);margin-inline:auto}
-section{padding:clamp(4rem,9vw,7rem) 0}
-.lead{color:var(--mute);max-width:58ch;margin-top:1rem}
-.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 1.4rem;border-radius:6px;font:700 1rem Manrope,sans-serif;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn-wa{background:var(--wa);color:#04210f}.btn-cy{background:var(--cyan);color:#04141c}
-.btn-ghost{border-color:var(--line);color:var(--white);background:transparent}.btn-ghost:hover{border-color:var(--cyan)}
-.sm{padding:.5rem .9rem;font-size:.88rem}
-header{position:sticky;top:0;z-index:20;background:rgba(7,11,20,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
-header img{height:46px;width:auto}
-nav{display:flex;gap:1.6rem}nav a{text-decoration:none;color:var(--mute);font-weight:500;font-size:.95rem}nav a:hover{color:var(--white)}
-@media(max-width:820px){nav{display:none}}
-/* hero */
-.hero{position:relative;min-height:calc(100svh - 68px);display:grid;align-items:center;padding:4rem 0;isolation:isolate;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:-20%;z-index:-1;background:repeating-radial-gradient(circle at 75% 45%,transparent 0 34px,rgba(56,182,224,.08) 35px 36px),radial-gradient(55% 60% at 75% 45%,rgba(56,182,224,.18),transparent 70%)}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
-@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.vf{max-width:360px}}
-.hero h1{font-size:clamp(2.3rem,6vw,4.6rem)}
-.hero p{font-size:1.15rem;color:#c3d0de;max-width:48ch;margin:1.4rem 0 2rem}
-.cta{display:flex;flex-wrap:wrap;gap:.8rem}
-.vf{position:relative;aspect-ratio:4/5;background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:grid;place-items:center}
-.vf img{width:100%;height:100%;object-fit:cover}.vf img.logo{width:70%;height:auto;object-fit:contain}
-.vf i{position:absolute;width:28px;height:28px;border:2px solid var(--cyan)}
-.vf .a{top:12px;left:12px;border-right:0;border-bottom:0}.vf .b{top:12px;right:12px;border-left:0;border-bottom:0}.vf .c{bottom:12px;left:12px;border-right:0;border-top:0}.vf .d{bottom:12px;right:12px;border-left:0;border-top:0}
-.vf small{position:absolute;font:600 .75rem Manrope;color:var(--cyan);letter-spacing:.05em;background:rgba(7,11,20,.7);padding:.2rem .5rem;border-radius:3px}
-.vf .rec{top:20px;left:50px}.vf .rec::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#ff4d4d;margin-right:.4rem;animation:blink 1.2s steps(2) infinite}
-.vf .alt{bottom:20px;right:50px}
-@keyframes blink{50%{opacity:.15}}
-/* stats */
-.stats{border-block:1px solid var(--line);background:var(--panel);padding:2.2rem 0}
-.stats ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
-.stats b{display:block;font:800 2.1rem Archivo,sans-serif;font-stretch:125%;color:var(--cyan)}.stats span{color:var(--mute);font-size:.95rem}
-/* segments */
-.seg{margin-top:2.5rem;padding:0;display:grid;gap:1rem}
-.seg li{list-style:none;position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:1.5rem;align-items:center;padding:2.4rem 1.8rem;min-height:170px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
-.seg li::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--bg) center/cover no-repeat;transition:transform .7s}
-.seg li::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(7,11,20,.95) 0,rgba(7,11,20,.8) 45%,rgba(7,11,20,.35) 100%)}
-.seg li:hover::before{transform:scale(1.05)}
-.seg h3{font-size:1.4rem}.seg p{color:#c3d0de}
-@media(max-width:640px){.seg li{grid-template-columns:1fr;gap:.4rem;padding:1.6rem 1.2rem}.seg li::after{background:linear-gradient(180deg,rgba(7,11,20,.8),rgba(7,11,20,.92))}}
-/* regulation */
-.reg{background:var(--panel);border-block:1px solid var(--line)}
-.reg .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:start}
-@media(max-width:900px){.reg .wrap{grid-template-columns:1fr}}
-.ck{list-style:none;padding:0;margin:2rem 0}
-.ck li{padding:0 0 1.3rem 1.8rem;position:relative}
-.ck li::before{content:"";position:absolute;left:0;top:.45rem;width:.8rem;height:.8rem;border:2px solid var(--cyan);border-radius:50%}
-.ck b{display:block;font-family:Archivo;font-stretch:125%;font-size:1.05rem}.ck span{color:var(--mute);font-size:.97rem}
-.why{border:1px solid var(--line);border-radius:8px;padding:2rem;background:var(--ink);box-shadow:10px 10px 0 rgba(56,182,224,.12)}
-.why h3{font-size:1.5rem;margin-bottom:1rem}.why p{color:var(--mute);font-size:.98rem}.why b{color:var(--white)}
-.tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.2rem}.tags span{border:1px solid var(--line);color:var(--cyan);font:700 .8rem Manrope;padding:.25rem .7rem;border-radius:4px}
-/* portfolio */
-.bar{display:flex;gap:.6rem;margin:2rem 0 1.5rem;flex-wrap:wrap;align-items:center}
-.bar button,.bar select{background:transparent;color:var(--mute);border:1px solid var(--line);border-radius:99px;padding:.5rem 1.2rem;font:600 .95rem Manrope,sans-serif;cursor:pointer}
-.bar button[aria-pressed=true]{background:var(--cyan);color:#04141c;border-color:var(--cyan)}
-.bar select{margin-left:auto;background:var(--ink);width:auto;max-width:100%}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.2rem}
-.item{cursor:pointer}
-.item .ph{position:relative;aspect-ratio:4/5;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.item:hover img{transform:scale(1.04)}
-.item .pl{position:absolute;inset:0;display:grid;place-items:center}
-.item .pl::after{content:"";border:14px solid transparent;border-left:22px solid #fff;border-right:0;filter:drop-shadow(0 2px 8px #000)}
-.item h3{font:700 1rem Manrope;font-stretch:100%;letter-spacing:0;margin-top:.7rem}
-.item small{color:var(--mute);font-size:.85rem}
-.empty{grid-column:1/-1;border:1px dashed var(--line);border-radius:8px;padding:3rem 1.5rem;text-align:center;color:var(--mute)}
-dialog{background:var(--ink);color:var(--white);border:1px solid var(--line);border-radius:8px;padding:0;max-width:min(92vw,1100px);width:100%}
-dialog::backdrop{background:rgba(0,0,0,.8)}
-dialog img,dialog video{max-height:82vh;margin:auto;width:100%;object-fit:contain}
-dialog p{padding:.9rem 1.2rem;color:var(--mute)}dialog button{position:absolute;right:.6rem;top:.6rem}
-/* footer */
-footer{border-top:1px solid var(--line);padding:3rem 0 2rem}
-footer .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2rem;align-items:start}
-footer img{height:60px;margin-bottom:.8rem}footer p,footer a{color:var(--mute);font-size:.95rem;text-decoration:none}footer a:hover{color:var(--white)}
-.copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:1.2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
-.copy button{background:none;border:0;color:var(--mute);cursor:pointer;font:inherit;font-size:.9rem}
-/* painel admin */
-#panel{position:fixed;inset:0 0 0 auto;width:min(540px,100%);z-index:40;background:#0A1120;border-left:1px solid var(--cyan);overflow:auto;transform:translateX(100%);transition:transform .3s;padding:1.5rem}
-#panel.on{transform:none}
-#panel h2{font-size:1.5rem}#panel h3{font:800 1rem Archivo;font-stretch:125%;margin:1.8rem 0 .8rem;color:var(--cyan)}
-.ph-head{display:flex;justify-content:space-between;align-items:center;gap:1rem}
-label{display:grid;gap:.35rem;font-weight:700;font-size:.85rem;margin-bottom:.8rem}
-input,select{background:var(--ink);border:1px solid var(--line);color:var(--white);border-radius:6px;padding:.6rem .8rem;font:inherit;font-size:.95rem;width:100%}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-.note{color:var(--mute);font-size:.85rem}
-#msg{color:var(--cyan);min-height:1.4em;margin-top:.8rem;font-size:.92rem}
-.row{display:grid;grid-template-columns:56px 1fr;gap:.8rem;padding:.8rem 0;border-bottom:1px solid var(--line)}
-.row img{width:56px;height:56px;object-fit:cover;border-radius:4px;background:var(--panel)}
-.row .f{display:grid;grid-template-columns:1fr auto;gap:.5rem}.row .f select{grid-column:1}
-#lock{display:grid;gap:.8rem;margin-top:1.5rem}
-#app{display:none}
-/* mini drone */
-#mini{position:fixed;left:0;top:0;width:72px;height:44px;z-index:15;pointer-events:none;filter:drop-shadow(0 14px 10px rgba(0,0,0,.55));will-change:transform}
-.rot{transform-box:fill-box;transform-origin:center;animation:spin .12s linear infinite}
-@keyframes spin{to{transform:scaleX(-1)}}
-@media(prefers-reduced-motion:reduce){.rot,.vf .rec::before{animation:none}html{scroll-behavior:auto}.btn,#panel{transition:none}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700..900&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/assets/img/cidade-noite-aerea-01-1920.webp" fetchpriority="high">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://dronevision.com.br/#empresa", "name": "Drone Vision", "description": "Imagens e filmagens aéreas 4K HDR com drone e assessoria em regularização de drones e pilotos (ANAC, ANATEL e DECEA).", "url": "https://dronevision.com.br/", "logo": "https://dronevision.com.br/assets/img/logo-512.png", "image": "https://dronevision.com.br/assets/img/cidade-noite-aerea-01-1920.jpg", "telephone": "+55 21 96681-0304", "email": "jorge@dronevision.com.br", "address": {"@type": "PostalAddress", "addressLocality": "Rio de Janeiro", "addressRegion": "RJ", "addressCountry": "BR"}, "areaServed": {"@type": "State", "name": "Rio de Janeiro"}, "sameAs": ["https://www.instagram.com/dronevision456/"]}, {"@type": "WebSite", "@id": "https://dronevision.com.br/#site", "url": "https://dronevision.com.br/", "name": "Drone Vision", "inLanguage": "pt-BR", "publisher": {"@id": "https://dronevision.com.br/#empresa"}}]}</script>
 </head>
 <body>
-<header><div class="wrap">
-  <a href="#topo" aria-label="Drone Vision, início"><img src="logo.png" alt="Drone Vision"></a>
-  <nav aria-label="Principal"><a href="#segmentos">Segmentos</a><a href="#regulacao">Regulação</a><a href="#portfolio">Portfólio</a><a href="#contato">Contato</a></nav>
-  <a class="btn btn-wa" href="https://wa.me/5521966810304?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento</a>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="/" aria-label="Drone Vision, página inicial"><img src="/assets/img/logo-160.webp" width="46" height="46" alt=""><span>DRONE<b>VISION</b></span></a>
+  <nav class="nav" id="nav" aria-label="Principal"><a href="/servicos/">Serviços</a><a href="/regularizacao-de-drones/">Regularização</a><a href="/portfolio/">Portfólio</a><a href="/contato/">Contato</a><a class="btn btn-wa" href="https://wa.me/5521966810304?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Pedir orçamento</a></nav>
+  <a class="btn btn-wa head-cta" href="https://wa.me/5521966810304?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Pedir orçamento</a>
+  <button class="menu-btn" type="button" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false"><i></i><i></i><i></i></button>
 </div></header>
-
-<main id="topo">
-<section class="hero"><div class="wrap">
-  <div>
-    <h1>O ângulo que sua obra, seu hotel e sua lavoura ainda não mostraram.</h1>
-    <p>Imagens e filmagens aéreas em 4K HDR, com operação e documentação regulatória resolvidas por quem entende de espaço aéreo.</p>
-    <div class="cta">
-      <a class="btn btn-wa" href="https://wa.me/5521966810304?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">Falar no WhatsApp</a>
-      <a class="btn btn-ghost" href="#portfolio">Ver portfólio</a>
-    </div>
+<main id="conteudo">
+<section class="hero">
+  <div class="hero-bg"><img src="/assets/img/cidade-noite-aerea-01-1920.webp" srcset="/assets/img/cidade-noite-aerea-01-960.webp 960w, /assets/img/cidade-noite-aerea-01-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" fetchpriority="high"></div>
+  <div class="hud" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i><span class="scan"></span><span class="cross"></span>
+    <small class="rec">REC 4K HDR</small><small class="clk" id="clk">00:00:00</small><small class="bat">GPS ● ● ● ●</small><small class="alt">ALT <b id="alt">120</b> m</small></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Filmagem aérea com drone · Rio de Janeiro</span>
+    <h1 class="rv" style="--d:1">O ângulo que sua obra, seu hotel e sua lavoura <span class="hl">ainda não mostraram.</span></h1>
+    <p class="sub rv" style="--d:2">Imagens e filmagens aéreas em 4K HDR, com operação e documentação regulatória resolvidas por quem entende de espaço aéreo.</p>
+    <div class="cta rv" style="--d:3"><a class="btn btn-wa" href="https://wa.me/5521966810304?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Falar no WhatsApp</a><a class="btn btn-ghost" href="/portfolio/">Ver portfólio</a></div>
   </div>
-  <div class="vf" aria-hidden="true"><img id="vfimg" class="logo" src="logo.png" alt=""><i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i><small class="rec">REC 4K HDR</small><small class="alt">ALT <b id="alt">120</b> m</small></div>
-</div></section>
+  <span class="scroll-cue" aria-hidden="true"></span>
+</section>
 
 <div class="stats"><div class="wrap"><ul>
-  <li><b>4K HDR</b><span>Imagem com faixa dinâmica ampla, pronta para cinema e web</span></li>
-  <li><b>5 segmentos</b><span>Hotelaria, imóveis, obras, inspeções e agro</span></li>
-  <li><b>3 órgãos</b><span>ANAC, ANATEL e DECEA tratados por nós</span></li>
-  <li><b>RJ</b><span>Base no Rio de Janeiro, outras regiões sob consulta</span></li>
+  <li class="rv"><b>4K HDR</b><span>Imagem com faixa dinâmica ampla, pronta para cinema e web</span></li>
+  <li class="rv" style="--d:1"><b>5 segmentos</b><span>Hotelaria, imóveis, obras, inspeções e agro</span></li>
+  <li class="rv" style="--d:2"><b>3 órgãos</b><span>ANAC, ANATEL e DECEA tratados por nós</span></li>
+  <li class="rv" style="--d:3"><b>RJ</b><span>Base no Rio de Janeiro, outras regiões sob consulta</span></li>
 </ul></div></div>
 
-<section id="segmentos"><div class="wrap">
-  <h2>Quem contrata a Drone Vision</h2>
-  <p class="lead">Cada segmento pede um tipo de imagem diferente. Planejamos o voo para o resultado que você vai usar.</p>
-  <ul class="seg">
-    <li><h3>Hotelaria e pousadas</h3><p>Fachada, piscina, paisagem e estrutura de lazer vistas de cima, para site, OTAs e campanhas.</p></li>
-    <li><h3>Imóveis</h3><p>Terrenos, condomínios e casas com contexto de vizinhança, acesso e vista que a foto de solo não entrega.</p></li>
-    <li><h3>Obras e estruturas</h3><p>Registro periódico do andamento, comparativo entre etapas e material para relatório de cliente.</p></li>
-    <li><h3>Inspeções técnicas</h3><p>Telhados, placas solares, fachadas e torres de difícil acesso, com imagem nítida e sem andaime.</p></li>
-    <li><h3>Agronegócio</h3><p>Visão geral de áreas de plantio, pastagens e infraestrutura rural, para acompanhamento e divulgação.</p></li>
-  </ul>
+<section id="servicos"><div class="wrap">
+  <span class="eyebrow rv">Serviços</span>
+  <h2 class="rv">Quem contrata a Drone Vision</h2>
+  <p class="lead rv">Cada segmento pede um tipo de imagem diferente. Planejamos o voo para o resultado que você vai usar.</p>
+  <ul class="cards"><li class="rv" style="--d:0"><a class="card" href="/servicos/hotelaria-e-pousadas/"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 42V18l18-10 18 10v24"/><path d="M4 42h40M14 42V30h8v12M28 26h8M28 33h8M14 22h8"/><path d="M33 12c2-3 6-3 8 0" opacity=".6"/></svg><h3>Hotelaria e pousadas</h3><p>Fachada, piscina, paisagem e estrutura de lazer vistas de cima, para site, OTAs e campanhas.</p><span class="link">Ver serviço</span></a></li><li class="rv" style="--d:1"><a class="card" href="/servicos/imoveis/"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 22 24 8l18 14"/><path d="M10 19v23h28V19"/><path d="M20 42V30h8v12"/><circle cx="24" cy="22" r="3"/></svg><h3>Imóveis</h3><p>Terrenos, condomínios e casas com contexto de vizinhança, acesso e vista que a foto de solo não entrega.</p><span class="link">Ver serviço</span></a></li><li class="rv" style="--d:2"><a class="card" href="/servicos/obras-e-estruturas/"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 42V8h4v34M4 42h40M14 10h28l-6 6M14 10l8 8M30 16v8"/><rect x="26" y="24" width="8" height="6"/><path d="M22 42V32h18v10"/></svg><h3>Obras e estruturas</h3><p>Registro periódico do andamento, comparativo entre etapas e material para relatório de cliente.</p><span class="link">Ver serviço</span></a></li><li class="rv" style="--d:3"><a class="card" href="/servicos/inspecoes-tecnicas/"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 34 14 18h26l-10 16Z"/><path d="M9 26h26M19 18l-6 16M29 18l-6 16"/><circle cx="36" cy="10" r="5"/><path d="m40 14 4 4"/></svg><h3>Inspeções técnicas</h3><p>Telhados, placas solares, fachadas e torres de difícil acesso, com imagem nítida e sem andaime.</p><span class="link">Ver serviço</span></a></li><li class="rv" style="--d:4"><a class="card" href="/servicos/agronegocio/"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 40c8-4 32-4 40 0M4 33c8-4 32-4 40 0"/><path d="M24 26V8M24 14c-5 0-8-3-8-6 5 0 8 3 8 6Zm0 4c5 0 8-3 8-6-5 0-8 3-8 6Z"/></svg><h3>Agronegócio</h3><p>Visão geral de áreas de plantio, pastagens e infraestrutura rural, para acompanhamento e divulgação.</p><span class="link">Ver serviço</span></a></li></ul>
 </div></section>
 
-<section id="regulacao" class="reg"><div class="wrap">
+<section class="alt"><div class="wrap">
+  <span class="eyebrow rv">Como trabalhamos</span>
+  <h2 class="rv">Do briefing à entrega, em quatro etapas</h2>
+  <div class="flight">
+  <svg class="route" viewBox="0 0 1160 60" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M26 2 C 140 50, 230 -46, 322 2 S 520 50, 618 2 S 820 -46, 914 2 S 1100 50, 1160 30"/>
+    <path class="trail" d="M26 2 C 140 50, 230 -46, 322 2 S 520 50, 618 2 S 820 -46, 914 2 S 1100 50, 1160 30"/>
+    <g class="route-drone" fill="#38B6E0"><rect x="10" y="10" width="16" height="8" rx="4"/><rect x="0" y="6" width="12" height="2" rx="1"/><rect x="24" y="6" width="12" height="2" rx="1"/></g>
+  </svg>
+  <ol class="steps"><li class="rv" style="--d:0"><h3>Briefing</h3><p>Você conta o que precisa, onde e para que vai usar as imagens. Respondemos com proposta e prazo.</p></li><li class="rv" style="--d:1"><h3>Planejamento</h3><p>Definimos horário, ângulos e altitude e verificamos o espaço aéreo e as autorizações do local.</p></li><li class="rv" style="--d:2"><h3>Voo</h3><p>Operação no local com equipamento cadastrado e piloto habilitado, captando em 4K HDR.</p></li><li class="rv" style="--d:3"><h3>Entrega</h3><p>Fotos tratadas e vídeos editados nos formatos combinados, prontos para site, redes e relatórios.</p></li></ol>
+</div>
+</div></section>
+
+<section><div class="wrap">
+  <span class="eyebrow rv">Portfólio</span>
+  <h2 class="rv">Um pouco do que já foi registrado do ar</h2>
+  <div class="strip"><figure class="rv"><video src="/assets/video/inspecao-telhado-solar.mp4" poster="/assets/video/inspecao-telhado-solar-poster.jpg" muted loop playsinline autoplay preload="none" aria-label="Inspeção de telhado com placas solares (vídeo)"></video><figcaption>Inspeção de telhado com placas solares (vídeo)</figcaption></figure><figure class="rv" style="--d:1"><img src="/assets/img/inspecao-telhado-solar-01-960.webp" width="960" height="540" alt="Telhado e módulos fotovoltaicos vistos de cima" loading="lazy" decoding="async"><figcaption>Inspeções técnicas</figcaption></figure><figure class="rv" style="--d:2"><img src="/assets/img/inspecao-telhado-solar-02-960.webp" width="960" height="540" alt="Detalhe da cumeeira e das placas solares" loading="lazy" decoding="async"><figcaption>Obras &amp; Estruturas</figcaption></figure><figure class="rv" style="--d:3"><img src="/assets/img/inspecao-telhado-solar-03-960.webp" width="960" height="540" alt="Estado das telhas e fixação dos módulos" loading="lazy" decoding="async"><figcaption>Inspeções técnicas</figcaption></figure><figure class="rv" style="--d:4"><img src="/assets/img/cidade-noite-aerea-01-960.webp" width="960" height="540" alt="Cidade à noite, vista aérea" loading="lazy" decoding="async"><figcaption>Imagens aéreas</figcaption></figure></div>
+  <p style="margin-top:1.8rem" class="rv"><a class="link" href="/portfolio/">Ver o portfólio completo</a></p>
+</div></section>
+
+<section class="alt"><div class="wrap split">
   <div>
-    <h2>Regulação e homologação de drones e pilotos</h2>
-    <p class="lead">Voe com segurança e dentro da lei. Consultoria completa para regularizar equipamentos e adequar pilotos junto aos órgãos reguladores brasileiros.</p>
-    <ul class="ck">
-      <li><b>Cadastro de drone na ANAC</b><span>Assessoria no registro do equipamento no SISANT e obtenção da Certidão de Cadastro obrigatória.</span></li>
-      <li><b>Homologação ANATEL</b><span>Adequação e certificação de radiofrequência para equipamentos, incluindo linhas DJI e montagens personalizadas.</span></li>
-      <li><b>Carteira de piloto e DECEA</b><span>Orientação sobre a prova da ANAC, emissão da carteira de piloto e uso do SARPAS para solicitação de espaço aéreo.</span></li>
-    </ul>
-    <a class="btn btn-cy" href="https://wa.me/5521966810304?text=Ol%C3%A1!%20Quero%20solicitar%20consultoria%20de%20regulariza%C3%A7%C3%A3o%20de%20drone." target="_blank" rel="noopener">Solicitar consultoria</a>
+    <span class="eyebrow rv">Regularização</span>
+    <h2 class="rv">Drone e piloto em dia com ANAC, ANATEL e DECEA</h2>
+    <p class="lead rv">Além de voar, ajudamos quem tem drone a operar dentro da lei: cadastro do equipamento, homologação e orientação para a habilitação e o acesso ao espaço aéreo.</p>
+    <div class="cta rv" style="margin-top:2rem"><a class="btn btn-cy" href="/regularizacao-de-drones/">Entender a regularização</a></div>
   </div>
-  <aside class="why">
+  <aside class="box rv" style="--d:1"><svg style="width:48px;height:48px;color:var(--cyan);margin-bottom:1rem" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M24 4 8 10v12c0 10 7 18 16 22 9-4 16-12 16-22V10Z"/><path d="m17 24 5 5 10-10"/></svg>
     <h3>Por que regularizar?</h3>
-    <p>A operação de aeronaves não tripuladas sem a devida homologação e cadastro pode resultar em <b>apreensão do equipamento</b>, multa e responsabilização civil. Garanta que seus voos, comerciais ou recreativos, estejam resguardados legalmente.</p>
-    <div class="tags"><span>ANAC</span><span>ANATEL</span><span>DECEA / SARPAS</span></div>
+    <p>Operar drone sem cadastro e homologação pode resultar em <b>apreensão do equipamento</b>, multa e responsabilização civil.</p>
+    <div class="tags"><span>ANAC</span><span>ANATEL</span><span>DECEA</span></div>
   </aside>
 </div></section>
 
-<section id="portfolio"><div class="wrap">
-  <h2>Um pouco do que já foi registrado do ar</h2>
-  <p class="lead">Seleção de sobrevoos e trabalhos da Drone Vision.</p>
-  <div class="bar">
-    <span role="group" aria-label="Tipo" style="display:contents">
-      <button data-f="all" aria-pressed="true">Todos</button><button data-f="image" aria-pressed="false">Fotos</button><button data-f="video" aria-pressed="false">Vídeos</button>
-    </span>
-    <select id="catf" aria-label="Filtrar por categoria"><option value="">Todas as categorias</option></select>
-  </div>
-  <div class="grid" id="grid" aria-live="polite"></div>
-  <div class="cta" style="margin-top:2rem"><a class="btn btn-ghost" id="ig2" href="#" target="_blank" rel="noopener">Veja mais no Instagram</a></div>
+<section class="band"><div class="wrap">
+  <div class="rv"><h2>Vamos colocar seu projeto no ar?</h2><p class="lead">Conte o que precisa pelo WhatsApp e receba uma proposta.</p></div>
+  <div class="cta rv" style="--d:1"><a class="btn btn-wa" href="https://wa.me/5521966810304?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Falar no WhatsApp</a><a class="btn btn-ghost" href="/contato/">Outros contatos</a></div>
 </div></section>
+
 </main>
-
-<dialog id="lb"><button class="btn btn-ghost sm" id="lbx" type="button">Fechar</button><div id="lbc"></div><p id="lbt"></p></dialog>
-
-<footer id="contato"><div class="wrap">
-  <div><img src="logo.png" alt="Drone Vision"><p>Soluções Aéreas &amp; Imagens Corporativas</p></div>
-  <div><p><b style="color:var(--white)">Contato</b></p><p><a href="https://wa.me/5521966810304" target="_blank" rel="noopener">WhatsApp (21) 96681-0304</a></p><p><a href="mailto:jorge@dronevision.com.br">jorge@dronevision.com.br</a></p><p><a href="https://dronevision.com.br">dronevision.com.br</a></p><p><a id="ig" href="#" target="_blank" rel="noopener">Instagram</a></p></div>
-  <div><p><b style="color:var(--white)">Atendimento</b></p><p>Rio de Janeiro, RJ</p><p>ANAC · ANATEL · DECEA</p></div>
-  <div class="copy"><p>© <span id="yr"></span> Drone Vision. Todos os direitos reservados.</p><button type="button" id="adm">Área administrativa</button></div>
+<footer class="site-foot"><div class="wrap">
+  <div><img src="/assets/img/logo-160.webp" width="72" height="72" alt="Drone Vision" loading="lazy"><p>Soluções aéreas e imagens corporativas. Filmagens 4K HDR e regularização de drones no Rio de Janeiro.</p></div>
+  <div><h2>Serviços</h2><ul><li><a href="/servicos/hotelaria-e-pousadas/">Hotelaria e pousadas</a></li><li><a href="/servicos/imoveis/">Imóveis</a></li><li><a href="/servicos/obras-e-estruturas/">Obras e estruturas</a></li><li><a href="/servicos/inspecoes-tecnicas/">Inspeções técnicas</a></li><li><a href="/servicos/agronegocio/">Agronegócio</a></li><li><a href="/regularizacao-de-drones/">Regularização de drones</a></li></ul></div>
+  <div><h2>Site</h2><ul><li><a href="/">Início</a></li><li><a href="/servicos/">Serviços</a></li><li><a href="/portfolio/">Portfólio</a></li><li><a href="/contato/">Contato</a></li></ul></div>
+  <div><h2>Contato</h2><ul><li><a href="https://wa.me/5521966810304" target="_blank" rel="noopener">WhatsApp (21) 96681-0304</a></li><li><a href="mailto:jorge@dronevision.com.br">jorge@dronevision.com.br</a></li><li><a href="https://www.instagram.com/dronevision456/" target="_blank" rel="noopener">Instagram @dronevision456</a></li><li><p>Rio de Janeiro, RJ</p></li></ul></div>
+  <div class="copy"><p>© <span data-year>2026</span> Drone Vision. Todos os direitos reservados.</p><p>ANAC · ANATEL · DECEA</p></div>
 </div></footer>
-
-<!-- PAINEL ADMIN -->
-<aside id="panel" aria-label="Painel administrativo" aria-hidden="true">
-  <div class="ph-head"><h2>Painel Drone Vision</h2><button class="btn btn-ghost sm" id="pc" type="button">Fechar</button></div>
-  <form id="lock"><label>Senha do painel<input type="password" id="pw" autocomplete="current-password" required></label><button class="btn btn-cy" type="submit">Entrar</button><p class="note" id="lmsg"></p></form>
-  <div id="app">
-    <h3>1. Enviar mídia</h3>
-    <div class="two"><label>Cloud name<input id="cn" autocomplete="off"></label><label>Upload preset (unsigned)<input id="up" autocomplete="off"></label></div>
-    <div class="two"><label>Título do próximo envio<input id="tt" placeholder="ex.: Pousada em Penedo"></label><label>Categoria<select id="tc"></select></label></div>
-    <button class="btn btn-cy" id="send" type="button">Enviar fotos e vídeos</button>
-    <p id="msg" role="status"></p>
-    <label style="margin-top:1.2rem">Ou adicionar por link do Cloudinary<input id="lk" placeholder="https://res.cloudinary.com/iwmbn2fr/image/upload/..."></label><button class="btn btn-ghost sm" id="addlk" type="button">Adicionar link</button>
-    <h3>2. Gerenciar itens</h3>
-    <div id="list"></div>
-    <h3>3. Publicar para todos</h3>
-    <p class="note" style="margin-bottom:.8rem">Os uploads ficam no Cloudinary, mas a lista fica só neste navegador. Exporte o <b>portfolio.json</b> e suba para a raiz do repositório para o público ver.</p>
-    <div class="cta"><button class="btn btn-cy sm" id="exp" type="button">Exportar portfolio.json</button><label class="btn btn-ghost sm" style="margin:0;cursor:pointer">Importar JSON<input id="imp" type="file" accept=".json" hidden></label><button class="btn btn-ghost sm" id="reset" type="button">Descartar rascunho local</button></div>
-  </div>
-</aside>
-
+<a class="wa-float" href="https://wa.me/5521966810304?text=Ol%C3%A1%21%20Quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg></a>
 <svg id="mini" viewBox="0 0 72 44" aria-hidden="true">
   <path d="M36 30 L58 44 L14 44Z" fill="#38B6E0" opacity=".12"/>
   <g stroke="#9fdcf2" stroke-width="2.4" stroke-linecap="round"><path d="M36 20 L12 12M36 20 L60 12"/></g>
@@ -225,162 +117,6 @@ input,select{background:var(--ink);border:1px solid var(--line);color:var(--whit
   <g fill="#38B6E0"><ellipse class="rot" cx="12" cy="9" rx="10" ry="1.6"/><ellipse class="rot" cx="60" cy="9" rx="10" ry="1.6"/></g>
   <circle cx="12" cy="12" r="2" fill="#dff3fb"/><circle cx="60" cy="12" r="2" fill="#dff3fb"/>
 </svg>
-
-<script src="https://upload-widget.cloudinary.com/global/all.js" async></script>
-<script>
-/* ===== CONFIGURAÇÃO =====
-   cloud/preset: Cloudinary (preset "unsigned"). passHash: SHA-256 da senha do painel
-   (digite uma senha no painel, copie o hash que aparecer e cole aqui). */
-const CFG = { cloud: "iwmbn2fr", preset: "", tag: "dronevision-portfolio", passHash: "", insta: "dronevision456" };
-const SEGS = [["hotelaria","Hotelaria e pousadas"],["imoveis","Imóveis"],["obras","Obras e estruturas"],["inspecoes","Inspeções técnicas"],["agro","Agronegócio"]];
-const CATS = ["Imagens aéreas","Hotelaria & Pousadas","Imóveis","Obras & Estruturas","Inspeções técnicas","Agronegócio"];
-
-const $ = s => document.querySelector(s);
-["#ig", "#ig2"].forEach((q, k) => { const a = document.querySelector(q); a.href = "https://www.instagram.com/" + CFG.insta + "/"; if (!k) a.textContent = "Instagram @" + CFG.insta });
-const st = { get(k){ try { return localStorage.getItem(k) } catch(e){ return null } }, set(k,v){ try { localStorage.setItem(k,v) } catch(e){} } };
-$("#yr").textContent = new Date().getFullYear();
-const opts = (sel, first) => { sel.innerHTML = (first ? `<option value="">${first}</option>` : "") + CATS.map(c => `<option>${c}</option>`).join("") };
-opts($("#catf"), "Todas as categorias"); opts($("#tc"));
-
-/* ---------- portfólio ---------- */
-let items = [], type = "all", cat = "";
-const opt = (u, t, w = 1200) => t === "video" ? u.replace("/upload/", `/upload/so_0,w_${w},c_limit,q_auto:good,f_jpg/`).replace(/\.\w+$/, ".jpg") : u.replace("/upload/", `/upload/f_auto,q_auto:${w >= 1800 ? "best" : "good"},w_${w},c_limit/`);
-const save = () => st.set("dv2", JSON.stringify(items));
-const fmt = d => d ? new Date(d + "T12:00").toLocaleDateString("pt-BR", { month: "long", year: "numeric" }) : "";
-function paintSegs(){
-  document.querySelectorAll(".seg li").forEach((li, n) => {
-    const it = items.find(i => i.seg === SEGS[n][0] && i.type === "image");
-    li.style.setProperty("--bg", it ? `url("${opt(it.url, "image", 1920)}")` : "none");
-  });
-}
-function render(){
-  paintSegs();
-  const g = $("#grid"), list = items.filter(i => (type === "all" || i.type === type) && (!cat || i.cat === cat));
-  g.replaceChildren();
-  if (!list.length){ g.innerHTML = `<div class="empty">${items.length ? "Nenhuma mídia nesta seleção ainda." : "Estamos atualizando o portfólio. Peça pelo WhatsApp exemplos de trabalhos recentes."}</div>`; return }
-  list.forEach(i => {
-    const f = document.createElement("figure"); f.className = "item"; f.tabIndex = 0;
-    f.innerHTML = `<div class="ph"><img loading="lazy" alt=""><span class="pl" hidden></span></div><h3></h3><small></small>`;
-    f.querySelector("img").src = opt(i.url, i.type); f.querySelector("img").alt = i.title || "Imagem aérea";
-    f.querySelector(".pl").hidden = i.type !== "video";
-    f.querySelector("h3").textContent = i.title || i.cat;
-    f.querySelector("small").textContent = [i.cat, fmt(i.date)].filter(Boolean).join(" · ");
-    const open = () => lightbox(i); f.addEventListener("click", open); f.addEventListener("keydown", e => e.key === "Enter" && open());
-    g.append(f);
-  });
-  const first = items.find(i => i.type === "image");
-  if (first){ const v = $("#vfimg"); v.src = opt(first.url, "image", 1600); v.className = "" }
-}
-function lightbox(i){
-  const m = document.createElement(i.type === "video" ? "video" : "img");
-  if (i.type === "video"){ m.src = i.url; m.controls = true; m.autoplay = true; m.playsInline = true } else { m.src = opt(i.url, "image", 2400); m.alt = i.title || "" }
-  $("#lbc").replaceChildren(m); $("#lbt").textContent = [i.title, i.cat].filter(Boolean).join(" · "); $("#lb").showModal();
-}
-$("#lbx").addEventListener("click", () => $("#lb").close());
-$("#lb").addEventListener("close", () => $("#lbc").replaceChildren());
-$("#lb").addEventListener("click", e => { if (e.target === $("#lb")) $("#lb").close() });
-document.querySelectorAll(".bar button").forEach(b => b.addEventListener("click", () => {
-  type = b.dataset.f; document.querySelectorAll(".bar button").forEach(x => x.setAttribute("aria-pressed", x === b)); render();
-}));
-$("#catf").addEventListener("change", e => { cat = e.target.value; render() });
-
-async function fromCloud(){
-  const out = [];
-  for (const t of ["image", "video"]){
-    try {
-      const r = await fetch(`https://res.cloudinary.com/${CFG.cloud}/${t}/list/${CFG.tag}.json`);
-      if (!r.ok) continue;
-      (await r.json()).resources.forEach(x => out.push({ type: t, url: `https://res.cloudinary.com/${CFG.cloud}/${t}/upload/v${x.version}/${x.public_id}.${x.format}`, title: "", cat: "Imagens aéreas", date: (x.created_at || "").slice(0, 10) }));
-    } catch(e){}
-  }
-  return out.sort((a, b) => b.date.localeCompare(a.date));
-}
-async function boot(){
-  let local = []; try { local = JSON.parse(st.get("dv2") || "[]") } catch(e){}
-  if (local.length){ items = local } else {
-    try { const r = await fetch("portfolio.json", { cache: "no-cache" }); if (r.ok) items = await r.json() } catch(e){}
-  }
-  if (!items.length && CFG.cloud) items = await fromCloud();
-  render(); drawList();
-}
-boot();
-
-/* ---------- painel admin ---------- */
-const panel = $("#panel"), msg = $("#msg");
-const sha = async s => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s)))].map(b => b.toString(16).padStart(2, "0")).join("");
-const show = on => { panel.classList.toggle("on", on); panel.setAttribute("aria-hidden", !on) };
-$("#adm").addEventListener("click", () => show(true)); $("#pc").addEventListener("click", () => show(false));
-if (location.hash === "#admin") show(true);
-addEventListener("hashchange", () => { if (location.hash === "#admin") show(true) });
-addEventListener("keydown", e => { if (e.key === "Escape") show(false) });
-$("#lock").addEventListener("submit", async e => {
-  e.preventDefault(); const h = await sha($("#pw").value), lm = $("#lmsg");
-  if (!CFG.passHash){ lm.textContent = "Senha ainda não definida no site. Hash para colar em CFG.passHash: " + h }
-  else if (h !== CFG.passHash){ lm.textContent = "Senha incorreta."; return }
-  $("#lock").style.display = "none"; $("#app").style.display = "block";
-});
-$("#cn").value = CFG.cloud || st.get("dv_cloud") || ""; $("#up").value = CFG.preset || st.get("dv_preset") || "";
-function drawList(){
-  const l = $("#list"); l.replaceChildren();
-  if (!items.length){ l.innerHTML = '<p class="note">Nenhum item ainda.</p>'; return }
-  items.forEach((i, n) => {
-    const r = document.createElement("div"); r.className = "row";
-    r.innerHTML = `<img alt=""><div class="f"><input aria-label="Título"><button class="btn btn-ghost sm" type="button">Excluir</button><select aria-label="Categoria"></select><select class="sg" aria-label="Fundo de segmento"></select></div>`;
-    r.querySelector("img").src = opt(i.url, i.type, 120);
-    const inp = r.querySelector("input"), sel = r.querySelector("select"); opts(sel); sel.value = i.cat; inp.value = i.title || "";
-    inp.addEventListener("change", () => { i.title = inp.value; save(); render() });
-    const sg = r.querySelector(".sg"); sg.hidden = i.type === "video";
-    sg.innerHTML = '<option value="">Sem fundo de segmento</option>' + SEGS.map(x => `<option value="${x[0]}">Fundo: ${x[1]}</option>`).join(""); sg.value = i.seg || "";
-    sg.addEventListener("change", () => { items.forEach(x => { if (sg.value && x !== i && x.seg === sg.value) delete x.seg }); if (sg.value) i.seg = sg.value; else delete i.seg; save(); render(); drawList() });
-    sel.addEventListener("change", () => { i.cat = sel.value; save(); render() });
-    r.querySelector("button").addEventListener("click", () => { items.splice(n, 1); save(); render(); drawList() });
-    l.append(r);
-  });
-}
-$("#send").addEventListener("click", () => {
-  const cloud = $("#cn").value.trim(), preset = $("#up").value.trim();
-  if (!cloud || !preset){ msg.textContent = "Preencha Cloud name e Upload preset."; return }
-  if (!window.cloudinary){ msg.textContent = "O widget ainda está carregando. Tente de novo."; return }
-  st.set("dv_cloud", cloud); st.set("dv_preset", preset);
-  cloudinary.createUploadWidget({ cloudName: cloud, uploadPreset: preset, sources: ["local", "camera", "url"], multiple: true, resourceType: "auto", tags: [CFG.tag],
-    clientAllowedFormats: ["jpg", "jpeg", "png", "webp", "mp4", "mov", "webm"], language: "pt" }, (err, res) => {
-    if (err){ msg.textContent = "Falha no envio. Confira o Cloud name e se o preset é unsigned."; return }
-    if (res && res.event === "success" && !items.some(x => x.url === res.info.secure_url)){
-      items.unshift({ type: res.info.resource_type === "video" ? "video" : "image", url: res.info.secure_url, title: $("#tt").value.trim(), cat: $("#tc").value, date: new Date().toISOString().slice(0, 10) });
-      save(); render(); drawList(); msg.textContent = "Enviado e já exibido no portfólio.";
-    }
-  }).open();
-});
-$("#addlk").addEventListener("click", () => {
-  const u = $("#lk").value.trim();
-  if (!/^https:\/\/res\.cloudinary\.com\/.+\/upload\//.test(u)){ msg.textContent = "Cole uma URL do Cloudinary (res.cloudinary.com/.../upload/...)."; return }
-  if (items.some(x => x.url === u)){ msg.textContent = "Esse link já está na lista."; return }
-  items.unshift({ type: /\/video\/upload\//.test(u) ? "video" : "image", url: u, title: $("#tt").value.trim(), cat: $("#tc").value, date: new Date().toISOString().slice(0, 10) });
-  save(); render(); drawList(); $("#lk").value = ""; msg.textContent = "Adicionado ao portfólio.";
-});
-$("#exp").addEventListener("click", () => {
-  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(items, null, 2)], { type: "application/json" })); a.download = "portfolio.json"; a.click();
-  msg.textContent = "Suba o portfolio.json para a raiz do repositório.";
-});
-$("#imp").addEventListener("change", async e => { try { items = JSON.parse(await e.target.files[0].text()); save(); render(); drawList(); msg.textContent = "Importado." } catch(x){ msg.textContent = "Arquivo inválido." } });
-$("#reset").addEventListener("click", () => { st.set("dv2", "[]"); boot(); msg.textContent = "Rascunho local descartado; carregando o portfolio.json do site." });
-
-/* ---------- altitude e mini drone ---------- */
-let alt = 120; setInterval(() => { alt += Math.round((Math.random() - .5) * 4); $("#alt").textContent = alt }, 1200);
-const dr = $("#mini");
-if (matchMedia("(prefers-reduced-motion: reduce)").matches){ dr.style.display = "none" }
-else {
-  let x = innerWidth * .6, y = 140, vx = 0, mx = null, my = null;
-  addEventListener("pointermove", e => { mx = e.clientX; my = e.clientY }, { passive: true });
-  (function loop(t){
-    const w = innerWidth, h = innerHeight;
-    let tx = w * (.5 + .38 * Math.sin(t / 5200)), ty = h * (.32 + .2 * Math.sin(t / 2600)) + 30 * Math.sin(t / 900);
-    if (mx !== null){ tx = tx * .55 + (mx + 70) * .45; ty = ty * .55 + (my - 60) * .45 }
-    const px = x; x += (tx - x) * .02; y += (ty - y) * .02; vx = x - px;
-    dr.style.transform = `translate(${x - 36}px,${y - 22 + 4 * Math.sin(t / 260)}px) rotate(${Math.max(-16, Math.min(16, vx * 5))}deg)`;
-    requestAnimationFrame(loop);
-  })(0);
-}
-</script>
+<script src="/assets/js/site.js" defer></script>
 </body>
 </html>
